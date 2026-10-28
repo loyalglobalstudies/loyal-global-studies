@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#050816">
+  <meta name="description" content="LOYAL Global Studies — Learn, Grow, Achieve.">
+  <title>LOYAL Global Studies | Premium Learning</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<div class="ambient ambient-one"></div>
+<div class="ambient ambient-two"></div>
+
+<header class="topbar">
+  <a class="brand" href="/">
+    <span class="brand-name">LOYAL JI <span class="heart">♥</span></span>
+    <span class="brand-subtitle">✦ GLOBAL STUDIES ✦</span>
+  </a>
+  <a class="menu-link" href="#about">Discover <span>↗</span></a>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero-badge"><span class="live-dot"></span> YOUR NEXT CHAPTER STARTS HERE</div>
+
+    <div class="orbit orbit-one"></div>
+    <div class="orbit orbit-two"></div>
+
+    <p class="hero-kicker">DREAM BIG. LEARN BETTER.</p>
+    <h1>Your Future.<br>
+      <span class="gradient-text">Your Rules.</span><br>
+      <span class="gold-text">Your LOYAL Journey.</span>
+    </h1>
+
+    <p class="hero-copy">
+      A fresh learning experience built for ambitious minds.
+      Explore knowledge, build skills and move closer to your goals.
+    </p>
+
+    <div class="hero-actions">
+      <a class="button-primary" href="#about">Explore LOYAL <span>↗</span></a>
+      <a class="button-secondary" href="#vision">Our Vision <span>→</span></a>
+    </div>
+
+    <div class="trust-line">
+      <span>✦</span> LEARN <i></i> GROW <i></i> ACHIEVE <span>✦</span>
+    </div>
+
+    <div class="hero-decoration decoration-left">L</div>
+    <div class="hero-decoration decoration-right">✳</div>
+  </section>
+
+  <section class="intro-section" id="about">
+    <div class="section-label"><span></span> THE LOYAL EXPERIENCE</div>
+    <h2>Built for ambition.<br><span class="gradient-text">Designed to inspire.</span></h2>
+    <p class="section-copy">
+      A modern learning platform with a clear purpose:
+      make learning accessible, engaging and organised.
+    </p>
+
+    <div class="feature-grid">
+      <article class="feature-card card-purple">
+        <div class="feature-icon">✦</div>
+        <p class="feature-number">01 / LEARN</p>
+        <h3>Knowledge First</h3>
+        <p>A focused space for learning resources and future courses.</p>
+        <div class="card-glow"></div>
+      </article>
+
+      <article class="feature-card card-blue">
+        <div class="feature-icon">◈</div>
+        <p class="feature-number">02 / GROW</p>
+        <h3>Progress with Purpose</h3>
+        <p>Build your skills step by step and keep moving forward.</p>
+        <div class="card-glow"></div>
+      </article>
+
+      <article class="feature-card card-gold">
+        <div class="feature-icon">✧</div>
+        <p class="feature-number">03 / ACHIEVE</p>
+        <h3>Make It Happen</h3>
+        <p>Turn consistent effort into meaningful progress.</p>
+        <div class="card-glow"></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="vision-section" id="vision">
+    <div class="vision-panel">
+      <div class="vision-symbol">L<span>♥</span></div>
+      <p class="section-label">OUR PROMISE</p>
+      <h2>Every big dream<br>starts with <span class="gold-text">one step.</span></h2>
+      <p class="section-copy">
+        Start with curiosity. Continue with discipline.
+        Let your journey make the difference.
+      </p>
+      <a href="#top" class="text-link" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">Back to the top ↑</a>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <a class="footer-brand" href="/">LOYAL JI <span>♥</span></a>
+  <p>LEARN • GROW • ACHIEVE</p>
+  <small>© 2026 LOYAL Global Studies</small>
+</footer>
+</body>
+</html>
