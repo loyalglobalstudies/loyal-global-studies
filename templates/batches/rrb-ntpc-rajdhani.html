@@ -109,6 +109,65 @@
     }
     .notice h2 { margin: 0 0 10px; color: #ffdc66; }
     .notice p { color: #d7deeb; line-height: 1.7; margin-bottom: 0; }
+
+    /* LOYAL PREMIUM TEACHER CARDS */
+    .teacher-grid {
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+    }
+    .teacher-card {
+      position: relative;
+      min-width: 0;
+      padding: 18px;
+      overflow: hidden;
+      border: 1px solid #465779;
+      border-radius: 15px;
+      background: linear-gradient(145deg, #122747, #09162c);
+      box-shadow: 0 8px 22px #0003;
+      transition: transform .2s ease, border-color .2s ease;
+    }
+    .teacher-card::before {
+      content: "✦";
+      display: inline-grid;
+      place-items: center;
+      width: 32px;
+      height: 32px;
+      margin-bottom: 12px;
+      border-radius: 10px;
+      background: #ffd85b;
+      color: #071832;
+      font-weight: 900;
+    }
+    .teacher-card strong {
+      display: block;
+      color: #fff;
+      font-size: 16px;
+      line-height: 1.45;
+      overflow-wrap: anywhere;
+    }
+    .teacher-card span {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 6px 9px;
+      border: 1px solid #806b36;
+      border-radius: 8px;
+      background: #ffd85b12;
+      color: #ffe28a;
+      font-size: 12px;
+      line-height: 1.5;
+      overflow-wrap: anywhere;
+    }
+    @media (hover: hover) {
+      .teacher-card:hover {
+        transform: translateY(-3px);
+        border-color: #ffd85b;
+      }
+    }
+    @media (max-width: 480px) {
+      .notice { padding: 16px; }
+      .teacher-card { padding: 15px; }
+      .teacher-card strong { font-size: 15px; }
+    }
+
     .empty {
       margin-top: 18px;
       padding: 18px;
@@ -161,16 +220,31 @@
         अलग batch page है। Class links अभी नहीं जोड़े गए हैं।
         Classes उपलब्ध होने पर यहाँ केवल आपके दिए हुए links जोड़े जाएँगे।
       </p>
-      <h2 style="margin-top:24px;color:#ffdc66">Teacher-wise Classes</h2>
-      <section aria-label="Khan Sir and Team classes"
-        style="margin-top:14px;padding:18px;border:1px solid #46536c;border-radius:14px;background:#09162c">
-        <h3 style="margin:0 0 10px;color:#fff">By Khan Sir &amp; Team</h3>
-        <p style="color:#d7deeb;line-height:1.7">
-          इस teacher section में classes बाद में जोड़ी जाएँगी।
-          अभी कोई class link उपलब्ध नहीं कराया गया है।
-        </p>
-        <div class="empty">Classes coming soon — links will be added when provided.</div>
-      </section>
+      <h2 style="margin-top:24px;color:#ffdc66">Teacher-wise Subjects</h2>
+      <p style="color:#d7deeb;line-height:1.7">
+        Batch syllabus ke anusaar teacher aur subject list.
+        Class links milne par sambandhit cards update kiye ja sakte hain.
+      </p>
+
+      <div class="teacher-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:14px;margin-top:16px">
+
+        <article class="teacher-card"><strong>Amit Verma Sir</strong><span>Advance Maths</span></article>
+        <article class="teacher-card"><strong>Amit Sharma Sir</strong><span>Arithmetic Maths · Advance Maths</span></article>
+        <article class="teacher-card"><strong>Kartik Singh Sir</strong><span>Reasoning</span></article>
+        <article class="teacher-card"><strong>Gyan Sir</strong><span>Physics · Chemistry</span></article>
+        <article class="teacher-card"><strong>Shivam Tiwari Sir</strong><span>Current Affairs · Static GK</span></article>
+        <article class="teacher-card"><strong>Bhanu Sir</strong><span>Geography</span></article>
+        <article class="teacher-card"><strong>Abhishek Sir</strong><span>World Geography · Indian Geography</span></article>
+        <article class="teacher-card"><strong>Sanjay Srivastava Sir</strong><span>Computer</span></article>
+        <article class="teacher-card"><strong>CS Singh Sir</strong><span>Chemistry</span></article>
+        <article class="teacher-card"><strong>Shubham Tripathi Sir</strong><span>Polity</span></article>
+        <article class="teacher-card"><strong>Sunami Sir</strong><span>History</span></article>
+        <article class="teacher-card"><strong>Anjali Mam</strong><span>History</span></article>
+        <article class="teacher-card"><strong>Sukesh Sir</strong><span>Economics</span></article>
+        <article class="teacher-card"><strong>Amrita Ma'am</strong><span>Biology</span></article>
+
+      </div>
+      <p class="empty" style="margin-top:18px">Classes coming soon — verified class links will be added when provided.</p>
     </section>
   </main>
 
