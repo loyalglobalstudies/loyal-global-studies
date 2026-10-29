@@ -26,6 +26,12 @@ BATCHES = [
         "name": "Python Programming",
         "description": "Learn Python programming step by step.",
         "category": "Computer Courses"
+    },
+    {
+        "slug": "rrb-station-master-rail-nayak",
+        "name": "RRB Station Master — रेल नायक",
+        "description": "Online Hindi Medium Railway Batch 2026.",
+        "category": "Railway Exams"
     }
 ]
 
