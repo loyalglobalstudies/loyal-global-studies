@@ -39,6 +39,12 @@ BATCHES = [
         "description": "Three-year Hindi-medium UPSC Civil Services foundation course.",
         "category": "UPSC"
     },
+    {
+        "slug": "bpsc-tre-4",
+        "name": "BPSC TRE 4.0 — Class 9–10 & 11–12",
+        "description": "Bilingual Bihar teacher recruitment exam preparation.",
+        "category": "Teaching Exams"
+    },
 ]
 
 @app.route("/")

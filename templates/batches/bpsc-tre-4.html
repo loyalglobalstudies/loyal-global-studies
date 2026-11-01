@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071832">
+  <meta name="description" content="BPSC TRE 4.0 Class 9-10 and 11-12 Batch | LOYAL GLOBAL STUDIES">
+  <title>BPSC TRE 4.0 Batch | LOYAL GLOBAL STUDIES</title>
+  <style>
+    *{box-sizing:border-box}
+    body{margin:0;background:#061329;color:#f8fafc;font-family:system-ui,Arial,sans-serif}
+    a{color:inherit;text-decoration:none}
+    .topbar{padding:17px 5%;background:#030a17;border-bottom:1px solid #34435e;display:flex;justify-content:space-between;align-items:center;gap:12px}
+    .brand{font-weight:900;color:#ffdc66}
+    .brand small{display:block;color:#b8c5d9;font-size:10px;letter-spacing:2px;margin-top:4px}
+    .back{color:#ffdc66;font-size:13px}
+    .wrap{max-width:1100px;margin:auto;padding:24px 15px 55px}
+    .hero{overflow:hidden;border:1px solid #b18b36;border-radius:22px;background:linear-gradient(145deg,#102b50,#071329 70%);box-shadow:0 18px 55px #0008}
+    .hero img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;object-position:center}
+    .hero-content{padding:clamp(20px,4vw,38px)}
+    .tag{display:inline-block;background:#ffd45a;color:#101827;border-radius:7px;padding:7px 12px;font-weight:900;font-size:12px;letter-spacing:1px}
+    h1{font-size:clamp(27px,5vw,48px);line-height:1.2;margin:17px 0 10px;color:#fff}
+    h1 span{color:#ffda68}
+    .subtitle{color:#d4deee;font-size:clamp(15px,2.5vw,19px);line-height:1.7}
+    .chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:20px}
+    .chips span{border:1px solid #9d7d37;color:#ffe18b;background:#ffd45a12;border-radius:30px;padding:8px 12px;font-size:12px;font-weight:800}
+    .section{margin-top:24px;padding:clamp(19px,3vw,28px);border:1px solid #334766;border-radius:18px;background:linear-gradient(145deg,#102442,#09162b)}
+    .section h2{margin:0 0 15px;color:#ffdc66;font-size:clamp(21px,3vw,27px)}
+    .intro{color:#cbd5e1;line-height:1.7}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:13px;margin-top:18px}
+    .card{padding:17px;border:1px solid #465779;border-radius:14px;background:linear-gradient(145deg,#142d4e,#0a172c);min-width:0}
+    .card strong{display:block;font-size:16px;color:#fff;line-height:1.5}
+    .card span{display:inline-block;margin-top:9px;padding:6px 9px;border:1px solid #806b36;border-radius:8px;background:#ffd85b12;color:#ffe28a;font-size:12px;line-height:1.5}
+    .note{color:#aebbd0;font-size:12px;line-height:1.7;margin-top:16px}
+    footer{text-align:center;padding:25px 12px;border-top:1px solid #26334b;color:#aebbd0;font-size:12px}
+    footer strong{color:#ffd85b}
+    @media(max-width:480px){.topbar{padding:15px}.section{padding:17px}.card{padding:15px}}
+  </style>
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="/">
+    LOYAL GLOBAL STUDIES
+    <small>LEARN • GROW • ACHIEVE</small>
+  </a>
+  <a class="back" href="/">← Home</a>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <img src="{{ url_for('static', filename='images/bpsc-tre-4-thumbnail.jpg') }}"
+         alt="BPSC TRE 4.0 Class 9-10 and 11-12 Bilingual Batch">
+    <div class="hero-content">
+      <span class="tag">✦ BPSC TRE 4.0 ✦</span>
+      <h1>BPSC <span>TRE 4.0</span> Batch</h1>
+      <p class="subtitle">बिहार शिक्षक भर्ती परीक्षा | कक्षा 9–10 एवं 11–12 | Bilingual Preparation</p>
+      <div class="chips">
+        <span>Class 9–10</span>
+        <span>Class 11–12</span>
+        <span>Hindi + English</span>
+        <span>Teaching Exams</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Faculty — Teacher-wise Subjects</h2>
+    <p class="intro">उपलब्ध course listing में दिए गए शिक्षक और उनके विषय:</p>
+    <div class="grid">
+      <article class="card"><strong>Khan Sir</strong><span>Foundation / General Studies</span></article>
+      <article class="card"><strong>Navneet Sir</strong><span>Hindi</span></article>
+      <article class="card"><strong>Ashutosh Sir</strong><span>English</span></article>
+      <article class="card"><strong>Durgesh Tiwari Sir</strong><span>Static GK / Current Affairs</span></article>
+      <article class="card"><strong>Suchit Shukla Sir</strong><span>Economics</span></article>
+      <article class="card"><strong>Piyush Khatri Sir</strong><span>Geography</span></article>
+      <article class="card"><strong>Anishek Singh Sir</strong><span>History</span></article>
+      <article class="card"><strong>Himanshu Sir</strong><span>Polity</span></article>
+      <article class="card"><strong>Shubhankar Sir</strong><span>Physics</span></article>
+      <article class="card"><strong>Prashant Sir</strong><span>Mathematics</span></article>
+      <article class="card"><strong>Rajnish Maurya Sir</strong><span>Biology</span></article>
+      <article class="card"><strong>Jaswant Sir</strong><span>Bihar Special</span></article>
+    </div>
+    <p class="note">Faculty details उपलब्ध course listing पर आधारित हैं। अलग-अलग subject group या course version में faculty allocation बदल सकता है। इसे LOYAL Global Studies द्वारा स्वतंत्र रूप से सत्यापित वर्तमान timetable न समझें।</p>
+  </section>
+
+  <section class="section">
+    <h2>Course Coverage</h2>
+    <div class="grid">
+      <article class="card"><strong>General Studies</strong><span>इतिहास, भूगोल, राजव्यवस्था, अर्थव्यवस्था</span></article>
+      <article class="card"><strong>General Science</strong><span>भौतिकी, रसायन विज्ञान एवं जीवविज्ञान</span></article>
+      <article class="card"><strong>Language</strong><span>हिंदी एवं अंग्रेज़ी</span></article>
+      <article class="card"><strong>Bihar Special</strong><span>बिहार का इतिहास, भूगोल एवं सामान्य ज्ञान</span></article>
+      <article class="card"><strong>Current Affairs</strong><span>समसामयिक घटनाएँ एवं Static GK</span></article>
+      <article class="card"><strong>Subject Preparation</strong><span>कक्षा 9–10 / 11–12 के संबंधित विषय के अनुसार</span></article>
+    </div>
+    <p class="note">यह सामान्य विषय-परिचय है। वास्तविक syllabus और विषयवार पात्रता के लिए आधिकारिक BPSC notification देखें।</p>
+  </section>
+
+  <section class="section">
+    <h2>LOYAL Classroom</h2>
+    <p class="intro">यहाँ आगे अधिकृत class schedule, study notes, practice tests और revision material जोड़ा जा सकता है।</p>
+    <p class="note">Thumbnail पर ₹899 का offer price छपा है। वर्तमान फीस और admission status की पुष्टि संबंधित अधिकृत स्रोत से करें।</p>
+  </section>
+</main>
+
+<footer>
+  <strong>LOYAL GLOBAL STUDIES ♥</strong>
+  <p>LEARN • GROW • ACHIEVE</p>
+  <small>© 2026 LOYAL Global Studies</small>
+  <p>DEVELOPER BY 💓 LOYAL JI 💓</p>
+</footer>
+</body>
+</html>
