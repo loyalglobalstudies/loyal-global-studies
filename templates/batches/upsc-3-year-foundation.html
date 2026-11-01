@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071832">
+  <meta name="description" content="UPSC 3 Year Foundation Batch — Hindi Medium | LOYAL GLOBAL STUDIES">
+  <title>UPSC 3 Year Foundation Batch | LOYAL GLOBAL STUDIES</title>
+  <style>
+    *{box-sizing:border-box}
+    body{margin:0;background:#061329;color:#f8fafc;font-family:system-ui,Arial,sans-serif}
+    a{color:inherit;text-decoration:none}
+    .topbar{padding:17px 5%;background:#030a17;border-bottom:1px solid #34435e;display:flex;justify-content:space-between;align-items:center;gap:12px}
+    .brand{font-weight:900;color:#ffdc66;letter-spacing:.5px}
+    .brand small{display:block;color:#b8c5d9;font-size:10px;letter-spacing:2px;margin-top:4px}
+    .back{color:#ffdc66;font-size:13px}
+    .wrap{max-width:1100px;margin:auto;padding:24px 15px 55px}
+    .hero{overflow:hidden;border:1px solid #b18b36;border-radius:22px;background:linear-gradient(145deg,#102b50,#071329 70%);box-shadow:0 18px 55px #0008}
+    .hero img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;object-position:center}
+    .hero-content{padding:clamp(20px,4vw,38px)}
+    .tag{display:inline-block;background:#ffd45a;color:#101827;border-radius:7px;padding:7px 12px;font-weight:900;font-size:12px;letter-spacing:1px}
+    h1{font-size:clamp(27px,5vw,48px);line-height:1.2;margin:17px 0 10px;color:#fff}
+    h1 span{color:#ffda68}
+    .subtitle{color:#d4deee;font-size:clamp(15px,2.5vw,19px);line-height:1.7}
+    .chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:20px}
+    .chips span{border:1px solid #9d7d37;color:#ffe18b;background:#ffd45a12;border-radius:30px;padding:8px 12px;font-size:12px;font-weight:800}
+    .section{margin-top:24px;padding:clamp(19px,3vw,28px);border:1px solid #334766;border-radius:18px;background:linear-gradient(145deg,#102442,#09162b)}
+    .section h2{margin:0 0 15px;color:#ffdc66;font-size:clamp(21px,3vw,27px)}
+    .section-intro{color:#cbd5e1;line-height:1.7}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:13px;margin-top:18px}
+    .card{padding:17px;border:1px solid #465779;border-radius:14px;background:linear-gradient(145deg,#142d4e,#0a172c);min-width:0}
+    .card strong{display:block;font-size:16px;color:#fff;line-height:1.5}
+    .card span{display:inline-block;margin-top:9px;padding:6px 9px;border:1px solid #806b36;border-radius:8px;background:#ffd85b12;color:#ffe28a;font-size:12px;line-height:1.5}
+    .year-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:14px;margin-top:18px}
+    .year-card{padding:19px;border-radius:14px;border:1px solid #806b36;background:#0b1b34}
+    .year-card h3{margin:0 0 10px;color:#ffdc66}
+    .year-card p{margin:0;color:#d5deeb;line-height:1.7;font-size:14px}
+    .note{color:#aebbd0;font-size:12px;line-height:1.7;margin-top:16px}
+    footer{text-align:center;padding:25px 12px;border-top:1px solid #26334b;color:#aebbd0;font-size:12px}
+    footer strong{color:#ffd85b}
+    @media(max-width:480px){.topbar{padding:15px}.section{padding:17px}.card{padding:15px}}
+  </style>
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="/">
+    LOYAL GLOBAL STUDIES
+    <small>LEARN • GROW • ACHIEVE</small>
+  </a>
+  <a class="back" href="/">← Home</a>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <img src="{{ url_for('static', filename='images/upsc-3-year-foundation.jpg') }}"
+         alt="UPSC आह्वान बैच — तीन वर्षीय हिंदी माध्यम फाउंडेशन कोर्स">
+    <div class="hero-content">
+      <span class="tag">✦ THREE YEAR FOUNDATION ✦</span>
+      <h1>UPSC <span>3 Year Foundation</span> Batch</h1>
+      <p class="subtitle">हिंदी माध्यम | Civil Services Examination की व्यवस्थित तैयारी</p>
+      <div class="chips">
+        <span>3 Year Course</span>
+        <span>Hindi Medium</span>
+        <span>GS Foundation</span>
+        <span>Prelims + Mains</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Course Curriculum &amp; Syllabus</h2>
+    <p class="section-intro">तीन वर्षों में आधारभूत अध्ययन से लेकर UPSC Prelims, Mains और उत्तर लेखन तक की तैयारी के लिए विषयवार पाठ्यक्रम।</p>
+    <div class="year-grid">
+      <article class="year-card">
+        <h3>Year 1 — Foundation</h3>
+        <p>NCERT History, Geography, Indian Polity, Economics, General Science, Basic Environment और प्रारंभिक गणितीय एवं तार्किक क्षमता।</p>
+      </article>
+      <article class="year-card">
+        <h3>Year 2 — Core GS</h3>
+        <p>Advanced History, Indian &amp; World Geography, Constitution, Governance, Economy, Environment, Science &amp; Technology और Current Affairs।</p>
+      </article>
+      <article class="year-card">
+        <h3>Year 3 — Exam Preparation</h3>
+        <p>Prelims GS, CSAT, Mains GS-I से GS-IV, Essay, Ethics, Answer Writing, Revision और Mock Test Practice।</p>
+      </article>
+    </div>
+    <p class="note">यह LOYAL Global Studies द्वारा तैयार किया गया विषयवार अध्ययन ढाँचा है; इसे किसी आधिकारिक KGS timetable या पूर्ण सत्यापित batch schedule के रूप में न समझें।</p>
+  </section>
+
+  <section class="section">
+    <h2>Faculty — Teacher-wise Subjects</h2>
+    <div class="grid">
+      <article class="card"><strong>Khan Sir</strong><span>General Studies / Foundation</span></article>
+      <article class="card"><strong>Dharmendra Kumar Sir</strong><span>Ethics &amp; Essay</span></article>
+      <article class="card"><strong>Gaurav Sir</strong><span>Quantitative Aptitude / CSAT Maths</span></article>
+      <article class="card"><strong>Arun Sir</strong><span>Indian Polity</span></article>
+      <article class="card"><strong>Shubham Gupta Sir</strong><span>Geography / History (NCERT)</span></article>
+      <article class="card"><strong>Dr. Bharat Sir</strong><span>Economics</span></article>
+      <article class="card"><strong>Sushant Sharma Sir</strong><span>Science</span></article>
+      <article class="card"><strong>V. K. Mishra Sir</strong><span>Geography (NCERT)</span></article>
+      <article class="card"><strong>Sanjeev Tiwari Sir</strong><span>CSAT Reasoning</span></article>
+      <article class="card"><strong>Kinshuk Sir</strong><span>Current Affairs</span></article>
+    </div>
+    <p class="note">Faculty नाम और विषय उपलब्ध course/curriculum जानकारी पर आधारित हैं। अलग-अलग course listings में faculty विवरण भिन्न हो सकते हैं; सभी नामों की इस exact batch में वर्तमान नियुक्ति स्वतंत्र रूप से सत्यापित नहीं है।</p>
+  </section>
+
+  <section class="section">
+    <h2>LOYAL Batch Classroom</h2>
+    <p class="section-intro">इस सेक्शन में आगे चलकर अधिकृत class schedule, study notes, practice tests और revision material जोड़ा जा सकता है। अभी कोई बाहरी batch या KGS link शामिल नहीं है।</p>
+  </section>
+</main>
+
+<footer>
+  <strong>LOYAL GLOBAL STUDIES ♥</strong>
+  <p>LEARN • GROW • ACHIEVE</p>
+  <small>© 2026 LOYAL Global Studies</small>
+  <p>DEVELOPER BY 💓 LOYAL JI 💓</p>
+</footer>
+</body>
+</html>

@@ -32,7 +32,13 @@ BATCHES = [
         "name": "RRB Station Master — रेल नायक",
         "description": "Online Hindi Medium Railway Batch 2026.",
         "category": "Railway Exams"
-    }
+    },
+    {
+        "slug": "upsc-3-year-foundation",
+        "name": "UPSC (3 Year) Foundation Batch — Hindi Medium",
+        "description": "Three-year Hindi-medium UPSC Civil Services foundation course.",
+        "category": "UPSC"
+    },
 ]
 
 @app.route("/")
