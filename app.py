@@ -40,6 +40,12 @@ BATCHES = [
         "category": "UPSC"
     },
     {
+        "slug": "uppsc-ro-aro-2026",
+        "name": "UPPSC RO/ARO 2026 — Pre + Mains Foundation",
+        "description": "Prelims and Mains foundation preparation for UPPSC RO/ARO.",
+        "category": "State Exams"
+    },
+    {
         "slug": "bpsc-tre-4",
         "name": "BPSC TRE 4.0 — Class 9–10 & 11–12",
         "description": "Bilingual Bihar teacher recruitment exam preparation.",
