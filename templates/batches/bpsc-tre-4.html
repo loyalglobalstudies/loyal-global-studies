@@ -96,11 +96,697 @@
     <p class="note">यह सामान्य विषय-परिचय है। वास्तविक syllabus और विषयवार पात्रता के लिए आधिकारिक BPSC notification देखें।</p>
   </section>
 
-  <section class="section">
-    <h2>LOYAL Classroom</h2>
-    <p class="intro">यहाँ आगे अधिकृत class schedule, study notes, practice tests और revision material जोड़ा जा सकता है।</p>
-    <p class="note">Thumbnail पर ₹899 का offer price छपा है। वर्तमान फीस और admission status की पुष्टि संबंधित अधिकृत स्रोत से करें।</p>
-  </section>
+
+<section class="section" id="loyal-classroom">
+  <h2>✦ LOYAL Premium Video Classroom</h2>
+  <p class="intro">
+    BPSC TRE 4.0 | Class 9–10 & 11–12.
+    अपनी पसंद का subject चुनें और lectures वेबसाइट पर देखें।
+  </p>
+
+  <div class="class-stats">
+    <div><strong>04</strong><span>Subjects</span></div>
+    <div><strong>60</strong><span>Classes</span></div>
+    <div><strong>24×7</strong><span>Access</span></div>
+  </div>
+
+  <div class="classroom-layout">
+    <aside class="subject-panel">
+      <h3>📚 SUBJECT LIBRARY</h3>
+      <div id="subjectFolders"></div>
+    </aside>
+
+    <div class="lecture-panel">
+      <div class="lecture-heading">
+        <div>
+          <span class="live-tag">LOYAL CLASSROOM</span>
+          <h3 id="subjectTitle">Select a Subject</h3>
+          <p id="teacherTitle">Teacher-wise Lecture Library</p>
+        </div>
+        <span id="lectureCount" class="lecture-count">60 Classes</span>
+      </div>
+
+      <input id="lectureSearch" class="lecture-search"
+        type="search" placeholder="🔎 Search lectures...">
+
+      <div class="video-container">
+        <div class="video-placeholder" id="videoPlaceholder">
+          <span>▶</span>
+          <strong>Welcome to LOYAL Classroom</strong>
+          <small>Select a subject and lecture to begin</small>
+        </div>
+        <iframe id="classVideo"
+          title="LOYAL BPSC TRE Classroom"
+          src="about:blank"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+          style="display:none">
+        </iframe>
+      </div>
+
+      <div class="now-playing">
+        <div>
+          <small>NOW PLAYING</small>
+          <strong id="nowPlaying">No lecture selected</strong>
+        </div>
+        <button id="completeBtn" type="button">✓ Mark Completed</button>
+      </div>
+
+      <div class="video-controls">
+        <button id="previousBtn" type="button">← Previous</button>
+        <button id="nextBtn" type="button">Next Lecture →</button>
+      </div>
+
+      <div class="lecture-list-heading">
+        <h3>Lecture List</h3>
+        <span id="visibleCount"></span>
+      </div>
+      <div id="lectureList" class="lecture-list"></div>
+
+      <div class="download-panel">
+        <h3>📥 Study Material & Downloads</h3>
+        <p>
+          Authorized PDF notes, worksheets और study material
+          यहाँ उपलब्ध कराए जा सकते हैं।
+        </p>
+        <div id="materialList">
+          <span>Study materials will be added when available.</span>
+        </div>
+      </div>
+
+      <p class="classroom-note">
+        Videos YouTube के privacy-enhanced embedded player में चलते हैं।
+        Playback creator की embedding permissions और YouTube availability
+        पर निर्भर करेगा। यह सुविधा YouTube वीडियो डाउनलोड नहीं करती।
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+#loyal-classroom .class-stats{
+ display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:20px 0
+}
+#loyal-classroom .class-stats div{
+ background:#09172c;border:1px solid #806b36;border-radius:13px;
+ padding:14px;text-align:center
+}
+#loyal-classroom .class-stats strong{
+ display:block;color:#ffdc66;font-size:23px
+}
+#loyal-classroom .class-stats span{
+ color:#b8c5d9;font-size:12px
+}
+#loyal-classroom .classroom-layout{
+ display:grid;grid-template-columns:260px minmax(0,1fr);gap:15px;margin-top:20px
+}
+#loyal-classroom .subject-panel,
+#loyal-classroom .lecture-panel{
+ background:#07172d;border:1px solid #344766;border-radius:15px;
+ padding:15px;min-width:0
+}
+#loyal-classroom h3{color:#ffdc66;margin:8px 0 15px}
+#loyal-classroom .folder-btn,
+#loyal-classroom .lecture-btn{
+ width:100%;display:flex;justify-content:space-between;align-items:center;
+ gap:8px;text-align:left;padding:13px;margin:7px 0;
+ border:1px solid #405574;border-radius:10px;
+ background:#112744;color:#fff;cursor:pointer;font:inherit
+}
+#loyal-classroom .folder-btn.active,
+#loyal-classroom .lecture-btn.active{
+ border-color:#ffdc66;background:#283a4f
+}
+#loyal-classroom .folder-btn small{
+ color:#ffdc66;font-size:11px
+}
+#loyal-classroom .lecture-heading{
+ display:flex;justify-content:space-between;gap:10px;align-items:center
+}
+#loyal-classroom .lecture-heading h3{margin:7px 0}
+#loyal-classroom .lecture-heading p{color:#aebbd0;font-size:13px}
+#loyal-classroom .live-tag{
+ color:#ffdc66;font-size:10px;letter-spacing:1px;font-weight:900
+}
+#loyal-classroom .lecture-count{
+ background:#263b55;color:#ffdc66;padding:8px;border-radius:8px;font-size:11px
+}
+#loyal-classroom .lecture-search{
+ width:100%;padding:13px;background:#09172c;color:#fff;
+ border:1px solid #526582;border-radius:10px;margin:12px 0;
+ font:inherit
+}
+#loyal-classroom .video-container{
+ position:relative;width:100%;aspect-ratio:16/9;
+ background:#000;border:1px solid #526582;border-radius:12px;overflow:hidden
+}
+#loyal-classroom .video-container iframe{
+ width:100%;height:100%;border:0;position:absolute;inset:0
+}
+#loyal-classroom .video-placeholder{
+ width:100%;height:100%;display:flex;flex-direction:column;
+ align-items:center;justify-content:center;gap:10px;color:#cbd5e1
+}
+#loyal-classroom .video-placeholder span{
+ color:#ffdc66;font-size:42px
+}
+#loyal-classroom .video-placeholder strong{color:#fff}
+#loyal-classroom .video-placeholder small{font-size:12px}
+#loyal-classroom .now-playing{
+ display:flex;justify-content:space-between;align-items:center;
+ gap:10px;padding:14px 0
+}
+#loyal-classroom .now-playing small{
+ display:block;color:#aebbd0;font-size:10px;margin-bottom:5px
+}
+#loyal-classroom .now-playing strong{font-size:13px;color:#fff}
+#loyal-classroom button{
+ font:inherit
+}
+#loyal-classroom .now-playing button,
+#loyal-classroom .video-controls button{
+ background:#263d59;color:#ffdc66;border:1px solid #806b36;
+ border-radius:9px;padding:10px;cursor:pointer;font-size:12px
+}
+#loyal-classroom .video-controls{
+ display:flex;justify-content:space-between;gap:10px
+}
+#loyal-classroom .lecture-list-heading{
+ display:flex;justify-content:space-between;align-items:center;margin-top:18px
+}
+#loyal-classroom .lecture-list-heading h3{margin-bottom:8px}
+#loyal-classroom .lecture-list-heading span{color:#aebbd0;font-size:11px}
+#loyal-classroom .lecture-btn{
+ font-size:13px;padding:12px
+}
+#loyal-classroom .lecture-btn small{
+ color:#ffdc66;font-size:11px
+}
+#loyal-classroom .download-panel{
+ margin-top:22px;padding:16px;border:1px solid #806b36;
+ background:#102442;border-radius:12px
+}
+#loyal-classroom .download-panel p,
+#loyal-classroom .download-panel span,
+#loyal-classroom .classroom-note{
+ color:#b8c5d9;font-size:12px;line-height:1.7
+}
+#loyal-classroom .classroom-note{margin-top:18px}
+@media(max-width:700px){
+ #loyal-classroom .classroom-layout{grid-template-columns:1fr}
+ #loyal-classroom .subject-panel{padding:12px}
+ #loyal-classroom .subject-panel>div{display:grid;grid-template-columns:1fr 1fr;gap:5px}
+ #loyal-classroom .folder-btn{font-size:12px;padding:10px}
+}
+@media(max-width:390px){
+ #loyal-classroom .now-playing{align-items:flex-start;flex-direction:column}
+ #loyal-classroom .lecture-heading{align-items:flex-start;flex-direction:column}
+}
+
+/* LOYAL ROYAL PLAYER UPGRADE */
+#loyal-classroom {
+  scroll-margin-top: 20px;
+}
+#loyal-classroom .classroom-layout {
+  grid-template-columns: 250px minmax(0,1fr);
+  gap: 18px;
+  align-items: start;
+}
+#loyal-classroom .subject-panel {
+  position: sticky;
+  top: 16px;
+  box-shadow: 0 12px 35px rgba(0,0,0,.2);
+}
+#loyal-classroom .lecture-panel {
+  display: grid;
+  grid-template-columns: minmax(0,1.45fr) minmax(230px,.8fr);
+  grid-template-areas:
+    "heading heading"
+    "progress progress"
+    "player search"
+    "player listhead"
+    "player playlist"
+    "materials materials"
+    "note note";
+  gap: 12px;
+  align-items: start;
+  box-shadow: 0 14px 38px rgba(0,0,0,.22);
+}
+#loyal-classroom .lecture-heading { grid-area: heading; }
+#loyal-classroom .subject-progress { grid-area: progress; }
+#loyal-classroom .lecture-search { grid-area: search; margin: 0; }
+#loyal-classroom .video-container { grid-area: player; }
+#loyal-classroom .now-playing {
+  grid-area: player;
+  align-self: end;
+  margin-top: calc(56.25% + 12px);
+}
+#loyal-classroom .video-controls {
+  grid-area: player;
+  align-self: end;
+  margin-top: calc(56.25% + 72px);
+}
+#loyal-classroom .lecture-list-heading { grid-area: listhead; margin-top: 0; }
+#loyal-classroom .lecture-list {
+  grid-area: playlist;
+  max-height: 390px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+#loyal-classroom .download-panel { grid-area: materials; }
+#loyal-classroom .classroom-note { grid-area: note; }
+
+#loyal-classroom .subject-progress {
+  padding: 13px 15px;
+  border: 1px solid rgba(255,220,102,.35);
+  border-radius: 12px;
+  background: linear-gradient(110deg,#102846,#09172c);
+}
+#loyal-classroom .subject-progress-top {
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+  color:#dce6f4;
+  font-size:12px;
+  margin-bottom:9px;
+}
+#loyal-classroom .subject-progress-top strong { color:#ffdc66; }
+#loyal-classroom .progress-track {
+  height:7px;
+  overflow:hidden;
+  border-radius:20px;
+  background:#263b55;
+}
+#loyal-classroom .progress-fill {
+  width:0%;
+  height:100%;
+  border-radius:20px;
+  background:linear-gradient(90deg,#c99a2e,#ffe58a);
+  transition:width .25s ease;
+}
+#loyal-classroom .folder-btn,
+#loyal-classroom .lecture-btn {
+  transition:border-color .18s ease,background .18s ease,transform .18s ease;
+}
+#loyal-classroom .folder-btn:hover,
+#loyal-classroom .lecture-btn:hover {
+  border-color:#ffdc66;
+  background:#1a3658;
+}
+#loyal-classroom .lecture-btn.active {
+  border-color:#ffdc66;
+  background:linear-gradient(100deg,#34465b,#172c47);
+  box-shadow:inset 3px 0 #ffdc66;
+}
+#loyal-classroom .lecture-list::-webkit-scrollbar { width:5px; }
+#loyal-classroom .lecture-list::-webkit-scrollbar-thumb {
+  background:#806b36;
+  border-radius:10px;
+}
+#loyal-classroom .lecture-search:focus {
+  outline:2px solid #ffdc66;
+  outline-offset:2px;
+}
+#loyal-classroom .video-container {
+  border-color:#806b36;
+  box-shadow:0 12px 28px rgba(0,0,0,.3);
+}
+#loyal-classroom .video-controls button:hover,
+#loyal-classroom .now-playing button:hover {
+  background:#3a506c;
+}
+@media(max-width:900px) {
+  #loyal-classroom .classroom-layout {
+    grid-template-columns:1fr;
+  }
+  #loyal-classroom .subject-panel { position:static; }
+}
+@media(max-width:700px) {
+  #loyal-classroom .lecture-panel {
+    grid-template-columns:minmax(0,1fr);
+    grid-template-areas:
+      "heading"
+      "progress"
+      "search"
+      "player"
+      "listhead"
+      "playlist"
+      "materials"
+      "note";
+  }
+  #loyal-classroom .video-container,
+  #loyal-classroom .now-playing,
+  #loyal-classroom .video-controls {
+    grid-area:auto;
+    margin-top:0;
+  }
+  #loyal-classroom .lecture-list {
+    max-height:340px;
+  }
+  #loyal-classroom .classroom-layout { gap:12px; }
+}
+@media(prefers-reduced-motion:reduce) {
+  #loyal-classroom * { transition:none !important; }
+}
+
+
+/* LOYAL ROYAL PREMIUM POPUP PLAYER */
+#loyal-player-backdrop[hidden],
+#loyal-player-close[hidden] {
+  display: none !important;
+}
+#loyal-player-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 99990;
+  background: rgba(2, 8, 23, .84);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+#loyal-player-close {
+  position: fixed;
+  z-index: 100002;
+  top: max(12px, env(safe-area-inset-top));
+  right: max(12px, env(safe-area-inset-right));
+  width: 46px;
+  height: 46px;
+  border: 1px solid #ffd45a;
+  border-radius: 50%;
+  background: #102746;
+  color: #ffdf78;
+  font-size: 29px;
+  font-weight: 900;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 5px 25px #0009;
+}
+.video-container.loyal-popup-active,
+.video-screen.loyal-popup-active {
+  position: fixed !important;
+  top: 50% !important;
+  left: 50% !important;
+  right: auto !important;
+  bottom: auto !important;
+  transform: translate(-50%, -50%) !important;
+  width: min(94vw, 1100px) !important;
+  height: auto !important;
+  max-height: 82vh !important;
+  aspect-ratio: 16 / 9 !important;
+  z-index: 100001 !important;
+  margin: 0 !important;
+  border: 2px solid #ffd45a !important;
+  border-radius: 14px !important;
+  background: #000 !important;
+  overflow: hidden !important;
+  box-shadow: 0 0 35px #ffd45a55, 0 20px 70px #000 !important;
+}
+.video-container.loyal-popup-active iframe,
+.video-screen.loyal-popup-active iframe {
+  width: 100% !important;
+  height: 100% !important;
+}
+body.loyal-popup-open {
+  overflow: hidden !important;
+}
+@media (max-width: 600px) {
+  .video-container.loyal-popup-active,
+  .video-screen.loyal-popup-active {
+    width: 96vw !important;
+    border-radius: 9px !important;
+  }
+  #loyal-player-close {
+    width: 42px;
+    height: 42px;
+  }
+}
+@media (max-height: 480px) {
+  .video-container.loyal-popup-active,
+  .video-screen.loyal-popup-active {
+    width: min(88vw, 900px) !important;
+    max-height: 78vh !important;
+  }
+}
+
+</style>
+
+<div id="loyal-player-backdrop" hidden aria-hidden="true"></div>
+<button id="loyal-player-close" type="button"
+        aria-label="Close video player" title="Close Player" hidden>×</button>
+<script>
+(function(){
+"use strict";
+
+const subjects = [{"id": "history", "name": "History", "teacher": "Anishek Sir", "ids": ["K_FU0f_shyg", "m3N_Z4sf0Tc", "btooBEs4o6Q", "fv-PYXoF07A", "RsvfnLnGHO8", "v7U4dzsD31s", "n7ozcE1tel4", "EHfj830jKc8", "6fiaidAwDTQ", "KAZrEuzII80", "Wi1hIb5W2uU", "lVMRSSWknto", "2RaK2w4Gbbo", "XpFV4L0Rzz4"]}, {"id": "static-gk", "name": "Static GK", "teacher": "Durgesh Sir", "ids": ["cSWQVvoJK7c", "GF4Hk-Gc-_w", "QJIXNaN40Yg", "l8k8DaAa398", "kYVBWZ93n4U", "dWz5SWAq-YM", "oGRXupe54YU", "CiVXSRI5uNQ", "KVRFyDgLtY4", "T-8jWLN8KEQ", "GFg5X37OHjk", "S-QNCmRWW4M", "Ax61qlsEC_M", "QllnqFSQGOs", "G6eDO87FujM"]}, {"id": "biology", "name": "General Science Biology", "teacher": "Keshari Sir", "ids": ["2TJo4sG82x8", "3dWsvvdr95s", "RXb5WcfDyUs", "jM6MJmNBl0s", "YFIJ40zdHKY", "KRbY5TizzJ4", "ZI1J8MEMHjA", "PmOygqV1Nbc", "mpqZnkMD_Kw", "HJJhatCKeGg", "EiQk7Jv7WmE", "YQlZngHt4RU", "69Z5gnw9XJk", "Hri9f2OZrhU", "qiURLp21AHk", "CwFkoIM3_tg", "riPTG8VraY4", "tZv5fdeGSas", "GvBDW2Mg2k0", "CsWrSeJoHzE"]}, {"id": "hindi", "name": "Hindi", "teacher": "Navneet Sir", "ids": ["Ue7N7ZU3heo", "Bxidxd-Hywg", "OqNukFl6doo", "EvpQKV12FEo", "hvYp-8xg80U", "gDzPT1cqEyU", "RCXw65H_S6k", "NHFUVKzPwiE", "rJxzA5ngeOw", "jP1K17siIHw", "iFjo0cQd4Eo"]}];
+
+const folders = document.getElementById("subjectFolders");
+const list = document.getElementById("lectureList");
+const frame = document.getElementById("classVideo");
+const placeholder = document.getElementById("videoPlaceholder");
+const search = document.getElementById("lectureSearch");
+
+const title = document.getElementById("subjectTitle");
+const teacher = document.getElementById("teacherTitle");
+const playing = document.getElementById("nowPlaying");
+const count = document.getElementById("lectureCount");
+const visible = document.getElementById("visibleCount");
+
+const progressBox = document.createElement("div");
+progressBox.className = "subject-progress";
+progressBox.innerHTML =
+ '<div class="subject-progress-top">' +
+ '<span>Subject completion</span><strong id="subjectProgressText">0%</strong></div>' +
+ '<div class="progress-track"><div class="progress-fill" id="subjectProgressFill"></div></div>';
+
+const classroomHeading = document.querySelector("#loyal-classroom .lecture-heading");
+if (classroomHeading) classroomHeading.insertAdjacentElement("afterend", progressBox);
+
+function updateProgress(){
+ const subject = subjects.find(s => s.id === currentSubject);
+ if(!subject) return;
+
+ const completed = state.completed || {};
+ const done = subject.ids.reduce((total, id, index) =>
+   total + (completed[subject.id + ":" + index] ? 1 : 0), 0);
+ const percent = Math.round(done / subject.ids.length * 100);
+
+ const text = document.getElementById("subjectProgressText");
+ const fill = document.getElementById("subjectProgressFill");
+
+ if(text) text.textContent = done + "/" + subject.ids.length + " · " + percent + "%";
+ if(fill) fill.style.width = percent + "%";
+}
+
+
+const storageKey = "loyal_bpsc_tre4_classroom_v1";
+let state = {};
+
+try {
+ state = JSON.parse(localStorage.getItem(storageKey) || "{}");
+} catch(e) { state = {}; }
+
+let currentSubject = null;
+let currentIndex = -1;
+
+function save(){
+ try { localStorage.setItem(storageKey, JSON.stringify(state)); }
+ catch(e) {}
+}
+
+function getName(index){
+ return index === 0 ? "Orientation Class" : "Lecture " + String(index).padStart(2,"0");
+}
+
+function renderFolders(){
+ folders.innerHTML = "";
+
+ subjects.forEach(subject=>{
+  const button = document.createElement("button");
+  button.type = "button";
+  button.className = "folder-btn";
+  button.dataset.subject = subject.id;
+
+  const text = document.createElement("span");
+  text.textContent = subject.name + " · " + subject.teacher;
+
+  const badge = document.createElement("small");
+  badge.textContent = subject.ids.length + " Classes";
+
+  button.append(text,badge);
+  button.addEventListener("click",()=>selectSubject(subject.id));
+  folders.appendChild(button);
+ });
+}
+
+function renderList(){
+ updateProgress();
+ if(!currentSubject) return;
+
+ const subject = subjects.find(s=>s.id===currentSubject);
+ const query = search.value.trim().toLowerCase();
+
+ const completed = state.completed || {};
+ list.innerHTML = "";
+
+ const filtered = subject.ids
+  .map((id,index)=>({id,index,name:getName(index)}))
+  .filter(item=>item.name.toLowerCase().includes(query));
+
+ filtered.forEach(item=>{
+  const button = document.createElement("button");
+  button.type = "button";
+  button.className = "lecture-btn" +
+   (currentIndex===item.index ? " active" : "");
+
+  const name = document.createElement("span");
+  name.textContent = (item.index===0 ? "🎓 " : "▶ ") + item.name;
+
+  const badge = document.createElement("small");
+  badge.textContent = completed[subject.id+":"+item.index]
+   ? "✓ Completed" : "Watch";
+
+  button.append(name,badge);
+  button.addEventListener("click",()=>play(item.index));
+  list.appendChild(button);
+ });
+
+ visible.textContent = filtered.length + " lectures";
+}
+
+function selectSubject(id){
+ currentSubject=id;
+ currentIndex=-1;
+ search.value="";
+
+ const subject=subjects.find(s=>s.id===id);
+
+ title.textContent=subject.name;
+ teacher.textContent="Faculty: "+subject.teacher;
+ count.textContent=subject.ids.length+" Classes";
+
+ document.querySelectorAll(".folder-btn").forEach(button=>{
+  button.classList.toggle("active",button.dataset.subject===id);
+ });
+
+ renderList();
+
+ const last=state.last && state.last.subject===id
+  ? state.last.index : -1;
+
+ if(last>=0 && last<subject.ids.length){
+  play(last);
+ }else{
+  frame.src="about:blank";
+  frame.style.display="none";
+  placeholder.style.display="flex";
+  playing.textContent="Select a lecture";
+ }
+}
+
+function play(index){
+ const subject=subjects.find(s=>s.id===currentSubject);
+ if(!subject || !subject.ids[index]) return;
+
+ currentIndex=index;
+
+ const id=subject.ids[index];
+
+ frame.src="https://www.youtube-nocookie.com/embed/"+
+  encodeURIComponent(id)+"?rel=0&modestbranding=1";
+
+ frame.style.display="block";
+ placeholder.style.display="none";
+
+ playing.textContent=subject.name+" — "+getName(index);
+
+ state.last={subject:currentSubject,index:index};
+ save();
+
+ renderList();
+ window.loyalOpenPopup(document.querySelector("#loyal-classroom .video-container"));
+
+}
+
+document.getElementById("previousBtn").addEventListener("click",()=>{
+ if(currentIndex>0) play(currentIndex-1);
+});
+
+document.getElementById("nextBtn").addEventListener("click",()=>{
+ const subject=subjects.find(s=>s.id===currentSubject);
+ if(subject && currentIndex>=0 && currentIndex<subject.ids.length-1){
+  play(currentIndex+1);
+ }
+});
+
+document.getElementById("completeBtn").addEventListener("click",()=>{
+ if(currentIndex<0 || !currentSubject) return;
+
+ state.completed=state.completed||{};
+ state.completed[currentSubject+":"+currentIndex]=true;
+ save();
+ renderList();
+ updateProgress();
+
+ document.getElementById("completeBtn").textContent="✓ Completed";
+});
+
+search.addEventListener("input",renderList);
+
+renderFolders();
+
+if(subjects.length) selectSubject(subjects[0].id);
+
+})();
+
+/* LOYAL ROYAL POPUP PLAYER CONTROLS */
+window.loyalOpenPopup = function(player) {
+  if (!player) return;
+  window.__loyalPopupActive = player;
+  player.classList.add("loyal-popup-active");
+  document.body.classList.add("loyal-popup-open");
+  document.getElementById("loyal-player-backdrop").hidden = false;
+  document.getElementById("loyal-player-close").hidden = false;
+};
+
+window.loyalClosePopup = function() {
+  var player = window.__loyalPopupActive;
+  if (!player) return;
+
+  var frame = player.querySelector("iframe");
+  if (frame) frame.src = "about:blank";
+
+  if (player.matches("#loyal-classroom .video-container")) {
+    var bpscFrame = document.getElementById("classVideo");
+    var bpscPlaceholder = document.getElementById("videoPlaceholder");
+    if (bpscFrame) bpscFrame.style.display = "none";
+    if (bpscPlaceholder) bpscPlaceholder.style.display = "flex";
+  } else if (player.classList.contains("video-screen")) {
+    player.innerHTML =
+      '<div class="video-placeholder"><div><b>▶ LOYAL CLASSROOM</b>' +
+      'Lecture band hai. Dobara play karne ke liye lecture select karein.</div></div>';
+  }
+
+  player.classList.remove("loyal-popup-active");
+  window.__loyalPopupActive = null;
+  document.body.classList.remove("loyal-popup-open");
+  document.getElementById("loyal-player-backdrop").hidden = true;
+  document.getElementById("loyal-player-close").hidden = true;
+};
+
+document.getElementById("loyal-player-close")
+  .addEventListener("click", window.loyalClosePopup);
+
+document.getElementById("loyal-player-backdrop")
+  .addEventListener("click", window.loyalClosePopup);
+
+document.addEventListener("keydown", function(event) {
+  if (event.key === "Escape" && window.__loyalPopupActive) {
+    window.loyalClosePopup();
+  }
+});
+
+</script>
+
 </main>
 
 <footer>
@@ -109,5 +795,8 @@
   <small>© 2026 LOYAL Global Studies</small>
   <p>DEVELOPER BY 💓 LOYAL JI 💓</p>
 </footer>
+
+
+
 </body>
 </html>

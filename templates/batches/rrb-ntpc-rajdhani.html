@@ -168,6 +168,255 @@
       .teacher-card strong { font-size: 15px; }
     }
 
+
+    /* LOYAL PREMIUM VIDEO CLASSROOM */
+    .video-library {
+      margin-top: 28px;
+      padding: 22px;
+      border: 1px solid #66552e;
+      border-radius: 20px;
+      background: linear-gradient(145deg,#102442,#071329);
+      box-shadow: 0 14px 35px #0005;
+    }
+    .video-heading {
+      color: #ffdc66;
+      font-size: clamp(22px,4vw,30px);
+      margin: 0 0 8px;
+    }
+    .video-subtitle {
+      color: #cbd5e1;
+      line-height: 1.6;
+      margin: 0 0 20px;
+    }
+    .video-teachers {
+      display: grid;
+      grid-template-columns: repeat(2,minmax(0,1fr));
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    .video-teacher-btn {
+      border: 1px solid #806b36;
+      border-radius: 12px;
+      background: #102442;
+      color: #f8fafc;
+      padding: 14px 10px;
+      font-weight: 800;
+      font-size: 14px;
+      cursor: pointer;
+      text-align: center;
+    }
+    .video-teacher-btn.active {
+      color: #071832;
+      background: linear-gradient(120deg,#ffe58a,#d9aa35);
+      border-color: #ffe58a;
+    }
+
+    /* TEACHER FOLDER INTERFACE */
+    .video-teachers {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(min(100%,230px),1fr));
+      gap: 14px;
+      margin: 20px 0;
+    }
+    .video-teacher-btn {
+      min-height: 105px;
+      padding: 18px;
+      border: 1px solid #806b36;
+      border-radius: 15px;
+      background: linear-gradient(145deg,#193455,#0a1930);
+      color: #ffe28a;
+      font-size: 16px;
+      font-weight: 900;
+      text-align: left;
+      cursor: pointer;
+      box-shadow: 0 8px 20px #0004;
+    }
+    .video-teacher-btn::before {
+      content: "📁";
+      display: block;
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+    .video-teacher-btn::after {
+      content: "Open Teacher Folder →";
+      display: block;
+      margin-top: 8px;
+      color: #cbd5e1;
+      font-size: 11px;
+      font-weight: 500;
+    }
+    .video-teacher-btn:active {
+      transform: scale(.98);
+      border-color: #ffd85b;
+    }
+    .all-teachers-btn {
+      display: block;
+      margin: 18px 0;
+      padding: 11px 16px;
+      border: 1px solid #806b36;
+      border-radius: 10px;
+      background: #142b49;
+      color: #ffe28a;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .video-player {
+      overflow: hidden;
+      border: 1px solid #806b36;
+      border-radius: 16px;
+      background: #020817;
+      box-shadow: 0 10px 30px #0006;
+    }
+    .video-screen {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16/9;
+      background: #020817;
+    }
+    .video-screen iframe {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      inset: 0;
+      border: 0;
+    }
+    .video-placeholder {
+      min-height: 190px;
+      height: 100%;
+      display: grid;
+      place-content: center;
+      text-align: center;
+      padding: 20px;
+      color: #dbe5f5;
+    }
+    .video-placeholder b {
+      display: block;
+      color: #ffdc66;
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    /* LOYAL VIDEO VIEWING CONTROLS */
+    .video-controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      padding: 12px;
+      background: #09172b;
+      border-top: 1px solid #34435e;
+    }
+    .video-control-btn {
+      flex: 1 1 105px;
+      min-height: 42px;
+      padding: 9px 12px;
+      border: 1px solid #806b36;
+      border-radius: 9px;
+      background: #142b49;
+      color: #ffe28a;
+      font-weight: 800;
+      font-size: 12px;
+      cursor: pointer;
+    }
+    .video-control-btn:active {
+      background: #263d5c;
+      transform: scale(.98);
+    }
+    .video-player.theatre-mode {
+      position: relative;
+      width: 100%;
+      border-color: #ffd85b;
+      box-shadow: 0 0 0 2px #ffd85b22, 0 15px 40px #0008;
+    }
+    .video-player:fullscreen {
+      width: 100%;
+      height: 100%;
+      background: #020817;
+      border: 0;
+      border-radius: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .video-player:fullscreen .video-screen {
+      flex: 1;
+      min-height: 0;
+      aspect-ratio: auto;
+    }
+    .video-player:fullscreen .video-controls {
+      flex: 0 0 auto;
+    }
+    .video-player:fullscreen .video-now {
+      flex: 0 0 auto;
+    }
+    @media (max-width:480px) {
+      .video-control-btn { flex: 1 1 42%; }
+    }
+
+    .video-now {
+      padding: 14px 16px;
+      color: #ffe28a;
+      font-weight: 800;
+      border-top: 1px solid #34435e;
+      overflow-wrap: anywhere;
+    }
+    .lecture-heading {
+      margin: 24px 0 12px;
+      color: #ffdc66;
+      font-size: 19px;
+    }
+    .lecture-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(min(100%,220px),1fr));
+      gap: 10px;
+    }
+    .lecture-btn {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+      text-align: left;
+      border: 1px solid #344765;
+      border-radius: 12px;
+      background: #0b1b33;
+      color: #f8fafc;
+      padding: 13px;
+      cursor: pointer;
+      font-size: 14px;
+      line-height: 1.45;
+    }
+    .lecture-btn.active {
+      border-color: #ffd85b;
+      background: #26344a;
+    }
+    .lecture-play {
+      flex: 0 0 34px;
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: #ffd85b;
+      color: #071832;
+      font-weight: 900;
+    }
+    .lecture-name {
+      min-width: 0;
+      overflow-wrap: anywhere;
+      font-weight: 700;
+    }
+    .video-note {
+      margin: 18px 0 0;
+      color: #aebbd0;
+      font-size: 12px;
+      line-height: 1.6;
+    }
+    @media(max-width:480px) {
+      .video-library { padding: 15px; }
+      .video-teachers { grid-template-columns: 1fr; }
+      .lecture-list { grid-template-columns: 1fr; }
+    }
+
     .empty {
       margin-top: 18px;
       padding: 18px;
@@ -184,7 +433,85 @@
       font-size: 12px;
     }
     footer strong { color: #ffd85b; }
-  </style>
+
+/* LOYAL ROYAL PREMIUM POPUP PLAYER */
+#loyal-player-backdrop[hidden],
+#loyal-player-close[hidden] {
+  display: none !important;
+}
+#loyal-player-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 99990;
+  background: rgba(2, 8, 23, .84);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+#loyal-player-close {
+  position: fixed;
+  z-index: 100002;
+  top: max(12px, env(safe-area-inset-top));
+  right: max(12px, env(safe-area-inset-right));
+  width: 46px;
+  height: 46px;
+  border: 1px solid #ffd45a;
+  border-radius: 50%;
+  background: #102746;
+  color: #ffdf78;
+  font-size: 29px;
+  font-weight: 900;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 5px 25px #0009;
+}
+.video-container.loyal-popup-active,
+.video-screen.loyal-popup-active {
+  position: fixed !important;
+  top: 50% !important;
+  left: 50% !important;
+  right: auto !important;
+  bottom: auto !important;
+  transform: translate(-50%, -50%) !important;
+  width: min(94vw, 1100px) !important;
+  height: auto !important;
+  max-height: 82vh !important;
+  aspect-ratio: 16 / 9 !important;
+  z-index: 100001 !important;
+  margin: 0 !important;
+  border: 2px solid #ffd45a !important;
+  border-radius: 14px !important;
+  background: #000 !important;
+  overflow: hidden !important;
+  box-shadow: 0 0 35px #ffd45a55, 0 20px 70px #000 !important;
+}
+.video-container.loyal-popup-active iframe,
+.video-screen.loyal-popup-active iframe {
+  width: 100% !important;
+  height: 100% !important;
+}
+body.loyal-popup-open {
+  overflow: hidden !important;
+}
+@media (max-width: 600px) {
+  .video-container.loyal-popup-active,
+  .video-screen.loyal-popup-active {
+    width: 96vw !important;
+    border-radius: 9px !important;
+  }
+  #loyal-player-close {
+    width: 42px;
+    height: 42px;
+  }
+}
+@media (max-height: 480px) {
+  .video-container.loyal-popup-active,
+  .video-screen.loyal-popup-active {
+    width: min(88vw, 900px) !important;
+    max-height: 78vh !important;
+  }
+}
+
+</style>
 </head>
 
 <body>
@@ -216,9 +543,9 @@
     <section class="notice">
       <h2>Batch Information</h2>
       <p>
-        RRB NTPC राजधानी एक्सप्रेस Batch 2026 की जानकारी के लिए यह
-        अलग batch page है। Class links अभी नहीं जोड़े गए हैं।
-        Classes उपलब्ध होने पर यहाँ केवल आपके दिए हुए links जोड़े जाएँगे।
+        RRB NTPC राजधानी एक्सप्रेस Batch 2026 के लिए teacher-wise
+        video classroom तैयार है। नीचे उपलब्ध lectures वेबसाइट के अंदर
+        ही चलाए जा सकते हैं।
       </p>
       <h2 style="margin-top:24px;color:#ffdc66">Teacher-wise Subjects</h2>
       <p style="color:#d7deeb;line-height:1.7">
@@ -244,6 +571,45 @@
         <article class="teacher-card"><strong>Amrita Ma'am</strong><span>Biology</span></article>
 
       </div>
+
+      <section class="video-library" id="loyal-video-library">
+        <h2 class="video-heading">✦ LOYAL Premium Video Classroom</h2>
+        <p class="video-subtitle">
+          RRB NTPC Graduate Level · Teacher-wise Classes · Learn at your own pace
+        </p>
+
+        <div class="video-teachers" id="videoTeachers">
+          <button class="video-teacher-btn active" type="button" data-teacher="kartik">
+            Kartik Singh Sir
+          </button>
+          <button class="video-teacher-btn" type="button" data-teacher="amit">
+            Amit Verma Sir · Maths
+          </button>
+        </div>
+
+        <div class="video-player">
+          <div class="video-screen" id="videoScreen">
+            <div class="video-placeholder">
+              <div>
+                <b>▶ LOYAL CLASSROOM</b>
+                Teacher select karke apna lecture play karein.
+              </div>
+            </div>
+          </div>
+          <div class="video-now" id="videoNow" aria-live="polite">
+            कोई lecture select नहीं किया गया है।
+          </div>
+        </div>
+
+        <h3 class="lecture-heading" id="lectureHeading">Kartik Singh Sir — Classes</h3>
+        <div class="lecture-list" id="lectureList"></div>
+
+        <p class="video-note">
+          Videos YouTube ke embedded player se chalte hain. Playback ke liye
+          internet connection aur YouTube ki embedding permission zaroori hai.
+        </p>
+      </section>
+
       <p class="empty" style="margin-top:18px">Classes coming soon — verified class links will be added when provided.</p>
     </section>
   </main>
@@ -253,5 +619,285 @@
     <p>DEVELOPER BY 💓 LOYAL JI 💓</p>
     © 2026 LOYAL GLOBAL STUDIES
   </footer>
+
+<div id="loyal-player-backdrop" hidden aria-hidden="true"></div>
+<button id="loyal-player-close" type="button"
+        aria-label="Close video player" title="Close Player" hidden>×</button>
+<script>
+(function () {
+  "use strict";
+
+  const teachers = {
+    kartik: {
+      name: "Kartik Singh Sir",
+      lectures: [
+        ["Introduction Class", "Lo9D6FBAbaw"],
+        ["Lecture 01", "5I9G1W-wb5U"],
+        ["Lecture 02", "JMjWC863mXI"],
+        ["Lecture 03", "NaN8SsTbcBI"],
+        ["Lecture 04", "m_SE5vVcXKU"],
+        ["Lecture 05", "wFoOUZI4p20"],
+        ["Lecture 06", "4vF6jY8UUKs"],
+        ["Lecture 07", "rwNbugnZluA"],
+        ["Lecture 08", "xZvad_wPRSg"]
+      ]
+    },
+    amit: {
+      name: "Amit Verma Sir",
+      lectures: [
+        ["Maths Lecture 01", "Z8pg7AIHloI"],
+        ["Maths Lecture 02", "SEIKNrzHIYc"],
+        ["Maths Lecture 03", "kpt3RclGZCs"],
+        ["Maths Lecture 04", "PDCR6SnORII"],
+        ["Maths Lecture 05", "47UNQs0LOyE"],
+        ["Maths Lecture 06", "ufgLLdiyJw0"],
+        ["Maths Lecture 07", "NoGjPGzuqy4"],
+        ["Maths Lecture 08", "lkF0gcpLMNo"],
+        ["Maths Lecture 09", "u90QC6jSgPo"],
+        ["Maths Lecture 10", "FznJ4JZwz20"]
+      ]
+    }
+  };
+
+  const folderArea = document.getElementById("videoTeachers");
+  const screen = document.getElementById("videoScreen");
+  const player = document.querySelector(".video-player");
+  const now = document.getElementById("videoNow");
+  const list = document.getElementById("lectureList");
+  const heading = document.getElementById("lectureHeading");
+
+  if (!folderArea || !screen || !player || !now || !list || !heading) return;
+
+  // Player controls: fullscreen, landscape, theatre and exit.
+  const toolbar = document.createElement("div");
+  toolbar.className = "video-controls";
+
+  function makeControl(label, action) {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "video-control-btn";
+    button.textContent = label;
+    button.addEventListener("click", action);
+    toolbar.appendChild(button);
+    return button;
+  }
+
+  const fullscreenButton = makeControl("⛶ Fullscreen", async function () {
+    try {
+      if (!document.fullscreenElement) {
+        await player.requestFullscreen();
+      } else {
+        await document.exitFullscreen();
+      }
+    } catch (error) {
+      now.textContent = "Fullscreen is not supported by this browser.";
+    }
+  });
+
+  const rotateButton = makeControl("↻ Rotate / Landscape", async function () {
+    try {
+      if (!document.fullscreenElement) {
+        await player.requestFullscreen();
+      }
+
+      if (screen.orientation && screen.orientation.lock) {
+        await screen.orientation.lock("landscape");
+        now.textContent = "Landscape mode enabled. Rotate button dobara dabakar normal mode mein aayein.";
+      } else {
+        now.textContent = "Landscape lock supported nahi hai. Phone ka Auto-rotate ON karke mobile ghumaayein.";
+      }
+    } catch (error) {
+      now.textContent = "Landscape lock browser ne allow nahi kiya. Auto-rotate ON karke phone ghumaayein.";
+    }
+  });
+
+  const theatreButton = makeControl("▣ Theatre Mode", function () {
+    player.classList.toggle("theatre-mode");
+    theatreButton.textContent = player.classList.contains("theatre-mode")
+      ? "▣ Exit Theatre"
+      : "▣ Theatre Mode";
+  });
+
+  const exitButton = makeControl("↩ Exit / Portrait", async function () {
+    try {
+      if (document.fullscreenElement) {
+        await document.exitFullscreen();
+      }
+    } catch (error) {}
+
+    try {
+      if (screen.orientation && screen.orientation.unlock) {
+        screen.orientation.unlock();
+      }
+    } catch (error) {}
+
+    player.classList.remove("theatre-mode");
+    theatreButton.textContent = "▣ Theatre Mode";
+    now.textContent = "Normal viewing mode.";
+  });
+
+  player.insertBefore(toolbar, now);
+
+  document.addEventListener("fullscreenchange", function () {
+    fullscreenButton.textContent = document.fullscreenElement
+      ? "⛶ Exit Fullscreen"
+      : "⛶ Fullscreen";
+
+    if (!document.fullscreenElement) {
+      try {
+        if (screen.orientation && screen.orientation.unlock) {
+          screen.orientation.unlock();
+        }
+      } catch (error) {}
+    }
+  });
+
+
+  const back = document.createElement("button");
+  back.type = "button";
+  back.className = "all-teachers-btn";
+  back.textContent = "← All Teachers";
+  back.hidden = true;
+  folderArea.after(back);
+
+  player.hidden = true;
+  heading.hidden = true;
+  list.hidden = true;
+
+  function openTeacher(key) {
+    const teacher = teachers[key];
+    if (!teacher) return;
+
+    folderArea.hidden = true;
+    back.hidden = false;
+    player.hidden = false;
+    heading.hidden = false;
+    list.hidden = false;
+
+    heading.textContent = "📂 " + teacher.name + " — Lectures";
+    now.textContent = teacher.name + " ka lecture select karein.";
+
+    screen.innerHTML =
+      '<div class="video-placeholder"><div><b>▶ LOYAL CLASSROOM</b>' +
+      teacher.name + ' ka lecture select karein.</div></div>';
+
+    list.replaceChildren();
+
+    teacher.lectures.forEach(function (lecture) {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "lecture-btn";
+
+      const play = document.createElement("span");
+      play.className = "lecture-play";
+      play.textContent = "▶";
+
+      const label = document.createElement("span");
+      label.className = "lecture-name";
+      label.textContent = lecture[0];
+
+      button.append(play, label);
+
+      button.addEventListener("click", function () {
+        const frame = document.createElement("iframe");
+        frame.src = "https://www.youtube-nocookie.com/embed/" +
+          encodeURIComponent(lecture[1]) + "?rel=0";
+        frame.title = teacher.name + " - " + lecture[0];
+        frame.allow =
+          "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+        frame.referrerPolicy = "strict-origin-when-cross-origin";
+        frame.allowFullscreen = true;
+
+        screen.replaceChildren(frame);
+        window.loyalOpenPopup(screen);
+        now.textContent = "▶ Now Playing: " + teacher.name + " — " + lecture[0];
+
+        list.querySelectorAll(".lecture-btn").forEach(function (item) {
+          item.classList.remove("active");
+        });
+        button.classList.add("active");
+      });
+
+      list.appendChild(button);
+    });
+
+    document.getElementById("loyal-video-library")
+      .scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  folderArea.querySelectorAll(".video-teacher-btn").forEach(function (button) {
+    button.addEventListener("click", function () {
+      openTeacher(button.dataset.teacher);
+    });
+  });
+
+  back.addEventListener("click", function () {
+    screen.innerHTML =
+      '<div class="video-placeholder"><div><b>📁 LOYAL CLASSROOM</b>' +
+      'Apne teacher ka folder kholein.</div></div>';
+
+    now.textContent = "अपना शिक्षक चुनें।";
+    folderArea.hidden = false;
+    back.hidden = true;
+    player.hidden = true;
+    heading.hidden = true;
+    list.hidden = true;
+
+    folderArea.scrollIntoView({ behavior: "smooth", block: "center" });
+  });
+
+/* LOYAL ROYAL POPUP PLAYER CONTROLS */
+window.loyalOpenPopup = function(player) {
+  if (!player) return;
+  window.__loyalPopupActive = player;
+  player.classList.add("loyal-popup-active");
+  document.body.classList.add("loyal-popup-open");
+  document.getElementById("loyal-player-backdrop").hidden = false;
+  document.getElementById("loyal-player-close").hidden = false;
+};
+
+window.loyalClosePopup = function() {
+  var player = window.__loyalPopupActive;
+  if (!player) return;
+
+  var frame = player.querySelector("iframe");
+  if (frame) frame.src = "about:blank";
+
+  if (player.matches("#loyal-classroom .video-container")) {
+    var bpscFrame = document.getElementById("classVideo");
+    var bpscPlaceholder = document.getElementById("videoPlaceholder");
+    if (bpscFrame) bpscFrame.style.display = "none";
+    if (bpscPlaceholder) bpscPlaceholder.style.display = "flex";
+  } else if (player.classList.contains("video-screen")) {
+    player.innerHTML =
+      '<div class="video-placeholder"><div><b>▶ LOYAL CLASSROOM</b>' +
+      'Lecture band hai. Dobara play karne ke liye lecture select karein.</div></div>';
+  }
+
+  player.classList.remove("loyal-popup-active");
+  window.__loyalPopupActive = null;
+  document.body.classList.remove("loyal-popup-open");
+  document.getElementById("loyal-player-backdrop").hidden = true;
+  document.getElementById("loyal-player-close").hidden = true;
+};
+
+document.getElementById("loyal-player-close")
+  .addEventListener("click", window.loyalClosePopup);
+
+document.getElementById("loyal-player-backdrop")
+  .addEventListener("click", window.loyalClosePopup);
+
+document.addEventListener("keydown", function(event) {
+  if (event.key === "Escape" && window.__loyalPopupActive) {
+    window.loyalClosePopup();
+  }
+});
+
+})();
+</script>
+
+
+
+
 </body>
 </html>
