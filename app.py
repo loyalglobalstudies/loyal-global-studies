@@ -51,6 +51,12 @@ BATCHES = [
         "description": "Bilingual Bihar teacher recruitment exam preparation.",
         "category": "Teaching Exams"
     },
+    {
+        "slug": "up-tgt-udan-science",
+        "name": "UP TGT उड़ान बैच (SCIENCE)",
+        "description": "Physics, Biology, Computer and Geography preparation.",
+        "category": "Teaching Exams"
+    },
 ]
 
 @app.route("/")
