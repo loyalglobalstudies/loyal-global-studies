@@ -1,57 +1,399 @@
 <!doctype html>
 <html lang="hi">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>RRB Station Master रेल नायक Batch 2026 | LOYAL GLOBAL STUDIES</title>
-  <meta name="description" content="RRB Station Master रेल नायक Batch 2026 — Online Hindi Medium Railway preparation.">
-  <style>
-    *{box-sizing:border-box}
-    body{margin:0;background:#071329;color:#f8fbff;font-family:system-ui,-apple-system,sans-serif}
-    .top{padding:16px 5%;background:#0b2141;border-bottom:1px solid #b99138}
-    .brand{color:#ffdc66;font-weight:900;text-decoration:none}
-    .wrap{width:min(100% - 28px,980px);margin:24px auto 50px}
-    .poster{display:block;width:100%;height:auto;max-height:560px;object-fit:contain;background:#102443;border-radius:18px;border:1px solid #c9a646}
-    .panel{margin-top:20px;padding:22px;border:1px solid #4b5d7a;border-radius:18px;background:linear-gradient(145deg,#12294b,#09162c)}
-    h1{font-size:clamp(25px,5vw,42px);line-height:1.2;margin:0 0 12px}
-    h2{color:#ffdc66;margin:0 0 12px}
-    .tag{display:inline-block;padding:7px 11px;margin:5px 5px 5px 0;border-radius:9px;background:#20395c;color:#fff}
-    .price{font-size:clamp(30px,6vw,44px);font-weight:900;color:#ffdc66}
-    .btn{display:inline-block;margin-top:12px;padding:13px 20px;border-radius:12px;background:#d92332;color:white;text-decoration:none;font-weight:900}
-    .muted{color:#cbd6e8;line-height:1.7}
-    .classes{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:12px}
-    .class-card{padding:16px;border:1px solid #465779;border-radius:13px;background:#102443}
-    footer{text-align:center;color:#aebbd0;padding:24px}
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RRB Station Master रेल नायक 2026 | LOYAL GLOBAL STUDIES</title>
+<meta name="description" content="RRB Station Master Rail Nayak 2026 teacher-wise video classroom.">
+<style>
+*{box-sizing:border-box}
+:root{--navy:#061832;--navy2:#10294c;--gold:#ffd45a;--white:#f8fbff}
+body{margin:0;background:var(--navy);color:var(--white);font-family:system-ui,-apple-system,sans-serif}
+body.modal-open{overflow:hidden}
+.top{position:sticky;top:0;z-index:20;padding:15px 5%;background:#0b2141;border-bottom:1px solid #b99138;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{color:var(--gold);font-weight:950;text-decoration:none;letter-spacing:.5px}
+.home{color:#fff;text-decoration:none;border:1px solid #637b9e;padding:8px 13px;border-radius:10px;font-size:13px}
+.wrap{width:min(100% - 26px,1050px);margin:22px auto 50px}
+.hero,.panel{padding:clamp(17px,4vw,26px);border:1px solid #405779;border-radius:19px;background:linear-gradient(145deg,#142e52,#09172d);margin-bottom:18px}
+.poster{display:block;width:100%;max-height:440px;object-fit:contain;border-radius:15px;border:1px solid #b99138;background:#102443;margin-bottom:20px}
+h1{font-size:clamp(27px,5vw,43px);line-height:1.2;margin:0 0 12px}
+h2{color:var(--gold);margin:0 0 12px}
+h3{margin:0 0 6px}
+.gold{color:var(--gold)}
+.muted{color:#cbd6e8;line-height:1.7}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.tag{background:#20395c;color:#fff;padding:7px 11px;border-radius:9px;font-size:13px}
+.price{font-size:35px;font-weight:950;color:var(--gold)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;padding:11px 16px;border:0;border-radius:11px;background:linear-gradient(120deg,#e6b83d,#ffdf78);color:#17243b;text-decoration:none;font-weight:900;cursor:pointer}
+.btn.secondary{background:#203b61;color:#fff;border:1px solid #607797}
+.btn:disabled{opacity:.4;cursor:not-allowed}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:18px}
+.stat{padding:13px 8px;text-align:center;background:#0b1c35;border:1px solid #3a5273;border-radius:13px}
+.stat strong{display:block;font-size:23px;color:var(--gold)}
+.stat span{font-size:12px;color:#cbd6e8}
+.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin:15px 0}
+.search{width:100%;min-width:0;padding:13px 14px;background:#07162b;color:#fff;border:1px solid #607797;border-radius:11px;font-size:15px;outline:none}
+.search:focus{border-color:var(--gold)}
+.teacher-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,245px),1fr));gap:12px}
+.teacher-card{width:100%;text-align:left;padding:18px;border-radius:15px;border:1px solid #52698a;background:#102747;color:white;cursor:pointer;transition:.2s}
+.teacher-card:hover{border-color:var(--gold);transform:translateY(-2px)}
+.teacher-icon{font-size:27px;margin-bottom:8px}
+.teacher-card strong{display:block;font-size:17px;color:var(--gold)}
+.teacher-card small{display:block;color:#cbd6e8;margin-top:5px}
+.count{display:inline-block;margin-top:12px;padding:5px 9px;background:#203e63;border-radius:20px;font-size:12px}
+.lecture-head{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.lecture-list{display:grid;gap:10px;margin-top:15px}
+.lecture{padding:15px;border:1px solid #465d7e;border-radius:13px;background:#102443;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.lecture-title{font-weight:800}
+.lecture-sub{font-size:12px;color:#bdcbe0;margin-top:5px}
+.lecture-actions{display:flex;gap:7px;flex-wrap:wrap;justify-content:flex-end}
+.done{background:#173e38;color:#b7f6d8;border:1px solid #398b70}
+.pending{border:1px dashed #657b9c;padding:14px;border-radius:12px;color:#cbd6e8;margin-top:12px}
+.progress-track{height:10px;background:#263d5c;border-radius:20px;overflow:hidden;margin-top:10px}
+.progress-fill{height:100%;width:0;background:linear-gradient(90deg,#d5a52c,#ffe48a);transition:width .25s}
+#lectureArea[hidden],#teacherArea[hidden]{display:none!important}
+.back{margin-bottom:12px}
+.empty{text-align:center;padding:25px;color:#cbd6e8}
+footer{text-align:center;color:#aebbd0;padding:24px}
+.modal[hidden]{display:none!important}
+.modal{position:fixed;inset:0;z-index:1000;background:#020817eF;backdrop-filter:blur(10px);display:flex;align-items:center;justify-content:center;padding:16px}
+.modal-box{width:min(100%,1050px);background:#081a32;border:2px solid var(--gold);border-radius:16px;overflow:hidden;box-shadow:0 20px 80px #000b}
+.modal-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 15px;border-bottom:1px solid #435878}
+.modal-head strong{color:var(--gold)}
+.close{width:42px;height:42px;border:1px solid var(--gold);border-radius:50%;background:#183252;color:#ffdf78;font-size:26px;cursor:pointer}
+.player-frame{width:100%;aspect-ratio:16/9;background:#000}
+.player-frame iframe{width:100%;height:100%;border:0}
+.modal-foot{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;padding:12px 15px}
+@media(max-width:600px){
+ .stats{grid-template-columns:repeat(3,1fr)}
+ .stat strong{font-size:19px}
+ .lecture{align-items:flex-start;flex-direction:column}
+ .lecture-actions{width:100%;justify-content:flex-start}
+ .lecture-actions .btn{flex:1}
+ .modal{padding:7px}
+ .modal-box{border-radius:11px}
+ .modal-head{padding:9px}
+ .modal-foot{padding:9px}
+}
+@media(max-height:480px) and (orientation:landscape){
+ .modal{padding:3px}
+ .modal-box{width:min(95vw,1100px)}
+ .modal-head{padding:5px 10px}
+ .modal-foot{padding:5px 10px}
+}
+</style>
 </head>
 <body>
-<header class="top"><a class="brand" href="/">LOYAL GLOBAL STUDIES</a></header>
+<header class="top">
+ <a class="brand" href="/">👑 LOYAL GLOBAL STUDIES</a>
+ <a class="home" href="/">← Home</a>
+</header>
+
 <main class="wrap">
+ <section class="hero">
   <img class="poster"
-       src="{{ url_for('static', filename='images/rrb-station-master-rail-nayak.jpg') }}"
-       alt="RRB Station Master रेल नायक Batch 2026 poster"
-       onerror="this.style.display='none'">
+   src="{{ url_for('static', filename='images/rrb-station-master-rail-nayak.jpg') }}"
+   alt="RRB Station Master Rail Nayak Batch poster"
+   onerror="this.style.display='none'">
+  <h1>RRB Station Master<br><span class="gold">रेल नायक Batch 2026</span></h1>
+  <p class="muted">Premium Teacher-wise Video Classroom · Hindi Medium · LOYAL GLOBAL STUDIES</p>
+  <div class="tags">
+   <span class="tag">🚆 Railway Exams</span>
+   <span class="tag">📚 Teacher-wise Classes</span>
+   <span class="tag">🎬 Video Lectures</span>
+  </div>
+  <div class="muted">Offer Fee</div>
+  <div class="price">₹499/-</div>
 
-  <section class="panel">
-    <h1>RRB Station Master<br><span style="color:#ffdc66">रेल नायक Batch 2026</span></h1>
-    <p class="muted">Online Classes · Hindi Medium · By Khan Sir &amp; Team (as shown on the supplied poster)</p>
-    <div class="tag">Classes start: 5 November 2026</div>
-    <div class="tag">Hindi Medium</div>
-    <p class="muted">Offer Fee</p>
-    <div class="price">₹499/-</div>
-    <a class="btn" href="https://share.google/u9NcWoX8RaekVBxC5" target="_blank" rel="noopener noreferrer">Registration / KGS Link ↗</a>
-  </section>
+  <div class="stats">
+   <div class="stat"><strong>6</strong><span>Teachers</span></div>
+   <div class="stat"><strong>13</strong><span>Video Classes</span></div>
+   <div class="stat"><strong id="completedTotal">0</strong><span>Completed</span></div>
+  </div>
+ </section>
 
-  <section class="panel">
-    <h2>Teacher-wise Classes</h2>
-    <p class="muted">Teacher names, subjects, lecture dates and class links will be added when verified details are provided.</p>
-    <div class="classes">
-      <article class="class-card"><strong>Teacher &amp; Subject</strong><p class="muted">Class details coming soon</p></article>
-      <article class="class-card"><strong>Video Classes</strong><p class="muted">Verified class links will appear here.</p></article>
-      <article class="class-card"><strong>PDF / Notes</strong><p class="muted">Notes links will be added when available.</p></article>
-    </div>
-  </section>
+ <section class="panel">
+  <h2>👨‍🏫 Teacher-wise Classroom</h2>
+  <p class="muted">अपना Subject और Teacher चुनें। Lecture पर Play दबाकर वीडियो देखें। आपकी completed classes इसी browser में save होंगी।</p>
+  <div class="progress-track"><div class="progress-fill" id="overallProgress"></div></div>
+  <p class="muted" id="progressText">Course progress: 0 / 13</p>
+
+  <div id="teacherArea">
+   <div class="teacher-grid" id="teacherGrid"></div>
+  </div>
+
+  <div id="lectureArea" hidden>
+   <button class="btn secondary back" id="backTeachers" type="button">← All Teachers</button>
+   <div class="lecture-head">
+    <div><h2 id="teacherName"></h2><p class="muted" id="teacherSubject"></p></div>
+    <span class="tag" id="teacherCount"></span>
+   </div>
+   <input class="search" id="lectureSearch" type="search" placeholder="🔎 Search lecture...">
+   <div class="lecture-list" id="lectureList"></div>
+   <div id="pendingNotice"></div>
+  </div>
+ </section>
 </main>
-<footer>© 2026 LOYAL GLOBAL STUDIES</footer>
+
+<footer>© 2026 LOYAL GLOBAL STUDIES · LEARN • GROW • ACHIEVE</footer>
+
+<div class="modal" id="playerModal" hidden>
+ <div class="modal-box" role="dialog" aria-modal="true" aria-label="Video classroom player">
+  <div class="modal-head">
+   <strong id="nowPlaying">LOYAL CLASSROOM</strong>
+   <button class="close" id="closePlayer" type="button" aria-label="Close player">×</button>
+  </div>
+  <div class="player-frame">
+   <iframe id="videoFrame" title="YouTube lecture player"
+    src="about:blank"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+  <div class="modal-foot">
+   <button class="btn secondary" id="previousLecture" type="button">← Previous</button>
+   <button class="btn done" id="modalComplete" type="button">✓ Mark Completed</button>
+   <button class="btn secondary" id="nextLecture" type="button">Next →</button>
+  </div>
+ </div>
+</div>
+
+<script>
+"use strict";
+
+const STORAGE_KEY = "loyal_rrb_station_master_progress_v1";
+
+const teachers = [
+ {
+  id:"arithmetic",
+  name:"Prashant Sharma Sir",
+  subject:"Arithmetic Maths",
+  icon:"🔢",
+  lessons:[
+   {title:"Lecture 01",id:"gpnQmkwGlBQ"},
+   {title:"Lecture 02",id:"h8BMswyqVcY"},
+   {title:"Lecture 03",id:"rcfDyQSjYq4"},
+   {title:"Lecture 04",id:"6HCboBf-DOQ"},
+   {title:"Lecture 05",id:"ssrOSZ-H79Q"},
+   {title:"Lecture 06",id:"I1ywDeez_0s"}
+  ]
+ },
+ {
+  id:"advance",
+  name:"Ashutosh Tiwari Sir",
+  subject:"Advance Maths",
+  icon:"📐",
+  lessons:[
+   {title:"Lecture 01",id:"iNTuaFjqDJg"}
+  ],
+  pending:"Lecture 02 का YouTube link अभी उपलब्ध नहीं है। Link मिलने पर इसे जोड़ सकते हैं।"
+ },
+ {
+  id:"data-analysis",
+  name:"Amit Verma Sir",
+  subject:"Data Analysis & Interpretation",
+  icon:"📊",
+  lessons:[
+   {title:"Orientation Class",id:"8Rtl2ltQmc8"},
+   {title:"Lecture 01",id:"YyyZJCY5s-4"}
+  ]
+ },
+ {
+  id:"physics",
+  name:"CS Singh Sir",
+  subject:"Physics",
+  icon:"⚛️",
+  lessons:[
+   {title:"Orientation Class",id:"ZlDzI2INd14"}
+  ]
+ },
+ {
+  id:"reasoning",
+  name:"Manish Sir",
+  subject:"Reasoning",
+  icon:"🧠",
+  lessons:[
+   {title:"Lecture 01",id:"U3b4k1Lg-9I"},
+   {title:"Lecture 02",id:"PWi_uSGQghg"}
+  ]
+ },
+ {
+  id:"english",
+  name:"Ram Sir",
+  subject:"English",
+  icon:"🔤",
+  lessons:[
+   {title:"Lecture 01",id:"HMtxZifA9Xg"}
+  ]
+ }
+];
+
+const $ = id => document.getElementById(id);
+let activeTeacher = null;
+let currentIndex = -1;
+let completed = {};
+
+try {
+ completed = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}") || {};
+} catch (error) {
+ completed = {};
+}
+
+function saveProgress() {
+ try {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(completed));
+ } catch (error) {
+  console.warn("Progress could not be saved", error);
+ }
+}
+
+function allLessons() {
+ return teachers.flatMap(t => t.lessons);
+}
+
+function updateProgress() {
+ const total = allLessons().length;
+ const done = allLessons().filter(l => completed[l.id]).length;
+ $("completedTotal").textContent = done;
+ $("progressText").textContent = "Course progress: " + done + " / " + total;
+ $("overallProgress").style.width = (total ? done / total * 100 : 0) + "%";
+}
+
+function renderTeachers() {
+ $("teacherGrid").innerHTML = teachers.map(t => {
+  const done = t.lessons.filter(l => completed[l.id]).length;
+  return `<button class="teacher-card" type="button" data-teacher="${t.id}">
+   <div class="teacher-icon">${t.icon}</div>
+   <strong>${t.name}</strong>
+   <small>${t.subject}</small>
+   <span class="count">${t.lessons.length} Videos · ${done} Completed</span>
+  </button>`;
+ }).join("");
+}
+
+function openTeacher(id) {
+ activeTeacher = teachers.find(t => t.id === id);
+ if (!activeTeacher) return;
+ $("teacherArea").hidden = true;
+ $("lectureArea").hidden = false;
+ $("teacherName").textContent = activeTeacher.name;
+ $("teacherSubject").textContent = activeTeacher.subject;
+ $("teacherCount").textContent = activeTeacher.lessons.length + " Videos";
+ $("lectureSearch").value = "";
+ renderLectures();
+}
+
+function renderLectures() {
+ if (!activeTeacher) return;
+ const query = $("lectureSearch").value.trim().toLowerCase();
+ const matches = activeTeacher.lessons
+  .map((lesson,index) => ({lesson,index}))
+  .filter(item => item.lesson.title.toLowerCase().includes(query));
+
+ if (!matches.length) {
+  $("lectureList").innerHTML = '<div class="empty">कोई lecture नहीं मिला।</div>';
+ } else {
+  $("lectureList").innerHTML = matches.map(({lesson,index}) => {
+   const isDone = !!completed[lesson.id];
+   return `<article class="lecture">
+    <div>
+     <div class="lecture-title">${lesson.title}</div>
+     <div class="lecture-sub">${isDone ? "✓ Completed" : "Not completed"} · YouTube Video</div>
+    </div>
+    <div class="lecture-actions">
+     <button class="btn" type="button" data-play="${index}">▶ Play</button>
+     <button class="btn ${isDone ? "done" : "secondary"}" type="button" data-done="${lesson.id}">
+      ${isDone ? "✓ Done" : "Mark Done"}
+     </button>
+    </div>
+   </article>`;
+  }).join("");
+ }
+
+ $("pendingNotice").innerHTML = activeTeacher.pending
+  ? `<div class="pending">⏳ ${activeTeacher.pending}</div>` : "";
+ updateProgress();
+}
+
+function toggleCompleted(id) {
+ completed[id] = !completed[id];
+ if (!completed[id]) delete completed[id];
+ saveProgress();
+ renderTeachers();
+ renderLectures();
+ updateProgress();
+ if (activeTeacher && currentIndex >= 0) {
+  const lesson = activeTeacher.lessons[currentIndex];
+  if (lesson) $("modalComplete").textContent = completed[lesson.id] ? "✓ Completed" : "✓ Mark Completed";
+ }
+}
+
+function playLecture(index) {
+ if (!activeTeacher || !activeTeacher.lessons[index]) return;
+ currentIndex = index;
+ const lesson = activeTeacher.lessons[index];
+ $("nowPlaying").textContent = activeTeacher.name + " — " + lesson.title;
+ $("videoFrame").src = "https://www.youtube-nocookie.com/embed/" +
+  encodeURIComponent(lesson.id) + "?autoplay=1&rel=0&modestbranding=1&playsinline=1";
+ $("modalComplete").textContent = completed[lesson.id] ? "✓ Completed" : "✓ Mark Completed";
+ $("previousLecture").disabled = index === 0;
+ $("nextLecture").disabled = index === activeTeacher.lessons.length - 1;
+ $("playerModal").hidden = false;
+ document.body.classList.add("modal-open");
+}
+
+function closePlayer() {
+ $("videoFrame").src = "about:blank";
+ $("playerModal").hidden = true;
+ document.body.classList.remove("modal-open");
+}
+
+$("teacherGrid").addEventListener("click", event => {
+ const card = event.target.closest("[data-teacher]");
+ if (card) openTeacher(card.dataset.teacher);
+});
+
+$("backTeachers").addEventListener("click", () => {
+ activeTeacher = null;
+ currentIndex = -1;
+ $("lectureArea").hidden = true;
+ $("teacherArea").hidden = false;
+ renderTeachers();
+});
+
+$("lectureSearch").addEventListener("input", renderLectures);
+
+$("lectureList").addEventListener("click", event => {
+ const play = event.target.closest("[data-play]");
+ const done = event.target.closest("[data-done]");
+ if (play) playLecture(Number(play.dataset.play));
+ if (done) toggleCompleted(done.dataset.done);
+});
+
+$("closePlayer").addEventListener("click", closePlayer);
+$("playerModal").addEventListener("click", event => {
+ if (event.target === $("playerModal")) closePlayer();
+});
+
+$("previousLecture").addEventListener("click", () => {
+ if (currentIndex > 0) playLecture(currentIndex - 1);
+});
+$("nextLecture").addEventListener("click", () => {
+ if (activeTeacher && currentIndex < activeTeacher.lessons.length - 1) {
+  playLecture(currentIndex + 1);
+ }
+});
+$("modalComplete").addEventListener("click", () => {
+ if (!activeTeacher || currentIndex < 0) return;
+ const lesson = activeTeacher.lessons[currentIndex];
+ toggleCompleted(lesson.id);
+});
+
+document.addEventListener("keydown", event => {
+ if (event.key === "Escape" && !$("playerModal").hidden) closePlayer();
+});
+
+renderTeachers();
+updateProgress();
+</script>
 </body>
 </html>
