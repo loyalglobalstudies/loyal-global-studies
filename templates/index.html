@@ -29,6 +29,7 @@
   </section>
 
   {% set batch_images = {
+    'stylish-photo-pose': 'images/stylish-photo-pose-batch.jpg',
     'army-gd-tradesman': 'images/army-gd-tradesman.jpg',
     'biology-foundation-4-amrita': 'images/biology-foundation-4-amrita.jpg',
     'rrb-ntpc-rajdhani': 'images/rrb-ntpc-rajdhani.jpg',
@@ -54,7 +55,7 @@
              aria-label="Search batches">
       <select id="batchCategory" aria-label="Filter by category">
         <option value="">सभी Categories</option>
-        {% for category in ['Teaching Exams', 'State Exams', 'Railway Exams', 'Computer Courses', 'UPSC', 'Defence Exams'] %}
+        {% for category in ['Teaching Exams', 'State Exams', 'Railway Exams', 'Computer Courses', 'UPSC', 'Defence Exams', 'Creative Skills'] %}
         <option value="{{ category }}">{{ category }}</option>
         {% endfor %}
       </select>

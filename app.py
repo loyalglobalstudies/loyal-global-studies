@@ -65,6 +65,12 @@ BATCHES = [
         "category": "Defence Exams"
     },
     {
+        "slug": "stylish-photo-pose",
+        "name": "Stylish Photo Pose Batch",
+        "description": "Best Photo Poses, Stylish Attitude और Professional Look सीखें।",
+        "category": "Creative Skills"
+    },
+    {
         "slug": "biology-foundation-4-amrita",
         "name": "Biology Foundation Batch 4.0 — Amrita Ma’am",
         "description": "Live bilingual Biology foundation batch with 5 free mock tests.",
