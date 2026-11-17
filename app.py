@@ -57,6 +57,13 @@ BATCHES = [
         "description": "Physics, Biology, Computer and Geography preparation.",
         "category": "Teaching Exams"
     },
+
+    {
+        "slug": "army-gd-tradesman",
+        "name": "Army GD & Tradesman Batch",
+        "description": "Army GD और Tradesman परीक्षा की bilingual online batch information.",
+        "category": "Defence Exams"
+    },
 ]
 
 @app.route("/")
