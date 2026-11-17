@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UPSSSC PET PYQ Practice 2023 — Hindi</title>
+<style>
+body{font-family:sans-serif;background:#0b1020;color:#fff;margin:0;padding:20px}
+.card{max-width:800px;margin:auto;background:#141b32;padding:20px;border-radius:16px;border:1px solid #334}
+h1{color:#ffce3d;font-size:22px}
+.q{background:#1a2340;padding:14px;border-radius:10px;margin:12px 0}
+.opt{display:block;width:100%;text-align:left;background:#0d1530;color:#fff;border:1px solid #334;padding:10px;margin-top:8px;border-radius:8px;cursor:pointer}
+.opt.sel{border-color:#ffce3d;background:#2a2410}
+.btn{padding:10px 18px;border:0;border-radius:8px;cursor:pointer;font-weight:700;margin-top:10px}
+.p{background:#ffce3d;color:#231a00}.g{background:#1a2547;color:#fff}
+.res{margin-top:16px}.exp{border-left:4px solid #ffce3d;padding:8px;background:#101a36;margin-top:6px;border-radius:6px}
+a{color:#ffce3d}
+</style>
+</head>
+<body>
+<div class="card">
+<h1>UPSSSC PET PYQ Practice 2023 — Hindi</h1>
+<p>10 Questions • 12 Minutes • Hindi Medium</p>
+<div id="quiz"></div>
+<button class="btn p" onclick="submit()">Test Submit Karein</button>
+<a class="btn g" href="/">← Home</a>
+<div id="result" class="res"></div>
+</div>
+<script>
+const qs=[
+{q:'चंद्रयान-3 कब लॉन्च हुआ?',o:['2022','2023','2024','2021'],a:1,e:'अगस्त 2023 में।'},
+{q:'चंद्रयान-3 की लैंडिंग कहाँ हुई?',o:['उत्तरी ध्रुव','दक्षिणी ध्रुव','केंद्र','पीछे'],a:1,e:'दक्षिणी ध्रुव के पास।'},
+{q:'G20 2023 कहाँ हुआ?',o:['मुंबई','नई दिल्ली','गोवा','हैदराबाद'],a:1,e:'नई दिल्ली।'},
+{q:'2023 को किसे अंतर्राष्ट्रीय वर्ष घोषित किया गया?',o:['मोटे अनाज','चावल','गेहूं','दाल'],a:0,e:'मोटे अनाज।'},
+{q:'भारत का पहला सौर मिशन?',o:['चंद्रयान','आदित्य-L1','मंगलयान','गगनयान'],a:1,e:'आदित्य-L1।'},
+{q:'पानी का रासायनिक सूत्र?',o:['CO2','H2O','O2','NaCl'],a:1,e:'H2O।'},
+{q:'“राम” शब्द में कौन-सी संज्ञा है?',o:['जातिवाचक','व्यक्तिवाचक','भाववाचक','समूहवाचक'],a:1,e:'व्यक्तिवाचक संज्ञा।'},
+{q:'8 × 7 = ?',o:['54','56','58','64'],a:1,e:'56।'},
+{q:'भारत का राष्ट्रीय पक्षी?',o:['मोर','कबूतर','तोता','हंस'],a:0,e:'मोर।'},
+{q:'उत्तर प्रदेश की राजधानी?',o:['कानपुर','लखनऊ','वाराणसी','प्रयागराज'],a:1,e:'लखनऊ।'}
+];
+let cur=0,ans=Array(qs.length).fill(-1),time=12*60,timer;
+function render(){const q=qs[cur];document.getElementById('quiz').innerHTML=`<div class="q"><b>Q${cur+1}/${qs.length}</b><p>${q.q}</p>${q.o.map((o,i)=>`<button class="opt ${ans[cur]===i?'sel':''}" onclick="pick(${i})">${String.fromCharCode(65+i)}. ${o}</button>`).join('')}</div><button class="btn g" onclick="cur>0&&cur--;render()">← पिछला</button> <button class="btn g" onclick="cur<qs.length-1&&cur++;render()">अगला →</button>`}
+function pick(i){ans[cur]=i;render()}
+function submit(){clearInterval(timer);let s=0;const r=qs.map((q,i)=>{const ok=ans[i]===q.a;if(ok)s++;return `<div class="q"><b>Q${i+1}. ${q.q}</b><p>आपका उत्तर: ${ans[i]<0?'—':q.o[ans[i]]}</p><p style="color:${ok?'#22c55e':'#ef4444'}">सही: ${q.o[q.a]}</p><div class="exp">${q.e}</div></div>`}).join('');document.getElementById('result').innerHTML=`<h2>Result: ${s}/${qs.length}</h2>${r}`}
+timer=setInterval(()=>{time--;if(time<=0)submit()},1000);
+render();
+</script>
+</body>
+</html>

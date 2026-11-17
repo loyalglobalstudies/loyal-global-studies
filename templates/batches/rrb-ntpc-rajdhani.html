@@ -511,6 +511,131 @@ body.loyal-popup-open {
   }
 }
 
+
+/* LOYAL RRB PREMIUM MOBILE POLISH */
+.video-teachers {
+  gap: 14px;
+  margin: 16px 0 20px;
+}
+
+.video-teacher-btn {
+  min-height: 66px;
+  padding: 16px;
+  border: 1px solid #806b36;
+  border-radius: 15px;
+  background: linear-gradient(135deg,#102746,#09172b);
+  color: #fff1bd;
+  font-size: 15px;
+  font-weight: 850;
+  box-shadow: 0 7px 20px #0005;
+  transition: border-color .2s, transform .2s, background .2s;
+}
+
+.video-teacher-btn.active {
+  border: 2px solid #ffd45a;
+  background: linear-gradient(135deg,#263d5c,#142b49);
+  color: #ffe28a;
+  box-shadow: 0 0 0 2px #ffd45a20, 0 9px 24px #0007;
+}
+
+.video-player {
+  border: 1px solid #806b36;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 12px 32px #0006;
+}
+
+.video-screen {
+  background: #020817;
+}
+
+.video-now {
+  min-height: 48px;
+  background: #102746;
+  font-size: 14px;
+}
+
+.lecture-heading {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #806b36;
+}
+
+.lecture-btn {
+  min-height: 62px;
+  border-color: #405574;
+  background: linear-gradient(135deg,#102746,#09172b);
+  border-radius: 14px;
+  transition: border-color .2s, background .2s, transform .2s;
+}
+
+.lecture-btn.active {
+  border: 2px solid #ffd45a;
+  background: linear-gradient(135deg,#263d5c,#172b46);
+  box-shadow: 0 0 0 2px #ffd45a20;
+}
+
+.lecture-btn:focus-visible,
+.video-teacher-btn:focus-visible,
+.video-control-btn:focus-visible {
+  outline: 3px solid #ffe28a;
+  outline-offset: 3px;
+}
+
+.video-control-btn {
+  min-height: 46px;
+  border-radius: 12px;
+  background: linear-gradient(135deg,#193657,#102746);
+}
+
+.video-note {
+  padding: 12px 14px;
+  border-left: 3px solid #ffd45a;
+  border-radius: 8px;
+  background: #0b1b33;
+}
+
+@media (max-width: 600px) {
+  .video-teachers {
+    grid-template-columns: 1fr;
+  }
+
+  .video-teacher-btn {
+    min-height: 60px;
+    text-align: left;
+  }
+
+  .lecture-list {
+    grid-template-columns: 1fr;
+    gap: 11px;
+  }
+
+  .lecture-btn {
+    min-height: 60px;
+    padding: 13px;
+  }
+
+  .video-controls {
+    gap: 8px;
+    padding: 10px;
+  }
+
+  .video-control-btn {
+    flex: 1 1 44%;
+    min-height: 46px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .video-teacher-btn,
+  .lecture-btn {
+    transition: none;
+  }
+}
+/* END LOYAL RRB PREMIUM MOBILE POLISH */
+
 </style>
 </head>
 
@@ -668,6 +793,55 @@ body.loyal-popup-open {
 
   if (!folderArea || !screen || !player || !now || !list || !heading) return;
 
+  // LOYAL TEACHER-WISE LIVE LECTURE SEARCH
+  const searchWrap = document.createElement("div");
+  searchWrap.className = "loyal-lecture-search-wrap";
+  searchWrap.hidden = true;
+
+  const searchInput = document.createElement("input");
+  searchInput.type = "search";
+  searchInput.id = "loyalLectureSearch";
+  searchInput.placeholder = "🔎 Search this teacher's lectures...";
+  searchInput.setAttribute("aria-label", "Search lectures");
+
+  Object.assign(searchInput.style, {
+    width: "100%",
+    boxSizing: "border-box",
+    padding: "13px 15px",
+    borderRadius: "12px",
+    border: "1px solid #d5a52c",
+    background: "#0b2850",
+    color: "#ffffff",
+    fontSize: "14px",
+    outline: "none",
+    margin: "12px 0"
+  });
+
+  const noResults = document.createElement("p");
+  noResults.textContent = "इस नाम से कोई lecture नहीं मिला।";
+  noResults.hidden = true;
+  noResults.style.cssText =
+    "color:#ffd45a;text-align:center;padding:14px;font-size:14px";
+
+  searchWrap.appendChild(searchInput);
+  heading.after(searchWrap);
+  list.after(noResults);
+
+  searchInput.addEventListener("input", function () {
+    const query = searchInput.value.trim().toLowerCase();
+    let visible = 0;
+
+    list.querySelectorAll(".lecture-btn").forEach(function (button) {
+      const name = button.querySelector(".lecture-name");
+      const match = name && name.textContent.toLowerCase().includes(query);
+      button.hidden = !match;
+      if (match) visible++;
+    });
+
+    noResults.hidden = visible !== 0;
+  });
+
+
   // Player controls: fullscreen, landscape, theatre and exit.
   const toolbar = document.createElement("div");
   toolbar.className = "video-controls";
@@ -765,6 +939,10 @@ body.loyal-popup-open {
   list.hidden = true;
 
   function openTeacher(key) {
+    searchWrap.hidden = false;
+    searchInput.value = "";
+    noResults.hidden = true;
+
     const teacher = teachers[key];
     if (!teacher) return;
 
@@ -832,6 +1010,10 @@ body.loyal-popup-open {
   });
 
   back.addEventListener("click", function () {
+    searchWrap.hidden = true;
+    searchInput.value = "";
+    noResults.hidden = true;
+
     screen.innerHTML =
       '<div class="video-placeholder"><div><b>📁 LOYAL CLASSROOM</b>' +
       'Apne teacher ka folder kholein.</div></div>';

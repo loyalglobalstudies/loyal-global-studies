@@ -81,6 +81,120 @@ footer{text-align:center;color:#aebbd0;padding:24px}
  .modal-head{padding:5px 10px}
  .modal-foot{padding:5px 10px}
 }
+
+/* LOYAL RAIL NAYAK PREMIUM POLISH */
+.teacher-card {
+  min-height: 145px;
+  border: 1px solid #806b36;
+  border-radius: 17px;
+  background: linear-gradient(145deg,#193657,#09172d);
+  box-shadow: 0 8px 22px #0005;
+  transition: border-color .2s, transform .2s, box-shadow .2s;
+}
+.teacher-card:hover {
+  border-color: #ffd45a;
+  box-shadow: 0 10px 26px #0007;
+}
+.teacher-card:focus-visible,
+.search:focus-visible,
+.btn:focus-visible,
+.close:focus-visible {
+  outline: 3px solid #ffe28a;
+  outline-offset: 3px;
+}
+.teacher-card strong {
+  color: #ffe28a;
+}
+.teacher-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border: 1px solid #806b36;
+  border-radius: 14px;
+  background: #0b1c35;
+}
+.count {
+  border: 1px solid #806b36;
+  color: #ffe28a;
+}
+.search {
+  min-height: 48px;
+  box-shadow: 0 5px 16px #0004;
+}
+.search:focus {
+  border-color: #ffd45a;
+  box-shadow: 0 0 0 3px #ffd45a22;
+}
+.lecture {
+  border-color: #405779;
+  border-radius: 15px;
+  background: linear-gradient(120deg,#142e52,#0b1b33);
+  box-shadow: 0 5px 16px #0003;
+}
+.lecture-title {
+  color: #fff1bd;
+}
+.lecture-actions .btn {
+  min-height: 42px;
+}
+.done {
+  border-radius: 10px;
+}
+.progress-track {
+  border: 1px solid #405779;
+  height: 12px;
+}
+.progress-fill {
+  background: linear-gradient(90deg,#d5a52c,#ffe48a);
+}
+.modal-box {
+  border-radius: 18px;
+  box-shadow: 0 0 30px #ffd45a22, 0 20px 80px #000b;
+}
+.modal-head {
+  background: linear-gradient(100deg,#142e52,#081a32);
+}
+.close {
+  transition: background .2s, transform .2s;
+}
+.close:active {
+  transform: scale(.95);
+}
+.modal-foot {
+  background: #0b1c35;
+  border-top: 1px solid #435878;
+}
+.btn.secondary {
+  border-color: #607797;
+}
+@media(max-width:600px) {
+  .teacher-grid {
+    grid-template-columns: 1fr;
+    gap: 11px;
+  }
+  .teacher-card {
+    min-height: 125px;
+    padding: 16px;
+  }
+  .lecture {
+    padding: 14px;
+  }
+  .lecture-actions {
+    gap: 8px;
+  }
+  .modal-foot .btn {
+    flex: 1 1 42%;
+    min-height: 44px;
+  }
+}
+@media(prefers-reduced-motion:reduce) {
+  .teacher-card,.close,.progress-fill {
+    transition: none;
+  }
+}
+/* END LOYAL RAIL NAYAK PREMIUM POLISH */
+
 </style>
 </head>
 <body>

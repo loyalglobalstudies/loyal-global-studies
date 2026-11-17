@@ -19,114 +19,87 @@
   <a class="menu-link" href="#about">Discover <span>↗</span></a>
 </header>
 
+
 <main>
-  
+  <section class="batch-hero">
+    <p class="batch-eyebrow">✦ LOYAL GLOBAL STUDIES ✦</p>
+    <h1>Premium <span>Batch Library</span></h1>
+    <p class="batch-intro">अपनी तैयारी के लिए सही बैच चुनें। Learn • Grow • Achieve</p>
+    <div class="batch-count"><strong>{{ batches|length }}</strong> Learning Programs</div>
+  </section>
 
-  
+  {% set batch_images = {
+    'rrb-ntpc-rajdhani': 'images/rrb-ntpc-rajdhani.jpg',
+    'rrb-station-master-rail-nayak': 'images/rrb-station-master-rail-nayak.jpg',
+    'upsc-3-year-foundation': 'images/upsc-3-year-foundation.jpg',
+    'uppsc-ro-aro-2026': 'images/uppsc-ro-aro-2026.jpg',
+    'bpsc-tre-4': 'images/bpsc-tre-4-thumbnail.jpg',
+    'up-tgt-udan-science': 'images/up-tgt-udan-science.webp'
+  } %}
 
-  
+  <section class="batch-library" id="batches">
+    <div class="library-heading">
+      <div>
+        <p class="batch-eyebrow">EXPLORE PROGRAMS</p>
+        <h2>हमारे सभी बैच</h2>
+      </div>
+      <span class="library-total">{{ batches|length }} Batches</span>
+    </div>
+
+    <div class="batch-tools">
+      <input id="batchSearch" type="search"
+             placeholder="बैच का नाम खोजें..."
+             aria-label="Search batches">
+      <select id="batchCategory" aria-label="Filter by category">
+        <option value="">सभी Categories</option>
+        {% for category in ['Teaching Exams', 'State Exams', 'Railway Exams', 'Computer Courses', 'UPSC'] %}
+        <option value="{{ category }}">{{ category }}</option>
+        {% endfor %}
+      </select>
+      <button type="button" id="favoritesToggle" aria-pressed="false">
+        ♡ Favorites
+      </button>
+    </div>
+
+    <div class="batch-grid" id="batchGrid">
+      {% for batch in batches %}
+      <article class="premium-batch-card"
+               data-name="{{ batch.name|lower }}"
+               data-category="{{ batch.category }}"
+               data-slug="{{ batch.slug }}">
+        <a class="batch-card-link" href="/batches/{{ batch.slug }}">
+          {% if batch.slug in batch_images %}
+          <img class="batch-thumbnail"
+               src="{{ url_for('static', filename=batch_images[batch.slug]) }}"
+               alt="{{ batch.name }}"
+               loading="lazy">
+          {% else %}
+          <div class="batch-placeholder">
+            <span>LOYAL</span>
+            <strong>{{ batch.name[:2]|upper }}</strong>
+            <small>GLOBAL STUDIES</small>
+          </div>
+          {% endif %}
+
+          <div class="batch-card-content">
+            <span class="batch-category">{{ batch.category }}</span>
+            <h3>{{ batch.name }}</h3>
+            <p>{{ batch.description }}</p>
+            <span class="batch-open">Open Classroom <span>→</span></span>
+          </div>
+        </a>
+        <button class="favorite-button" type="button"
+                aria-label="Add {{ batch.name }} to favorites"
+                aria-pressed="false">♡</button>
+      </article>
+      {% endfor %}
+    </div>
+
+    <p id="noBatches" class="no-batches" hidden>
+      कोई matching batch नहीं मिला।
+    </p>
+  </section>
 </main>
-
-
-
-    <!-- LOYAL RRB STATION MASTER BATCH CARD -->
-    <a href="/batches/rrb-station-master-rail-nayak"
-       style="display:block;max-width:680px;margin:22px auto;text-decoration:none;color:#fff;background:linear-gradient(130deg,#101b35,#20213b);border:1px solid #d5a52c;border-radius:18px;overflow:hidden">
-      <img src="{{ url_for('static', filename='images/rrb-station-master-rail-nayak.jpg') }}"
-           alt="RRB Station Master रेल नायक Batch 2026"
-           style="display:block;width:100%;aspect-ratio:16/9;object-fit:cover;object-position:center">
-      <div style="background:linear-gradient(110deg,#e00012,#ffda19);padding:18px;color:#101b31">
-        <div style="font-size:clamp(24px,5vw,38px);font-weight:1000">RRB STATION MASTER</div>
-        <div style="font-size:clamp(21px,4.5vw,32px);font-weight:900">रेल नायक बैच</div>
-        <strong style="display:inline-block;background:#071832;color:#fff;padding:5px 12px;border-radius:6px;margin-top:8px">BATCH 2026</strong>
-      </div>
-      <div style="padding:18px">
-        <div style="font-weight:800;font-size:18px">Online · Hindi Medium</div>
-        <p style="color:#d2d9e8;margin:8px 0">Classes start: 5 November 2026</p>
-        <strong style="color:#ffdc66;font-size:25px">Offer Fee ₹499/-</strong><br>
-        <span style="display:inline-block;background:#ffd45a;color:#111827;padding:10px 15px;border-radius:9px;font-weight:900;margin-top:12px">Open Batch →</span>
-      </div>
-    </a>
-
-    <!-- LOYAL RRB NTPC BATCH CARD -->
-    <section id="premium-batches" style="max-width:1050px;margin:30px auto;padding:22px 16px;color:#fff">
-      <p style="color:#ffd45a;font-weight:800;letter-spacing:2px">LOYAL BATCH LIBRARY</p>
-      <a href="/batches/rrb-ntpc-rajdhani"
-         style="display:block;max-width:680px;text-decoration:none;color:#fff;background:linear-gradient(130deg,#101b35,#20213b);border:1px solid #4b526b;border-radius:18px;overflow:hidden">
-        <img src="{{ url_for('static', filename='images/rrb-ntpc-rajdhani.jpg') }}"
-             alt="RRB NTPC राजधानी एक्सप्रेस Batch 2026 — Khan Sir & Team"
-             style="display:block;width:100%;aspect-ratio:16/9;object-fit:cover;object-position:center">
-        <div style="background:linear-gradient(110deg,#e00012,#ffda19);padding:18px;color:#101b31">
-          <div style="font-size:clamp(24px,5vw,38px);font-weight:1000">RRB NTPC</div>
-          <div style="font-size:clamp(21px,4.5vw,32px);font-weight:900">राजधानी एक्सप्रेस</div>
-          <strong style="display:inline-block;background:#071832;color:#fff;padding:5px 12px;border-radius:6px;margin-top:8px">BATCH 2026</strong>
-        </div>
-        <div style="padding:18px">
-          <div style="font-weight:800;font-size:18px">By <span style="color:#ff6c73">Khan Sir &amp; Team</span></div>
-          <p style="color:#d2d9e8;margin:8px 0">Graduate / Under Graduate · CBT 1 &amp; 2</p>
-          <span style="display:inline-block;background:#ffd45a;color:#111827;padding:10px 15px;border-radius:9px;font-weight:900">Open Batch →</span>
-        </div>
-      </a>
-    </section>
-    
-
-    <!-- LOYAL UPSC THREE YEAR FOUNDATION BATCH -->
-    <a href="/batches/upsc-3-year-foundation"
-       style="display:block;max-width:680px;margin:22px auto;text-decoration:none;color:#fff;background:linear-gradient(130deg,#101b35,#20213b);border:1px solid #d5a52c;border-radius:18px;overflow:hidden">
-      <img src="{{ url_for('static', filename='images/upsc-3-year-foundation.jpg') }}"
-           alt="UPSC 3 Year Foundation Batch Hindi Medium"
-           style="display:block;width:100%;aspect-ratio:16/9;object-fit:cover;object-position:center">
-      <div style="padding:18px">
-        <div style="color:#ffdc66;font-size:clamp(23px,5vw,34px);font-weight:1000">UPSC FOUNDATION</div>
-        <div style="font-size:21px;font-weight:900;margin-top:5px">आह्वान बैच — 3 Years</div>
-        <p style="color:#d2d9e8;margin:8px 0">Hindi Medium · Civil Services Examination</p>
-        <span style="display:inline-block;background:#ffd45a;color:#111827;padding:10px 15px;border-radius:9px;font-weight:900">Explore UPSC Batch →</span>
-      </div>
-    </a>
-
-
-    <!-- LOYAL UPPSC RO ARO 2026 BATCH CARD -->
-    <a href="/batches/uppsc-ro-aro-2026"
-       style="display:block;max-width:680px;margin:22px auto;text-decoration:none;color:#fff;background:linear-gradient(130deg,#101b35,#20213b);border:1px solid #d5a52c;border-radius:18px;overflow:hidden">
-      <img src="{{ url_for('static', filename='images/uppsc-ro-aro-2026.jpg') }}"
-           alt="UPPSC RO/ARO 2026 Prelims and Mains Foundation Batch"
-           style="display:block;width:100%;aspect-ratio:16/9;object-fit:cover;object-position:center">
-      <div style="padding:18px">
-        <div style="color:#ffdc66;font-size:clamp(23px,5vw,34px);font-weight:1000">UPPSC RO/ARO 2026</div>
-        <div style="font-size:21px;font-weight:900;margin-top:5px">Pre + Mains Foundation Batch</div>
-        <p style="color:#d2d9e8;margin:8px 0">Uttar Pradesh · Review Officer / Assistant Review Officer</p>
-        <span style="display:inline-block;background:#ffd45a;color:#111827;padding:10px 15px;border-radius:9px;font-weight:900">Explore UPPSC Batch →</span>
-      </div>
-    </a>
-
-    <!-- LOYAL BPSC TRE 4.0 BATCH CARD -->
-    <a href="/batches/bpsc-tre-4"
-       style="display:block;max-width:680px;margin:22px auto;text-decoration:none;color:#fff;background:linear-gradient(130deg,#101b35,#20213b);border:1px solid #d5a52c;border-radius:18px;overflow:hidden">
-      <img src="{{ url_for('static', filename='images/bpsc-tre-4-thumbnail.jpg') }}"
-           alt="BPSC TRE 4.0 Class 9–10 and 11–12 Bilingual Batch"
-           style="display:block;width:100%;aspect-ratio:16/9;object-fit:cover;object-position:center">
-      <div style="padding:18px">
-        <div style="color:#ffdc66;font-size:clamp(23px,5vw,34px);font-weight:1000">BPSC TRE 4.0</div>
-        <div style="font-size:21px;font-weight:900;margin-top:5px">Class 9–10 &amp; 11–12</div>
-        <p style="color:#d2d9e8;margin:8px 0">Bilingual · Bihar Teacher Recruitment</p>
-        <span style="display:inline-block;background:#ffd45a;color:#111827;padding:10px 15px;border-radius:9px;font-weight:900">Explore BPSC Batch →</span>
-      </div>
-    </a>
-
-
-    <!-- LOYAL UP TGT UDAAN SCIENCE BATCH -->
-    <a href="/batches/up-tgt-udan-science"
-       style="display:block;max-width:680px;margin:22px auto;text-decoration:none;color:#fff;background:linear-gradient(130deg,#101b35,#20213b);border:1px solid #d5a52c;border-radius:18px;overflow:hidden">
-      <img src="{{ url_for('static', filename='images/up-tgt-udan-science.webp') }}"
-           alt="UP TGT 2026 उड़ान Science Batch"
-           style="display:block;width:100%;height:auto;object-fit:cover">
-      <div style="padding:24px;background:linear-gradient(120deg,#10294b,#172b45)">
-        <div style="color:#ffdc66;font-size:clamp(25px,5vw,36px);font-weight:1000">UP TGT उड़ान</div>
-        <div style="font-size:23px;font-weight:900;margin-top:5px">SCIENCE BATCH</div>
-        <p style="color:#d2d9e8;margin:8px 0">Physics · Biology · Computer · Geography</p>
-        <span style="display:inline-block;background:#ffd45a;color:#111827;padding:10px 15px;border-radius:9px;font-weight:900">Explore UP TGT Batch →</span>
-      </div>
-    </a>
 
 <footer class="footer">
   <a class="footer-brand" href="/">LOYAL GLOBAL STUDIES <span>♥</span></a>
@@ -134,5 +107,88 @@
   <small>© 2026 LOYAL Global Studies</small>
 <p class="developer-credit">DEVELOPER BY 💓 LOYAL JI 💓</p>
 </footer>
+
+<script>
+(() => {
+  const cards = [...document.querySelectorAll('.premium-batch-card')];
+  const search = document.getElementById('batchSearch');
+  const category = document.getElementById('batchCategory');
+  const favoritesToggle = document.getElementById('favoritesToggle');
+  const noBatches = document.getElementById('noBatches');
+  const storageKey = 'loyal_batch_favorites_v1';
+
+  let favorites = [];
+  try {
+    favorites = JSON.parse(localStorage.getItem(storageKey) || '[]');
+    if (!Array.isArray(favorites)) favorites = [];
+  } catch (_) {
+    favorites = [];
+  }
+
+  let favoritesOnly = false;
+
+  function saveFavorites() {
+    try { localStorage.setItem(storageKey, JSON.stringify(favorites)); }
+    catch (_) {}
+  }
+
+  function updateCards() {
+    const term = search.value.trim().toLowerCase();
+    const selectedCategory = category.value;
+    let visible = 0;
+
+    cards.forEach(card => {
+      const matchesText = card.dataset.name.includes(term);
+      const matchesCategory = !selectedCategory ||
+        card.dataset.category === selectedCategory;
+      const matchesFavorite = !favoritesOnly ||
+        favorites.includes(card.dataset.slug);
+      const show = matchesText && matchesCategory && matchesFavorite;
+
+      card.hidden = !show;
+      if (show) visible++;
+    });
+
+    noBatches.hidden = visible !== 0;
+  }
+
+  cards.forEach(card => {
+    const button = card.querySelector('.favorite-button');
+    const slug = card.dataset.slug;
+
+    function updateButton() {
+      const active = favorites.includes(slug);
+      button.textContent = active ? '♥' : '♡';
+      button.setAttribute('aria-pressed', String(active));
+    }
+
+    button.addEventListener('click', () => {
+      if (favorites.includes(slug)) {
+        favorites = favorites.filter(item => item !== slug);
+      } else {
+        favorites.push(slug);
+      }
+      saveFavorites();
+      updateButton();
+      updateCards();
+    });
+
+    updateButton();
+  });
+
+  search.addEventListener('input', updateCards);
+  category.addEventListener('change', updateCards);
+
+  favoritesToggle.addEventListener('click', () => {
+    favoritesOnly = !favoritesOnly;
+    favoritesToggle.setAttribute('aria-pressed', String(favoritesOnly));
+    favoritesToggle.textContent = favoritesOnly ? '♥ Favorites ON' : '♡ Favorites';
+    updateCards();
+  });
+
+  updateCards();
+})();
+</script>
+
 </body>
 </html>

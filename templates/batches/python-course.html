@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#10152d">
+<title>Python Full Course | LOYAL Global Studies</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,Arial,sans-serif;background:linear-gradient(145deg,#0b1020,#172746);color:#f8fafc;line-height:1.65}
+.wrap{width:min(920px,92%);margin:auto}header{padding:18px 0;border-bottom:1px solid #ffffff20}
+.brand{font-weight:900;font-size:1.2rem;letter-spacing:.5px}.rainbow{background:linear-gradient(90deg,#ff416c,#ffb347,#f9f871,#5dffb1,#48dbfb,#9b6bff,#ff5fc8);background-size:300% 300%;color:transparent;background-clip:text;-webkit-background-clip:text;animation:colors 5s ease infinite}
+@keyframes colors{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+main{padding:42px 0 64px}.eyebrow{color:#ffd166;font-weight:800;letter-spacing:2px;text-transform:uppercase;font-size:.8rem}
+h1{font-size:clamp(2rem,7vw,3.7rem);line-height:1.12;margin:12px 0}.lead{color:#cbd5e1;font-size:1.05rem;max-width:700px}
+.panel{margin-top:26px;background:#ffffff0c;border:1px solid #ffffff20;border-radius:22px;padding:clamp(20px,5vw,34px);box-shadow:0 18px 55px #0003}
+.price{font-size:1.8rem;font-weight:900;color:#ffd166;margin:18px 0}h2{margin-top:26px}li{padding:5px 0;color:#e2e8f0}
+.note{background:#fbbf2415;border-left:4px solid #ffd166;padding:13px 16px;border-radius:8px;color:#fef3c7}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.btn{display:inline-block;padding:12px 18px;border-radius:12px;text-decoration:none;font-weight:800}.primary{background:linear-gradient(100deg,#ffd166,#ff9f43);color:#171717}.secondary{border:1px solid #ffffff40;color:#fff}
+footer{border-top:1px solid #ffffff20;padding:22px 0;color:#cbd5e1;font-size:.9rem}
+a:focus-visible{outline:3px solid #48dbfb;outline-offset:3px}
+@media(prefers-reduced-motion:reduce){.rainbow{animation:none}}
+
+/* LOYAL PREMIUM CLASSROOM */
+.classroom{margin-top:30px}
+.classroom-head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.classroom-head h2{margin:0;color:#ffd166}
+.classroom-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:18px}
+.classroom-card{background:linear-gradient(145deg,#132b4d,#0d1b34);border:1px solid #d6ad5545;border-radius:17px;padding:18px;min-width:0}
+.classroom-card h3{margin:0 0 8px;color:#ffe09a;font-size:1.05rem}
+.classroom-card p{margin:0;color:#cbd5e1;font-size:.94rem}
+.classroom-status{display:inline-block;margin-top:13px;padding:5px 10px;border-radius:30px;background:#ffffff12;color:#ffd166;font-size:.78rem;font-weight:800}
+.classroom-table{width:100%;border-collapse:collapse;margin-top:14px;font-size:.9rem}
+.classroom-table th,.classroom-table td{padding:10px 8px;border-bottom:1px solid #ffffff20;text-align:left}
+.classroom-table th{color:#ffd166}
+.classroom-table td{color:#e2e8f0}
+.classroom-note{margin-top:16px;color:#cbd5e1;font-size:.88rem}
+@media(max-width:520px){
+ .classroom-grid{grid-template-columns:1fr}
+ .classroom-table{font-size:.8rem}
+ .classroom-table th,.classroom-table td{padding:8px 5px}
+}
+
+
+/* LOYAL PYTHON ROYAL CLASSROOM POLISH */
+body {
+  background:
+    radial-gradient(ellipse at top,#18385d 0%,transparent 52%),
+    linear-gradient(145deg,#071426,#0b1020 70%);
+}
+header {
+  background:#081a32cc;
+  border-bottom:1px solid #b99138;
+}
+.brand {
+  color:#ffe08a;
+}
+main {
+  padding-top:clamp(26px,5vw,48px);
+}
+h1 {
+  color:#fff1bd;
+  letter-spacing:-.7px;
+}
+h2 {
+  color:#ffe08a;
+}
+.lead {
+  color:#d0dced;
+}
+.panel {
+  background:linear-gradient(145deg,#142f50,#0a192e);
+  border:1px solid #806b36;
+  box-shadow:0 14px 38px #0006;
+}
+.price {
+  color:#ffe08a;
+}
+li {
+  color:#e4edf9;
+}
+.note {
+  background:#d5a52c18;
+  border:1px solid #806b36;
+  border-left:4px solid #ffd45a;
+  color:#fff0c2;
+}
+.classroom {
+  border-color:#b99138;
+  background:linear-gradient(145deg,#112b49,#08172c);
+}
+.classroom-head {
+  padding-bottom:14px;
+  border-bottom:1px solid #ffffff20;
+}
+.classroom-head h2 {
+  color:#ffe08a;
+}
+.classroom-card {
+  background:linear-gradient(145deg,#193858,#0b1b32);
+  border:1px solid #806b36;
+  box-shadow:0 7px 20px #0004;
+  transition:transform .2s,border-color .2s;
+}
+.classroom-card h3 {
+  color:#ffe6a0;
+}
+.classroom-card p {
+  color:#d0dced;
+}
+.classroom-status {
+  border:1px solid #806b36;
+  background:#263e5e;
+  color:#ffe08a;
+}
+.classroom-table {
+  border-collapse:separate;
+  border-spacing:0;
+  overflow:hidden;
+}
+.classroom-table th {
+  background:#203b5b;
+  color:#ffe08a;
+}
+.classroom-table td {
+  background:#102541;
+}
+.classroom-table th:first-child,
+.classroom-table td:first-child {
+  border-left:1px solid #405779;
+}
+.classroom-table th,
+.classroom-table td {
+  border-right:1px solid #405779;
+  border-bottom:1px solid #405779;
+}
+.classroom-note {
+  background:#ffffff08;
+  padding:12px;
+  border-radius:10px;
+}
+.actions .btn {
+  min-height:46px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  transition:filter .2s,transform .2s;
+}
+.primary {
+  background:linear-gradient(110deg,#d5a52c,#ffe48a);
+  color:#17243b;
+}
+.secondary {
+  border-color:#b99138;
+  background:#183454;
+}
+.btn:hover {
+  filter:brightness(1.08);
+  transform:translateY(-1px);
+}
+a:focus-visible {
+  outline:3px solid #ffe08a;
+  outline-offset:3px;
+}
+footer {
+  border-top:1px solid #806b36;
+  background:#08172b;
+}
+@media(max-width:600px) {
+  .wrap {
+    width:min(92%,920px);
+  }
+  .panel {
+    border-radius:17px;
+    padding:19px;
+  }
+  .classroom-grid {
+    grid-template-columns:1fr;
+    gap:11px;
+  }
+  .classroom-card {
+    padding:16px;
+  }
+  .classroom-table {
+    font-size:.78rem;
+  }
+  .classroom-table th,
+  .classroom-table td {
+    padding:9px 5px;
+  }
+  .actions {
+    flex-direction:column;
+  }
+  .actions .btn {
+    width:100%;
+    text-align:center;
+  }
+}
+@media(prefers-reduced-motion:reduce) {
+  .classroom-card,.actions .btn {
+    transition:none;
+  }
+}
+/* END LOYAL PYTHON ROYAL CLASSROOM POLISH */
+
+</style>
+</head>
+<body>
+<header><div class="wrap"><div class="brand">LOYAL GLOBAL STUDIES <span class="rainbow">♥ LOYAL JI ♥</span></div></div></header>
+<main class="wrap">
+<div class="eyebrow">Course & Batch Portal</div>
+<h1>Python Full Course</h1>
+<p class="lead">Basics se Advanced tak Python programming, projects aur practice.</p>
+<section class="panel">
+<div class="eyebrow">Batch Details</div>
+<div class="price">₹499 / month</div>
+<h2>इस बैच में क्या सीखेंगे?</h2>
+<ul><li>Python Fundamentals</li><li>Advanced Python aur OOP</li><li>Projects aur coding practice</li></ul>
+<h2>बैच की सुविधाएँ</h2>
+<p>Live + Recorded Classes, Notes &amp; Assignments, Doubt Support</p>
+<p class="note">यह पेज बैच की जानकारी और learning roadmap के लिए है। वास्तविक क्लास, डाउनलोड, भुगतान और support की सुविधा तभी उपलब्ध होगी जब उसके सही लिंक या सामग्री जोड़ी जाएगी।</p>
+
+<section class="panel classroom" id="loyal-classroom">
+  <div class="classroom-head">
+    <div>
+      <div class="eyebrow">LOYAL Learning Dashboard</div>
+      <h2>👑 Premium Batch Classroom</h2>
+    </div>
+    <span class="classroom-status">STUDENT PORTAL</span>
+  </div>
+
+  <div class="classroom-grid">
+    <article class="classroom-card">
+      <h3>📅 Today's Class</h3>
+      <p>आज की क्लास का समय और विषय अभी प्रकाशित नहीं किया गया है।</p>
+      <span class="classroom-status">Schedule not published</span>
+    </article>
+
+    <article class="classroom-card">
+      <h3>🎬 Video Classroom</h3>
+      <p>Python के वास्तविक lecture उपलब्ध होने पर यहाँ विषयवार जोड़े जाएँगे।</p>
+      <span class="classroom-status">Lectures coming soon</span>
+    </article>
+
+    <article class="classroom-card">
+      <h3>📚 Study Material</h3>
+      <p>अधिकृत Python Notes और Assignments उपलब्ध होने पर यहाँ दिखेंगे।</p>
+      <span class="classroom-status">Material not uploaded</span>
+    </article>
+
+    <article class="classroom-card">
+      <h3>📢 Batch Updates</h3>
+      <p>अभी कोई नया बैच अपडेट प्रकाशित नहीं किया गया है।</p>
+      <span class="classroom-status">No new announcements</span>
+    </article>
+  </div>
+
+  <article class="classroom-card" style="margin-top:16px">
+    <h3>🗓️ Weekly Timetable</h3>
+    <p>सत्यापित क्लास शेड्यूल प्रकाशित होने तक कोई समय निर्धारित नहीं है।</p>
+    <table class="classroom-table">
+      <thead><tr><th>Day</th><th>Class Schedule</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td>Monday – Friday</td><td>Not announced</td><td>Pending</td></tr>
+        <tr><td>Saturday</td><td>Not announced</td><td>Pending</td></tr>
+        <tr><td>Sunday</td><td>Not announced</td><td>Pending</td></tr>
+      </tbody>
+    </table>
+    <p class="classroom-note">नोट: यह केवल Classroom का ढाँचा है। वास्तविक क्लास टाइम और सामग्री की पुष्टि होने पर ही प्रकाशित की जाएगी।</p>
+  </article>
+</section>
+
+<div class="actions">
+<a class="btn primary" href="/#batches">← सभी बैच देखें</a>
+<a class="btn secondary" href="developer.html">Learning Hub</a>
+</div>
+</section>
+</main>
+<footer><div class="wrap">© 2026 LOYAL Global Studies | Developed by <span class="rainbow">💓 LOYAL JI 💓</span></div></footer>
+</body>
+</html>

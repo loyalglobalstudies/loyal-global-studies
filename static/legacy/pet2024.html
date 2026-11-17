@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UPSSSC PET PYQ Practice 2024 — Hindi</title>
+<style>
+body{font-family:sans-serif;background:#0b1020;color:#fff;margin:0;padding:20px}
+.card{max-width:800px;margin:auto;background:#141b32;padding:20px;border-radius:16px;border:1px solid #334}
+h1{color:#ffce3d;font-size:22px}
+.q{background:#1a2340;padding:14px;border-radius:10px;margin:12px 0}
+.opt{display:block;width:100%;text-align:left;background:#0d1530;color:#fff;border:1px solid #334;padding:10px;margin-top:8px;border-radius:8px;cursor:pointer}
+.opt.sel{border-color:#ffce3d;background:#2a2410}
+.btn{padding:10px 18px;border:0;border-radius:8px;cursor:pointer;font-weight:700;margin-top:10px}
+.p{background:#ffce3d;color:#231a00}.g{background:#1a2547;color:#fff}
+.res{margin-top:16px}.exp{border-left:4px solid #ffce3d;padding:8px;background:#101a36;margin-top:6px;border-radius:6px}
+a{color:#ffce3d}
+</style>
+</head>
+<body>
+<div class="card">
+<h1>UPSSSC PET PYQ Practice 2024 — Hindi</h1>
+<p>10 Questions • 12 Minutes • Hindi Medium</p>
+<div id="quiz"></div>
+<button class="btn p" onclick="submit()">Test Submit Karein</button>
+<a class="btn g" href="/">← Home</a>
+<div id="result" class="res"></div>
+</div>
+<script>
+const qs=[
+{q:'PM Surya Ghar योजना किससे संबंधित है?',o:['छत पर सौर पैनल','मुफ्त राशन','लैपटॉप','कृषि ऋण'],a:0,e:'छत पर सौर पैनल।'},
+{q:'आदित्य-L1 किससे संबंधित है?',o:['चंद्रमा','सूर्य','मंगल','शनि'],a:1,e:'सूर्य।'},
+{q:'भारत का सबसे बड़ा राज्य (क्षेत्रफल)?',o:['मध्य प्रदेश','राजस्थान','महाराष्ट्र','उत्तर प्रदेश'],a:1,e:'राजस्थान।'},
+{q:'राष्ट्रीय आपातकाल का अनुच्छेद?',o:['352','356','360','368'],a:0,e:'352।'},
+{q:'RBI की स्थापना?',o:['1935','1947','1949','1950'],a:0,e:'1935।'},
+{q:'25 × 4 = ?',o:['80','90','100','110'],a:2,e:'100।'},
+{q:'“सूर्य” शब्द का पर्यायवाची?',o:['रवि','चंद्र','तारा','नक्षत्र'],a:0,e:'रवि।'},
+{q:'भारत का राष्ट्रीय पशु?',o:['शेर','बाघ','हाथी','चीता'],a:1,e:'बाघ।'},
+{q:'उत्तर प्रदेश का राज्य पशु?',o:['बाघ','बारहसिंगा','हाथी','मोर'],a:1,e:'बारहसिंगा।'},
+{q:'भारत की स्वतंत्रता कब मिली?',o:['1945','1946','1947','1948'],a:2,e:'1947।'}
+];
+let cur=0,ans=Array(qs.length).fill(-1),time=12*60,timer;
+function render(){const q=qs[cur];document.getElementById('quiz').innerHTML=`<div class="q"><b>Q${cur+1}/${qs.length}</b><p>${q.q}</p>${q.o.map((o,i)=>`<button class="opt ${ans[cur]===i?'sel':''}" onclick="pick(${i})">${String.fromCharCode(65+i)}. ${o}</button>`).join('')}</div><button class="btn g" onclick="cur>0&&cur--;render()">← पिछला</button> <button class="btn g" onclick="cur<qs.length-1&&cur++;render()">अगला →</button>`}
+function pick(i){ans[cur]=i;render()}
+function submit(){clearInterval(timer);let s=0;const r=qs.map((q,i)=>{const ok=ans[i]===q.a;if(ok)s++;return `<div class="q"><b>Q${i+1}. ${q.q}</b><p>आपका उत्तर: ${ans[i]<0?'—':q.o[ans[i]]}</p><p style="color:${ok?'#22c55e':'#ef4444'}">सही: ${q.o[q.a]}</p><div class="exp">${q.e}</div></div>`}).join('');document.getElementById('result').innerHTML=`<h2>Result: ${s}/${qs.length}</h2>${r}`}
+timer=setInterval(()=>{time--;if(time<=0)submit()},1000);
+render();
+</script>
+</body>
+</html>

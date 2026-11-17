@@ -29,6 +29,26 @@ h1 span,.section h2{color:var(--gold)}
 footer{text-align:center;padding:25px;background:#041126;border-top:1px solid #b88c2b}
 footer strong{color:var(--gold)}
 @media(max-width:520px){.hero,.section{padding:17px}.topbar{padding:13px 4%}}
+
+/* LOYAL PREMIUM CLASSROOM DASHBOARD */
+.classroom-head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.classroom-head h2{margin:0;color:var(--gold)}
+.classroom-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:18px}
+.classroom-card{padding:18px;background:linear-gradient(145deg,#10294b,#091a32);border:1px solid #b88c2b66;border-radius:15px;min-width:0}
+.classroom-card h3{margin:0 0 8px;color:#ffe08a}
+.classroom-card p{margin:0;color:#d2d9e8}
+.classroom-status{display:inline-block;margin-top:12px;padding:5px 10px;border:1px solid #b88c2b;border-radius:30px;color:#ffe69a;font-size:12px;font-weight:800}
+.classroom-table{width:100%;border-collapse:collapse;margin-top:14px}
+.classroom-table th,.classroom-table td{text-align:left;padding:10px 8px;border-bottom:1px solid #ffffff22}
+.classroom-table th{color:var(--gold)}
+.classroom-table td{color:#d2d9e8}
+.classroom-note{font-size:13px;color:#aebdd0;margin-top:14px}
+@media(max-width:520px){
+ .classroom-grid{grid-template-columns:1fr}
+ .classroom-table{font-size:13px}
+ .classroom-table th,.classroom-table td{padding:8px 5px}
+}
+
 </style>
 </head>
 <body>
@@ -66,6 +86,72 @@ footer strong{color:var(--gold)}
 <h2>Video Classroom</h2>
 <p class="muted">अधिकृत lecture links उपलब्ध होने पर विषयवार वीडियो यहाँ वेबसाइट के अंदर जोड़े जाएँगे।</p>
 <p class="note">अभी कोई lecture link उपलब्ध नहीं कराया गया है। इसलिए कोई नकली या अनधिकृत वीडियो नहीं जोड़ा गया है।</p>
+</section>
+
+
+<section class="section" id="loyal-classroom">
+  <div class="classroom-head">
+    <div>
+      <span class="tag">✦ LOYAL STUDENT PORTAL ✦</span>
+      <h2>👑 Premium Batch Classroom</h2>
+    </div>
+    <span class="status">UP TGT SCIENCE</span>
+  </div>
+
+  <div class="classroom-grid">
+    <article class="classroom-card">
+      <h3>📅 Today's Class</h3>
+      <p>आज की क्लास का विषय और समय अभी प्रकाशित नहीं किया गया है।</p>
+      <span class="classroom-status">Schedule not published</span>
+    </article>
+
+    <article class="classroom-card">
+      <h3>🎬 Video Classroom</h3>
+      <p>Physics, Biology, Computer और Geography के वास्तविक lectures उपलब्ध होने पर जोड़े जाएँगे।</p>
+      <span class="classroom-status">Lectures not uploaded</span>
+    </article>
+
+    <article class="classroom-card">
+      <h3>📚 Study Material</h3>
+      <p>विषयवार Notes और अध्ययन सामग्री उपलब्ध होने पर यहाँ दिखाई जाएगी।</p>
+      <span class="classroom-status">Material not uploaded</span>
+    </article>
+
+    <article class="classroom-card">
+      <h3>📝 Revision & Practice</h3>
+      <p>अधिकृत अभ्यास प्रश्न और Revision सामग्री उपलब्ध होने पर जोड़ी जाएगी।</p>
+      <span class="classroom-status">Practice material pending</span>
+    </article>
+
+    <article class="classroom-card">
+      <h3>📢 Batch Updates</h3>
+      <p>अभी कोई नया बैच Announcement प्रकाशित नहीं किया गया है।</p>
+      <span class="classroom-status">No new announcements</span>
+    </article>
+
+    <article class="classroom-card">
+      <h3>📖 Subject Library</h3>
+      <p>Physics, Biology, Computer और Geography के चारों विषय इस बैच में शामिल हैं।</p>
+      <span class="classroom-status">4 subjects listed</span>
+    </article>
+  </div>
+
+  <article class="classroom-card" style="margin-top:16px">
+    <h3>🗓️ Weekly Timetable</h3>
+    <p>सत्यापित क्लास शेड्यूल अभी प्रकाशित नहीं किया गया है।</p>
+    <table class="classroom-table">
+      <thead>
+        <tr><th>Subject</th><th>Class Time</th><th>Status</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Physics</td><td>Not announced</td><td>Pending</td></tr>
+        <tr><td>Biology</td><td>Not announced</td><td>Pending</td></tr>
+        <tr><td>Computer</td><td>Not announced</td><td>Pending</td></tr>
+        <tr><td>Geography</td><td>Not announced</td><td>Pending</td></tr>
+      </tbody>
+    </table>
+    <p class="classroom-note">यह Classroom ढाँचा है। वास्तविक क्लास समय और सामग्री की पुष्टि के बाद ही प्रकाशित होगी।</p>
+  </article>
 </section>
 
 <section class="section">

@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UPSSSC PET — Year-wise Test Series | LOYAL Global Studies</title>
+
+<style>
+*{box-sizing:border-box}
+body{margin:0;padding:16px;font-family:system-ui,sans-serif;
+background:#06152d;color:#f5f7ff}
+main{max-width:1050px;margin:auto}
+.home{display:inline-block;margin:12px 0 20px;color:#ffda68;text-decoration:none}
+.pet-hero{padding:26px 20px;border:1px solid #80652c;border-radius:20px;
+background:linear-gradient(135deg,#102b50,#07152c 70%);text-align:center}
+.pet-hero h1{color:#ffda68;margin:8px 0}
+.pet-hero p{color:#d2def0;line-height:1.7}
+.pet-tag{display:inline-block;padding:6px 11px;border-radius:30px;
+background:#263858;color:#ffda68;font-size:12px;font-weight:800}
+.pet-tools{display:flex;gap:10px;flex-wrap:wrap;margin:20px 0}
+.pet-tools input,.pet-tools select{flex:1;min-width:145px;padding:12px;
+border-radius:10px;border:1px solid #536582;background:#101f39;color:white}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.year{display:block;text-decoration:none;color:#f5f7ff;background:#101f39;
+border:1px solid #344b70;border-radius:15px;padding:17px;transition:.2s}
+.year:hover{border-color:#ffda68;transform:translateY(-2px)}
+.year h2{color:#ffda68;font-size:19px;margin:8px 0}
+.year p{line-height:1.6;color:#cbd7e9}
+.year span{color:#ffda68;font-weight:800}
+.pet-status{font-size:12px;color:#cbd7e9}
+.pet-footer{text-align:center;color:#aebed5;margin:28px 0 10px}
+#petNoResults{display:none;color:#ffda68;text-align:center;padding:20px}
+@media(max-width:360px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body><main>
+<a class="home" href="/">← मुख्य वेबसाइट</a>
+
+<section class="pet-hero" id="pet-premium-library">
+  <span class="pet-tag">✦ LOYAL GLOBAL STUDIES ✦</span>
+  <h1>👑 UPSSSC PET Test Series</h1>
+  <p>Hindi Medium • Year-wise Practice Library</p>
+  <p>अपना वर्ष चुनें और उपलब्ध अभ्यास सामग्री से तैयारी करें। अभ्यास सामग्री को आधिकारिक PYQ तभी मानें जब उसका सत्यापन हो।</p>
+</section>
+
+<div class="pet-tools">
+  <input id="petSearch" type="search" placeholder="वर्ष खोजें — जैसे 2021" aria-label="वर्ष खोजें">
+  <select id="petFilter" aria-label="टेस्ट स्थिति चुनें">
+    <option value="all">सभी वर्ष</option>
+    <option value="practice">अभ्यास टेस्ट</option>
+    <option value="info">परीक्षा सूचना</option>
+  </select>
+</div>
+
+<p class="intro">Hindi Medium • वर्षवार अलग-अलग पेज।
+जहाँ अभ्यास सामग्री है, उसे आधिकारिक PYQ के रूप में सत्यापित नहीं माना गया है।
+जिन वर्षों में परीक्षा नहीं हुई, वहाँ वास्तविक PYQ होने का दावा नहीं किया गया है।</p>
+<div class="grid" id="petYearGrid">
+
+<a class="year" data-year="2018" data-kind="info" href="upsssc-pet-2018.html">
+  <h2>UPSSSC PET 2018</h2>
+  <p>परीक्षा आयोजित नहीं हुई</p><span>सूचना देखें →</span>
+</a>
+
+<a class="year" data-year="2019" data-kind="info" href="upsssc-pet-2019.html">
+  <h2>UPSSSC PET 2019</h2>
+  <p>परीक्षा आयोजित नहीं हुई</p><span>सूचना देखें →</span>
+</a>
+
+<a class="year" data-year="2020" data-kind="info" href="upsssc-pet-2020.html">
+  <h2>UPSSSC PET 2020</h2>
+  <p>परीक्षा आयोजित नहीं हुई</p><span>सूचना देखें →</span>
+</a>
+
+<a class="year" data-year="2021" data-kind="practice" href="upsssc-pet-2021.html">
+  <h2>UPSSSC PET 2021</h2>
+  <p>अभ्यास टेस्ट • आधिकारिक PYQ सत्यापन बाकी</p><span>टेस्ट खोलें →</span>
+</a>
+
+<a class="year" data-year="2022" data-kind="practice" href="upsssc-pet-2022.html">
+  <h2>UPSSSC PET 2022</h2>
+  <p>अभ्यास टेस्ट • आधिकारिक PYQ सत्यापन बाकी</p><span>टेस्ट खोलें →</span>
+</a>
+
+<a class="year" data-year="2023" data-kind="practice" href="upsssc-pet-2023.html">
+  <h2>UPSSSC PET 2023</h2>
+  <p>अभ्यास टेस्ट • आधिकारिक PYQ सत्यापन बाकी</p><span>टेस्ट खोलें →</span>
+</a>
+
+<a class="year" data-year="2024" data-kind="info" href="upsssc-pet-2024.html">
+  <h2>UPSSSC PET 2024</h2>
+  <p>परीक्षा आयोजित नहीं हुई</p><span>सूचना देखें →</span>
+</a>
+
+<a class="year" data-year="2025" data-kind="practice" href="upsssc-pet-2025.html">
+  <h2>UPSSSC PET 2025</h2>
+  <p>अभ्यास टेस्ट • आधिकारिक PYQ सत्यापन बाकी</p><span>टेस्ट खोलें →</span>
+</a>
+</div><p id="petNoResults">इस खोज में कोई वर्ष नहीं मिला।</p><p class="pet-footer">LOYAL Global Studies • Hindi Medium</p>
+
+<script>
+(function(){
+  const search=document.getElementById('petSearch');
+  const filter=document.getElementById('petFilter');
+  const cards=[...document.querySelectorAll('#petYearGrid .year')];
+  const empty=document.getElementById('petNoResults');
+  function update(){
+    const q=search.value.trim().toLowerCase();
+    const kind=filter.value;
+    let shown=0;
+    cards.forEach(card=>{
+      const matchText=card.innerText.toLowerCase().includes(q);
+      const matchKind=kind==='all'||card.dataset.kind===kind;
+      const visible=matchText&&matchKind;
+      card.hidden=!visible;
+      if(visible)shown++;
+    });
+    empty.style.display=shown?'none':'block';
+  }
+  search.addEventListener('input',update);
+  filter.addEventListener('change',update);
+})();
+</script>
+
+</main></body></html>

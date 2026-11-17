@@ -39,7 +39,28 @@
     footer{text-align:center;padding:25px 12px;border-top:1px solid #26334b;color:#aebbd0;font-size:12px}
     footer strong{color:#ffd85b}
     @media(max-width:480px){.topbar{padding:15px}.section{padding:17px}.card{padding:15px}}
-  </style>
+
+/* LOYAL UPSC PREMIUM CLASSROOM */
+.classroom-head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.classroom-head h2{margin:12px 0 0;color:#ffdc66}
+.classroom-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:18px}
+.classroom-card{padding:18px;background:linear-gradient(145deg,#142d4e,#09172d);border:1px solid #806b36;border-radius:15px;min-width:0}
+.classroom-card h3{margin:0 0 8px;color:#ffe28a}
+.classroom-card p{margin:0;color:#d5deeb;line-height:1.7}
+.classroom-status{display:inline-block;margin-top:12px;padding:5px 10px;border:1px solid #9d7d37;border-radius:30px;color:#ffe69a;font-size:12px;font-weight:800}
+.classroom-table{width:100%;border-collapse:collapse;margin-top:14px}
+.classroom-table th,.classroom-table td{text-align:left;padding:10px 8px;border-bottom:1px solid #ffffff22}
+.classroom-table th{color:#ffdc66}
+.classroom-table td{color:#d5deeb}
+.classroom-note{margin-top:14px;color:#aebbd0;font-size:13px;line-height:1.7}
+@media(max-width:520px){
+ .classroom-grid{grid-template-columns:1fr}
+ .classroom-card{padding:15px}
+ .classroom-table{font-size:13px}
+ .classroom-table th,.classroom-table td{padding:8px 5px}
+}
+
+</style>
 </head>
 <body>
 <header class="topbar">
@@ -104,10 +125,71 @@
     <p class="note">Faculty नाम और विषय उपलब्ध course/curriculum जानकारी पर आधारित हैं। अलग-अलग course listings में faculty विवरण भिन्न हो सकते हैं; सभी नामों की इस exact batch में वर्तमान नियुक्ति स्वतंत्र रूप से सत्यापित नहीं है।</p>
   </section>
 
-  <section class="section">
-    <h2>LOYAL Batch Classroom</h2>
-    <p class="section-intro">इस सेक्शन में आगे चलकर अधिकृत class schedule, study notes, practice tests और revision material जोड़ा जा सकता है। अभी कोई बाहरी batch या KGS link शामिल नहीं है।</p>
+
+  <section class="section" id="loyal-classroom">
+    <div class="classroom-head">
+      <div>
+        <span class="tag">✦ LOYAL STUDENT PORTAL ✦</span>
+        <h2>👑 Premium Batch Classroom</h2>
+      </div>
+      <div class="chips"><span>UPSC 3 YEAR FOUNDATION</span></div>
+    </div>
+
+    <div class="classroom-grid">
+      <article class="classroom-card">
+        <h3>📅 Today's Class</h3>
+        <p>आज की क्लास का विषय और समय अभी प्रकाशित नहीं किया गया है।</p>
+        <span class="classroom-status">Schedule not published</span>
+      </article>
+
+      <article class="classroom-card">
+        <h3>🎬 Video Classroom</h3>
+        <p>तीनों वर्षों के वास्तविक LOYAL lectures उपलब्ध होने पर यहाँ जोड़े जाएँगे।</p>
+        <span class="classroom-status">Lectures not uploaded</span>
+      </article>
+
+      <article class="classroom-card">
+        <h3>📚 Study Material</h3>
+        <p>NCERT, General Studies और विषयवार Notes उपलब्ध होने पर यहाँ मिलेंगे।</p>
+        <span class="classroom-status">Material not uploaded</span>
+      </article>
+
+      <article class="classroom-card">
+        <h3>📝 Prelims Practice</h3>
+        <p>GS और CSAT के अभ्यास प्रश्न तथा mock tests उपलब्ध होने पर जोड़े जाएँगे।</p>
+        <span class="classroom-status">Practice pending</span>
+      </article>
+
+      <article class="classroom-card">
+        <h3>✍️ Mains Answer Writing</h3>
+        <p>GS-I से GS-IV, Essay और Ethics के लिखित अभ्यास की सामग्री उपलब्ध होने पर जोड़ी जाएगी।</p>
+        <span class="classroom-status">Writing practice pending</span>
+      </article>
+
+      <article class="classroom-card">
+        <h3>📢 Batch Updates</h3>
+        <p>अभी कोई नया बैच Announcement प्रकाशित नहीं किया गया है।</p>
+        <span class="classroom-status">No new announcements</span>
+      </article>
+    </div>
+
+    <article class="classroom-card" style="margin-top:16px">
+      <h3>🗓️ Weekly Timetable</h3>
+      <p>तीनों वर्षों का सत्यापित क्लास शेड्यूल अभी प्रकाशित नहीं किया गया है।</p>
+      <table class="classroom-table">
+        <thead>
+          <tr><th>Course Year</th><th>Class Time</th><th>Status</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Year 1 — Foundation</td><td>Not announced</td><td>Pending</td></tr>
+          <tr><td>Year 2 — Core GS</td><td>Not announced</td><td>Pending</td></tr>
+          <tr><td>Year 3 — Exam Preparation</td><td>Not announced</td><td>Pending</td></tr>
+        </tbody>
+      </table>
+      <p class="classroom-note">यह Classroom ढाँचा है। वास्तविक क्लास समय और सामग्री की पुष्टि के बाद ही प्रकाशित होगी।</p>
+    </article>
   </section>
+
 </main>
 
 <footer>

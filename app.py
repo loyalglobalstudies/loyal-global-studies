@@ -1,4 +1,4 @@
-from flask import Flask, render_template, abort
+from flask import Flask, render_template, abort, send_from_directory
 
 app = Flask(__name__)
 
@@ -62,6 +62,26 @@ BATCHES = [
 @app.route("/")
 def home():
     return render_template("index.html", batches=BATCHES)
+
+@app.route("/batches/upsssc-pet-<int:year>.html")
+def pet_year_page(year):
+    if year not in (2021, 2022, 2023, 2024, 2025):
+        abort(404)
+
+    filename = f"pet{year}.html"
+    return send_from_directory("static/legacy", filename)
+
+
+
+@app.route("/batches/bihar-stet-full-exam.html")
+def bihar_stet_full_exam():
+    return send_from_directory("static/legacy", "bihar-stet-full-exam.html")
+
+
+@app.route("/batches/bihar-stet-2024-practice.html")
+def bihar_stet_2024_practice():
+    return send_from_directory("static/legacy", "bihar-stet-2024-practice.html")
+
 
 @app.route("/batches/<slug>")
 def batch_page(slug):
