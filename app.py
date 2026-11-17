@@ -64,6 +64,12 @@ BATCHES = [
         "description": "Army GD और Tradesman परीक्षा की bilingual online batch information.",
         "category": "Defence Exams"
     },
+    {
+        "slug": "biology-foundation-4-amrita",
+        "name": "Biology Foundation Batch 4.0 — Amrita Ma’am",
+        "description": "Live bilingual Biology foundation batch with 5 free mock tests.",
+        "category": "Teaching Exams"
+    },
 ]
 
 @app.route("/")
