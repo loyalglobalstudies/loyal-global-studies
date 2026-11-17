@@ -23,6 +23,39 @@ h1{font-size:clamp(28px,5vw,46px);margin:12px 0}
 .notice{background:#fff4d6;color:#382b08;padding:16px;border-radius:12px;line-height:1.7}
 .btn{display:inline-block;margin-top:22px;padding:13px 20px;background:#ffd45a;color:#061832;text-decoration:none;font-weight:800;border-radius:10px}
 footer{text-align:center;padding:25px;color:#cbd6e8;line-height:1.8}
+
+/* LOYAL BEST PHOTO POSE GALLERY */
+.pose-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 16px;
+}
+.pose-gallery img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 2px solid #d5a52c;
+  background: #102b4b;
+}
+.pose-gallery figure {
+  margin: 0;
+  overflow: hidden;
+  border-radius: 12px;
+}
+.pose-gallery figcaption {
+  padding: 7px 3px;
+  color: #ffd45a;
+  font-size: 13px;
+  text-align: center;
+}
+@media(max-width:380px) {
+  .pose-gallery { gap: 8px; }
+}
+/* END LOYAL BEST PHOTO POSE GALLERY */
+
 </style>
 </head>
 <body>
@@ -41,6 +74,25 @@ footer{text-align:center;padding:25px;color:#cbd6e8;line-height:1.8}
 <div class="topic">
 <b>01 · Best Photo Poses</b>
 <p>अलग-अलग फोटो poses और बेहतर photo presentation.</p>
+
+<div class="pose-gallery">
+<figure>
+<img src="{{ url_for('static', filename='images/best-photo-pose-01.jpg') }}" alt="Best Photo Pose 1" loading="lazy">
+<figcaption>Photo Pose 01</figcaption>
+</figure>
+<figure>
+<img src="{{ url_for('static', filename='images/best-photo-pose-02.jpg') }}" alt="Best Photo Pose 2" loading="lazy">
+<figcaption>Photo Pose 02</figcaption>
+</figure>
+<figure>
+<img src="{{ url_for('static', filename='images/best-photo-pose-03.jpg') }}" alt="Best Photo Pose 3" loading="lazy">
+<figcaption>Photo Pose 03</figcaption>
+</figure>
+<figure>
+<img src="{{ url_for('static', filename='images/best-photo-pose-04.jpg') }}" alt="Best Photo Pose 4" loading="lazy">
+<figcaption>Photo Pose 04</figcaption>
+</figure>
+</div>
 </div>
 <div class="topic">
 <b>02 · Stylish Attitude</b>
