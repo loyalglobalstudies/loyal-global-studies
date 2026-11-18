@@ -2,6 +2,18 @@ from flask import Flask, render_template, abort, send_from_directory
 
 app = Flask(__name__)
 
+# LOYAL_SECURITY_HEADERS_V1
+@app.after_request
+def add_security_headers(response):
+    response.headers["X-Content-Type-Options"] = "nosniff"
+    response.headers["X-Frame-Options"] = "SAMEORIGIN"
+    response.headers["Referrer-Policy"] = (
+        "strict-origin-when-cross-origin"
+    )
+    return response
+
+
+
 BATCHES = [
     {
         "slug": "bihar-stet",
@@ -116,4 +128,4 @@ def batch_page(slug):
     return render_template("batches/" + slug + ".html", batch=batch)
 
 if __name__ == "__main__":
-    app.run(host="127.0.0.1", port=5000, debug=True)
+    app.run(host="127.0.0.1", port=5000, debug=False)
