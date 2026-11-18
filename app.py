@@ -76,6 +76,12 @@ BATCHES = [
         "description": "Live bilingual Biology foundation batch with 5 free mock tests.",
         "category": "Teaching Exams"
     },
+    {
+        "slug": "upsc-crash-course-2026",
+        "name": "UPSC Crash Course 2026 — KGS",
+        "description": "KGS UPSC Crash Course 2026 की जानकारी और मूल कोर्स पेज।",
+        "category": "UPSC"
+    },
 ]
 
 @app.route("/")
