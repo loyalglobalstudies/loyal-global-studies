@@ -457,3 +457,56 @@ h1 {
   .telegram-join-btn { transition: none; }
 }
 /* END LOYAL TELEGRAM COMMUNITY */
+
+
+/* LOYAL NEW BATCH CARD POLISH 2026 */
+.new-batch-card {
+  border-color: rgba(255,212,90,.58);
+  background: linear-gradient(145deg,#142c4d,#061832);
+  box-shadow: 0 12px 30px rgba(0,0,0,.24),
+              inset 0 1px 0 rgba(255,212,90,.10);
+}
+.new-batch-card:hover {
+  border-color: #ffd45a;
+  box-shadow: 0 16px 34px rgba(0,0,0,.30),
+              0 0 18px rgba(255,212,90,.12);
+}
+.new-batch-card .batch-thumbnail {
+  aspect-ratio: 4 / 5;
+  object-fit: contain;
+  background: #061832;
+}
+.batch-price {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 8px 0 2px 7px;
+  padding: 6px 12px;
+  border: 1px solid rgba(255,212,90,.7);
+  border-radius: 999px;
+  background: linear-gradient(110deg,#ffd45a,#eab83c);
+  color: #061832;
+  font-size: .82rem;
+  font-weight: 950;
+  letter-spacing: .02em;
+  box-shadow: 0 4px 12px rgba(213,165,44,.18);
+}
+@media(max-width:600px) {
+  .new-batch-card .batch-card-content {
+    padding: 10px;
+  }
+  .new-batch-card .batch-card-content h3 {
+    font-size: .9rem;
+    line-height: 1.35;
+  }
+  .batch-price {
+    margin-left: 0;
+    padding: 5px 10px;
+  }
+}
+@media(prefers-reduced-motion:reduce) {
+  .new-batch-card {
+    transition: none;
+  }
+}
+/* END LOYAL NEW BATCH CARD POLISH */

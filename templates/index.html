@@ -38,7 +38,10 @@
     'upsc-crash-course-2026': 'images/upsc-crash-course-2026.jpg',
     'uppsc-ro-aro-2026': 'images/uppsc-ro-aro-2026.jpg',
     'bpsc-tre-4': 'images/bpsc-tre-4-thumbnail.jpg',
-    'up-tgt-udan-science': 'images/up-tgt-udan-science.webp'
+    'up-tgt-udan-science': 'images/up-tgt-udan-science.webp',
+    'up-si-2026-27': 'images/up-si-2026-27.jpg',
+    'economics-foundation': 'images/economics-foundation.jpg',
+    'history-foundation': 'images/history-foundation.jpg'
   } %}
 
   <section class="batch-library" id="batches">
@@ -67,7 +70,7 @@
 
     <div class="batch-grid" id="batchGrid">
       {% for batch in batches %}
-      <article class="premium-batch-card"
+      <article class="premium-batch-card{% if batch.slug in ['up-si-2026-27', 'economics-foundation', 'history-foundation'] %} new-batch-card{% endif %}"
                data-name="{{ batch.name|lower }}"
                data-category="{{ batch.category }}"
                data-slug="{{ batch.slug }}">
@@ -87,6 +90,11 @@
 
           <div class="batch-card-content">
             <span class="batch-category">{{ batch.category }}</span>
+            {% if batch.slug == 'up-si-2026-27' %}
+            <span class="batch-price">₹6,500</span>
+            {% elif batch.slug in ['economics-foundation', 'history-foundation'] %}
+            <span class="batch-price">₹200</span>
+            {% endif %}
             <h3>{{ batch.name }}</h3>
             <p>{{ batch.description }}</p>
             <span class="batch-open">Open Classroom <span>→</span></span>

@@ -10,6 +10,18 @@ def add_security_headers(response):
     response.headers["Referrer-Policy"] = (
         "strict-origin-when-cross-origin"
     )
+    response.headers["Content-Security-Policy-Report-Only"] = (
+        "default-src 'self'; "
+        "script-src 'self'; "
+        "style-src 'self'; "
+        "img-src 'self' data: https:; "
+        "font-src 'self' data:; "
+        "connect-src 'self'; "
+        "frame-src https://www.youtube-nocookie.com; "
+        "object-src 'none'; "
+        "base-uri 'self'; "
+        "form-action 'self'"
+    )
     return response
 
 
@@ -92,6 +104,24 @@ BATCHES = [
         "slug": "upsc-crash-course-2026",
         "name": "UPSC Crash Course 2026 — KGS",
         "description": "KGS UPSC Crash Course 2026 की जानकारी और मूल कोर्स पेज।",
+        "category": "UPSC"
+    },
+    {
+        "slug": "up-si-2026-27",
+        "name": "UP SI 2026–27 Offline Batch — Prayagraj",
+        "description": "Offline Hindi-medium UP SI preparation. Fee ₹6,500.",
+        "category": "State Exams"
+    },
+    {
+        "slug": "economics-foundation",
+        "name": "Economics Foundation by Khan Sir",
+        "description": "Economics Foundation Batch. Fee ₹200.",
+        "category": "UPSC"
+    },
+    {
+        "slug": "history-foundation",
+        "name": "History Foundation by Khan Sir",
+        "description": "History Foundation Batch. Fee ₹200.",
         "category": "UPSC"
     },
 ]
