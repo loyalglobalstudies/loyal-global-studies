@@ -40,9 +40,10 @@ const qs=[
 {q:'भारत का राष्ट्रीय वृक्ष?',o:['पीपल','बरगद','नीम','आम'],a:1,e:'बरगद।'}
 ];
 let cur=0,ans=Array(qs.length).fill(-1),time=12*60,timer;
+let submitted=false;
 function render(){const q=qs[cur];document.getElementById('quiz').innerHTML=`<div class="q"><b>Q${cur+1}/${qs.length}</b><p>${q.q}</p>${q.o.map((o,i)=>`<button class="opt ${ans[cur]===i?'sel':''}" onclick="pick(${i})">${String.fromCharCode(65+i)}. ${o}</button>`).join('')}</div><button class="btn g" onclick="cur>0&&cur--;render()">← पिछला</button> <button class="btn g" onclick="cur<qs.length-1&&cur++;render()">अगला →</button>`}
 function pick(i){ans[cur]=i;render()}
-function submit(){clearInterval(timer);let s=0;const r=qs.map((q,i)=>{const ok=ans[i]===q.a;if(ok)s++;return `<div class="q"><b>Q${i+1}. ${q.q}</b><p>आपका उत्तर: ${ans[i]<0?'—':q.o[ans[i]]}</p><p style="color:${ok?'#22c55e':'#ef4444'}">सही: ${q.o[q.a]}</p><div class="exp">${q.e}</div></div>`}).join('');document.getElementById('result').innerHTML=`<h2>Result: ${s}/${qs.length}</h2>${r}`}
+function submit(){if(submitted)return;submitted=true;clearInterval(timer);let s=0;const r=qs.map((q,i)=>{const ok=ans[i]===q.a;if(ok)s++;return `<div class="q"><b>Q${i+1}. ${q.q}</b><p>आपका उत्तर: ${ans[i]<0?'—':q.o[ans[i]]}</p><p style="color:${ok?'#22c55e':'#ef4444'}">सही: ${q.o[q.a]}</p><div class="exp">${q.e}</div></div>`}).join('');document.getElementById('result').innerHTML=`<h2>Result: ${s}/${qs.length}</h2>${r}`}
 timer=setInterval(()=>{time--;if(time<=0)submit()},1000);
 render();
 </script>
