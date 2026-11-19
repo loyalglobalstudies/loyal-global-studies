@@ -124,6 +124,55 @@ BATCHES = [
         "description": "History Foundation Batch. Fee ₹200.",
         "category": "UPSC"
     },
+    {
+        "slug": "jee-2027-dropper-phase-2",
+        "name": "JEE 2027 Dropper Yearlong Offline Batch — Phase II, Prayagraj",
+        "description": "JEE 2027 Dropper Yearlong Batch. Offline bilingual classroom in Prayagraj.",
+        "category": "Engineering Exams"
+    },
+    {
+        "slug": "upsc-hindi-literature-optional",
+        "name": "UPSC Hindi Literature Optional Paper — Online Batch",
+        "description": "UPSC Hindi Literature Optional Paper preparation batch.",
+        "category": "UPSC"
+    },
+    {
+        "slug": "bpsc-73-foundation-11",
+        "name": "73rd BPSC Foundation Batch 11 — Musallahpur",
+        "description": "73rd BPSC Foundation Batch 11 for Prelims, Mains and Interview preparation.",
+        "category": "State Exams"
+    },
+    {
+        "slug": "upsc-foundation-2028-online",
+        "name": "UPSC Foundation Batch 2028 — Hindi Medium (Online)",
+        "description": "UPSC Foundation 2028 Hindi-medium online preparation for Prelims and Mains.",
+        "category": "UPSC"
+    },
+    {
+        "slug": "upsc-foundation-2028-offline-delhi",
+        "name": "UPSC Pre + Mains Foundation Batch 2028 — Hindi Medium",
+        "description": "UPSC Prelims and Mains Foundation Batch 2028, offline Azadpur centre.",
+        "category": "UPSC"
+    },
+    {
+        "slug": "sbi-po-clerk-target-2026",
+        "name": "SBI PO/Clerk (Pre + Mains) Target Batch 2026",
+        "description": "Bilingual SBI PO and Clerk Target Batch 2026.",
+        "category": "Banking Exams"
+    },
+    {
+        "slug": "super-tet-primary-2026",
+        "name": "Super TET Primary Teacher Batch 2026",
+        "description": "Super TET 2026 preparation for Primary Teacher recruitment.",
+        "category": "Teaching Exams"
+    },
+    {
+        "slug": "rrb-group-d-rail-sarthi-2026",
+        "name": "RRB Group D — रेल सारथी बैच 2026",
+        "description": "RRB Group D Rail Sarthi Batch 2026, Hindi-medium railway preparation.",
+        "category": "Railway Exams"
+    },
+
 ]
 
 @app.route("/")

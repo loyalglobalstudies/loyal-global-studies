@@ -41,7 +41,15 @@
     'up-tgt-udan-science': 'images/up-tgt-udan-science.webp',
     'up-si-2026-27': 'images/up-si-2026-27.jpg',
     'economics-foundation': 'images/economics-foundation.jpg',
-    'history-foundation': 'images/history-foundation.jpg'
+    'history-foundation': 'images/history-foundation.jpg',
+    'jee-2027-dropper-phase-2': 'images/jee-2027-dropper-phase-2.webp',
+    'upsc-hindi-literature-optional': 'images/upsc-hindi-literature-optional.webp',
+    'bpsc-73-foundation-11': 'images/bpsc-73-foundation-11.webp',
+    'upsc-foundation-2028-online': 'images/upsc-foundation-2028-online.webp',
+    'upsc-foundation-2028-offline-delhi': 'images/upsc-foundation-2028-offline-delhi.webp',
+    'sbi-po-clerk-target-2026': 'images/sbi-po-clerk-2026.webp',
+    'super-tet-primary-2026': 'images/super-tet-2026.webp',
+    'rrb-group-d-rail-sarthi-2026': 'images/rrb-group-d-rail-sarthi-2026.webp',
   } %}
 
   <section class="batch-library" id="batches">
@@ -59,7 +67,7 @@
              aria-label="Search batches">
       <select id="batchCategory" aria-label="Filter by category">
         <option value="">सभी Categories</option>
-        {% for category in ['Teaching Exams', 'State Exams', 'Railway Exams', 'Computer Courses', 'UPSC', 'Defence Exams', 'Creative Skills'] %}
+        {% for category in ['Teaching Exams', 'State Exams', 'Railway Exams', 'Computer Courses', 'UPSC', 'Defence Exams', 'Creative Skills', 'Engineering Exams', 'Banking Exams'] %}
         <option value="{{ category }}">{{ category }}</option>
         {% endfor %}
       </select>
@@ -70,7 +78,7 @@
 
     <div class="batch-grid" id="batchGrid">
       {% for batch in batches %}
-      <article class="premium-batch-card{% if batch.slug in ['up-si-2026-27', 'economics-foundation', 'history-foundation'] %} new-batch-card{% endif %}"
+      <article class="premium-batch-card{% if batch.slug in ['up-si-2026-27', 'economics-foundation', 'history-foundation', 'jee-2027-dropper-phase-2', 'upsc-hindi-literature-optional', 'bpsc-73-foundation-11', 'upsc-foundation-2028-online', 'upsc-foundation-2028-offline-delhi', 'sbi-po-clerk-target-2026', 'super-tet-primary-2026', 'rrb-group-d-rail-sarthi-2026'] %} new-batch-card{% endif %}"
                data-name="{{ batch.name|lower }}"
                data-category="{{ batch.category }}"
                data-slug="{{ batch.slug }}">
@@ -94,6 +102,22 @@
             <span class="batch-price">₹6,500</span>
             {% elif batch.slug in ['economics-foundation', 'history-foundation'] %}
             <span class="batch-price">₹200</span>
+            {% elif batch.slug == 'jee-2027-dropper-phase-2' %}
+            <span class="batch-price">₹34,999</span>
+            {% elif batch.slug == 'upsc-hindi-literature-optional' %}
+            <span class="batch-price">₹6,999</span>
+            {% elif batch.slug == 'bpsc-73-foundation-11' %}
+            <span class="batch-price">₹20,000</span>
+            {% elif batch.slug == 'upsc-foundation-2028-online' %}
+            <span class="batch-price">₹10,000</span>
+            {% elif batch.slug == 'upsc-foundation-2028-offline-delhi' %}
+            <span class="batch-price">₹69,500</span>
+            {% elif batch.slug == 'sbi-po-clerk-target-2026' %}
+            <span class="batch-price">₹799</span>
+            {% elif batch.slug == 'super-tet-primary-2026' %}
+            <span class="batch-price">₹1,199</span>
+            {% elif batch.slug == 'rrb-group-d-rail-sarthi-2026' %}
+            <span class="batch-price">₹699</span>
             {% endif %}
             <h3>{{ batch.name }}</h3>
             <p>{{ batch.description }}</p>

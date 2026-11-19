@@ -510,3 +510,9 @@ h1 {
   }
 }
 /* END LOYAL NEW BATCH CARD POLISH */
+
+
+/* LOYAL EIGHT BATCH CARD POLISH */
+.new-batch-card .batch-thumbnail { aspect-ratio: 16 / 9; object-fit: cover; }
+.new-batch-card { border-color: rgba(255,212,90,.42); }
+.new-batch-card .batch-price { margin: 8px 0 2px; }
