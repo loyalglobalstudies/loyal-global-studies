@@ -1,0 +1,27 @@
+{
+  "id": "/",
+  "name": "LOYAL Global Studies",
+  "short_name": "LOYAL Studies",
+  "description": "LOYAL Global Studies — Learn, Grow, Achieve.",
+  "start_url": "/?source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#061832",
+  "theme_color": "#061832",
+  "lang": "en-IN",
+  "icons": [
+    {
+      "src": "/static/images/loyal-app-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/static/images/loyal-app-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

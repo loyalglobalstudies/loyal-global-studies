@@ -206,5 +206,17 @@ def batch_page(slug):
         abort(404)
     return render_template("batches/" + slug + ".html", batch=batch)
 
+
+
+@app.route("/sw.js")
+def loyal_service_worker():
+    response = send_from_directory(
+        "static", "sw.js", mimetype="application/javascript"
+    )
+    response.headers["Cache-Control"] = "no-cache"
+    response.headers["Service-Worker-Allowed"] = "/"
+    return response
+
+
 if __name__ == "__main__":
     app.run(host="127.0.0.1", port=5000, debug=False)

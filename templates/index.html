@@ -7,6 +7,9 @@
   <meta name="description" content="LOYAL GLOBAL STUDIES — Learn, Grow, Achieve.">
   <title>LOYAL GLOBAL STUDIES | Premium Learning</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+  <link rel="manifest" href="{{ url_for('static', filename='manifest.webmanifest') }}">
+
 </head>
 <body>
 <div class="ambient ambient-one"></div>
@@ -246,6 +249,9 @@
   updateCards();
 })();
 </script>
+
+
+<script src="{{ url_for('static', filename='js/pwa-register.js') }}" defer></script>
 
 </body>
 </html>
