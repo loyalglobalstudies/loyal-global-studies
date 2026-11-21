@@ -541,3 +541,69 @@ html {
     overflow-wrap: break-word;
   }
 }
+
+/* LOYAL FOUR COLUMN BATCH GRID */
+#batchGrid.batch-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 16px;
+  align-items: stretch;
+}
+
+#batchGrid .premium-batch-card {
+  min-width: 0;
+  width: 100%;
+}
+
+#batchGrid .batch-thumbnail {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+@media (max-width: 900px) {
+  #batchGrid.batch-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  #batchGrid.batch-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px;
+  }
+}
+
+/* LOYAL GLOBAL - FOUR COLUMNS WEB + ANDROID APP */
+#batchGrid.batch-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 12px;
+}
+
+@media (max-width: 900px) {
+  #batchGrid.batch-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 600px) {
+  #batchGrid.batch-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    gap: 5px;
+  }
+
+  #batchGrid .batch-card-content {
+    padding: 6px;
+  }
+
+  #batchGrid .batch-thumbnail {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
+}
