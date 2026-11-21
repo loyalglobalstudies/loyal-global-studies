@@ -218,5 +218,18 @@ def loyal_service_worker():
     return response
 
 
+
+
+@app.route("/.well-known/assetlinks.json")
+def loyal_assetlinks():
+    response = send_from_directory(
+        "static/.well-known",
+        "assetlinks.json",
+        mimetype="application/json"
+    )
+    response.headers["Cache-Control"] = "public, max-age=3600"
+    return response
+
+
 if __name__ == "__main__":
     app.run(host="127.0.0.1", port=5000, debug=False)

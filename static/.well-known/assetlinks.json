@@ -1,0 +1,8 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "com.onrender.loyal_global_studies_render.twa",
+        "sha256_cert_fingerprints": ["7A:F5:B3:45:57:86:FC:5E:58:5A:2D:8D:6F:9F:96:96:3E:56:0C:5D:38:2F:4C:55:13:CA:DF:66:34:C1:71:40"]
+      }
+    }]
