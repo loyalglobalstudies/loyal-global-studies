@@ -607,3 +607,58 @@ html {
     object-fit: cover;
   }
 }
+/* LOYAL GLOBAL STUDIES — PREMIUM BATCH LIBRARY HERO */
+.loyal-library-hero {
+  width: 100%;
+  margin: 0 auto clamp(22px, 4vw, 42px);
+  padding: clamp(8px, 1.5vw, 18px);
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(21, 85, 180, .24), transparent 62%),
+    linear-gradient(180deg, #050b1c 0%, #07152d 100%);
+  border-bottom: 1px solid rgba(255, 207, 83, .32);
+  box-sizing: border-box;
+}
+
+.loyal-library-hero__image-wrap {
+  width: min(100%, 1500px);
+  margin-inline: auto;
+  overflow: hidden;
+  border: 1px solid rgba(255, 207, 83, .58);
+  border-radius: clamp(8px, 1.5vw, 18px);
+  box-shadow:
+    0 12px 36px rgba(0, 0, 0, .38),
+    0 0 22px rgba(24, 112, 255, .16);
+  background: #030817;
+}
+
+.loyal-library-hero__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 470px;
+  object-fit: contain;
+  object-position: center;
+}
+
+@media (max-width: 600px) {
+  .loyal-library-hero {
+    padding: 7px;
+    margin-bottom: 20px;
+  }
+
+  .loyal-library-hero__image-wrap {
+    border-radius: 8px;
+  }
+
+  .loyal-library-hero__image {
+    max-height: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .loyal-library-hero,
+  .loyal-library-hero__image-wrap {
+    scroll-behavior: auto;
+  }
+}

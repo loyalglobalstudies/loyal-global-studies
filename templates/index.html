@@ -24,11 +24,15 @@
 
 
 <main>
-  <section class="batch-hero">
-    <p class="batch-eyebrow">✦ LOYAL GLOBAL STUDIES ✦</p>
-    <h1>Premium <span>Batch Library</span></h1>
-    <p class="batch-intro">अपनी तैयारी के लिए सही बैच चुनें। Learn • Grow • Achieve</p>
-    <div class="batch-count"><strong>{{ batches|length }}</strong> Learning Programs</div>
+  <section class="loyal-library-hero" aria-label="LOYAL Global Studies">
+    <div class="loyal-library-hero__image-wrap">
+      <img
+        class="loyal-library-hero__image"
+        src="{{ url_for('static', filename='images/loyal-global-studies-banner.png') }}"
+        alt="LOYAL GLOBAL STUDIES"
+        fetchpriority="high"
+        decoding="async">
+    </div>
   </section>
 
   {% set batch_images = {
