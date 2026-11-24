@@ -637,6 +637,7 @@ body.loyal-popup-open {
 /* END LOYAL RRB PREMIUM MOBILE POLISH */
 
 </style>
+<link rel="stylesheet" href="/static/css/loyal-video-player.css">
 </head>
 
 <body>
@@ -745,9 +746,16 @@ body.loyal-popup-open {
     © 2026 LOYAL GLOBAL STUDIES
   </footer>
 
+
+<section class="lvp-preview-section">
+  <h2>LOYAL Common Player — Preview</h2>
+  <div id="loyal-common-player"></div>
+</section>
+
 <div id="loyal-player-backdrop" hidden aria-hidden="true"></div>
 <button id="loyal-player-close" type="button"
         aria-label="Close video player" title="Close Player" hidden>×</button>
+<script src="/static/js/loyal-video-player.js"></script>
 <script>
 (function () {
   "use strict";
@@ -1075,8 +1083,36 @@ document.addEventListener("keydown", function(event) {
   }
 });
 
+
+  // LOYAL COMMON PLAYER — RRB DATA ADAPTER
+  if (window.LoyalVideoPlayer &&
+      document.getElementById("loyal-common-player")) {
+
+    const commonTeachers = Object.keys(teachers).map(function (key) {
+      return {
+        id: key,
+        name: teachers[key].name,
+        lectures: teachers[key].lectures.map(function (item) {
+          return {
+            title: item[0],
+            id: item[1]
+          };
+        })
+      };
+    });
+
+    window.rrbPlayer = window.LoyalVideoPlayer.mount({
+      root: "#loyal-common-player",
+      title: "RRB NTPC Rajdhani Express",
+      launchLabel: "▶ Open Common Video Classroom",
+      storageKey: "loyal_rrb_common_preview_v1",
+      teachers: commonTeachers
+    });
+  }
+
 })();
 </script>
+
 
 
 
