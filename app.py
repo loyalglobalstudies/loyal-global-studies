@@ -173,6 +173,48 @@ BATCHES = [
         "category": "Railway Exams"
     },
 
+    {
+        'slug': 'indian-map-foundation',
+        'name': 'Indian Map Foundation',
+        'description': 'Indian Map Foundation. Hindi medium. Fee ₹200.',
+        'category': 'UPSC',
+    },
+    {
+        'slug': 'upsc-csat-module-2027',
+        'name': 'UPSC CSAT Module 2027',
+        'description': 'UPSC CSAT Module 2027 preparation. Fee ₹2,499.',
+        'category': 'UPSC',
+    },
+    {
+        'slug': 'biology-foundation',
+        'name': 'Biology Foundation by Khan Sir',
+        'description': 'Biology Foundation: Botany + Zoology. Fee ₹200.',
+        'category': 'Teaching Exams',
+    },
+    {
+        'slug': 'english-foundation-2026',
+        'name': 'English Foundation by Ashutosh Tiwari Sir',
+        'description': 'English Foundation Batch. Fee ₹599.',
+        'category': 'Teaching Exams',
+    },
+    {
+        'slug': 'mind-calculation',
+        'name': 'Mind Calculation Batch',
+        'description': 'Mind Calculation Batch. Fee ₹99.',
+        'category': 'Creative Skills',
+    },
+    {
+        'slug': 'up-constable-2026-27',
+        'name': 'UP Constable 2026–27 Offline Batch — Prayagraj',
+        'description': 'UP Constable offline preparation in Prayagraj. Fee ₹5,500.',
+        'category': 'State Exams',
+    },
+    {
+        'slug': 'world-map-recorded',
+        'name': 'World Map by Khan Sir (Recorded)',
+        'description': 'Recorded World Map Batch. Fee ₹200.',
+        'category': 'UPSC',
+    },
 ]
 
 @app.route("/")
