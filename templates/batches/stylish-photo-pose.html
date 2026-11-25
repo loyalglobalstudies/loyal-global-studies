@@ -57,6 +57,8 @@ footer{text-align:center;padding:25px;color:#cbd6e8;line-height:1.8}
 /* END LOYAL BEST PHOTO POSE GALLERY */
 
 </style>
+<link rel="stylesheet" href="/static/css/loyal-classroom.css">
+<link rel="stylesheet" href="/static/css/loyal-video-player.css">
 </head>
 <body>
 <div class="wrap">
@@ -125,5 +127,28 @@ Admission, fees, classes या certificates की कोई अपुष्ट
 </main>
 <footer>LEARN • GROW • ACHIEVE<br>© 2026 LOYAL Global Studies</footer>
 </div>
+
+<!-- LOYAL-UNIVERSAL-CLASSROOM -->
+<section class="loyal-universal-classroom" id="loyal-classroom-stylish-photo-pose">
+  <h2>🎓 LOYAL Classroom</h2>
+  <p>इस बैच की कक्षाएँ LOYAL Global Studies Classroom में उपलब्ध कराई जाएँगी।</p>
+  <div class="loyal-classroom-note">
+    Recorded lectures इस बैच के अनुसार जोड़े जाएँगे। अभी इस पेज पर कोई अपुष्ट video link नहीं दिया गया है।
+  </div>
+  <div id="loyal-classroom-player-stylish-photo-pose"></div>
+</section>
+
+<script src="/static/js/loyal-video-player.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  window.LoyalVideoPlayer.mount({
+    root: "#loyal-classroom-player-stylish-photo-pose",
+    title: "Stylish Photo Pose",
+    launchLabel: "▶ Open LOYAL Classroom",
+    storageKey: "loyal_classroom_stylish_photo_pose_v1",
+    teachers: []
+  });
+});
+</script>
 </body>
 </html>

@@ -196,6 +196,10 @@ footer {
 /* END LOYAL BIHAR STET ROYAL POLISH */
 
 </style>
+
+<link rel="stylesheet" href="/static/css/loyal-classroom.css">
+<link rel="stylesheet" href="/static/css/loyal-video-player.css">
+
 </head>
 
 <body>
@@ -214,6 +218,16 @@ footer {
   </p>
 
 <a class="btn" href="bihar-stet-full-exam.html">Full 100-Question Science PYQ Test</a>
+</section>
+
+
+<section class="loyal-universal-classroom" id="loyal-bihar-stet-classroom">
+  <h2>LOYAL Classroom</h2>
+  <p>Bihar STET Science — Paper 1</p>
+  <p class="loyal-classroom-note">
+    नए verified lecture links उपलब्ध होने पर यहाँ जोड़े जाएँगे।
+  </p>
+  <div id="loyal-common-player"></div>
 </section>
 
 <section class="notice">
@@ -311,5 +325,21 @@ footer {
 </footer>
 
 </main>
+
+<script src="/static/js/loyal-video-player.js"></script>
+<script>
+(function () {
+  "use strict";
+  if (!window.LoyalVideoPlayer) return;
+  window.biharStetPlayer = window.LoyalVideoPlayer.mount({
+    root: "#loyal-common-player",
+    title: "Bihar STET Science",
+    launchLabel: "▶ Open LOYAL Classroom",
+    storageKey: "loyal_bihar_stet_classroom_v1",
+    teachers: []
+  });
+})();
+</script>
+
 </body>
 </html>

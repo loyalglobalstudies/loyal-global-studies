@@ -32,6 +32,8 @@ border:1px solid #344b70;border-radius:15px;padding:17px;transition:.2s}
 #petNoResults{display:none;color:#ffda68;text-align:center;padding:20px}
 @media(max-width:360px){.grid{grid-template-columns:1fr}}
 </style>
+<link rel="stylesheet" href="/static/css/loyal-classroom.css">
+<link rel="stylesheet" href="/static/css/loyal-video-player.css">
 </head>
 <body><main>
 <a class="home" href="/">← मुख्य वेबसाइट</a>
@@ -122,4 +124,27 @@ border:1px solid #344b70;border-radius:15px;padding:17px;transition:.2s}
 })();
 </script>
 
-</main></body></html>
+</main>
+<!-- LOYAL-UNIVERSAL-CLASSROOM -->
+<section class="loyal-universal-classroom" id="loyal-classroom-upsssc-pet">
+  <h2>🎓 LOYAL Classroom</h2>
+  <p>इस बैच की कक्षाएँ LOYAL Global Studies Classroom में उपलब्ध कराई जाएँगी।</p>
+  <div class="loyal-classroom-note">
+    Recorded lectures इस बैच के अनुसार जोड़े जाएँगे। अभी इस पेज पर कोई अपुष्ट video link नहीं दिया गया है।
+  </div>
+  <div id="loyal-classroom-player-upsssc-pet"></div>
+</section>
+
+<script src="/static/js/loyal-video-player.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  window.LoyalVideoPlayer.mount({
+    root: "#loyal-classroom-player-upsssc-pet",
+    title: "Upsssc Pet",
+    launchLabel: "▶ Open LOYAL Classroom",
+    storageKey: "loyal_classroom_upsssc_pet_v1",
+    teachers: []
+  });
+});
+</script>
+</body></html>

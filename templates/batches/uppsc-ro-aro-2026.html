@@ -60,6 +60,8 @@ footer small{color:#aebdd0}
 }
 
 </style>
+  <link rel="stylesheet" href="/static/css/loyal-classroom.css">
+  <link rel="stylesheet" href="/static/css/loyal-video-player.css">
 </head>
 <body>
 <header class="topbar">
@@ -129,6 +131,7 @@ footer small{color:#aebdd0}
         <h3>🎬 Video Classroom</h3>
         <p>Prelims और Mains के वास्तविक LOYAL lectures उपलब्ध होने पर यहाँ जोड़े जाएँगे।</p>
         <span class="classroom-status">Lectures not uploaded</span>
+        <div id="loyal-classroom-player-uppsc-ro-aro-2026"></div>
       </article>
 
       <article class="classroom-card">
@@ -181,5 +184,20 @@ footer small{color:#aebdd0}
   <small>© 2026 LOYAL Global Studies</small>
   <p>DEVELOPER BY 💓 LOYAL JI 💓</p>
 </footer>
+
+<script src="/static/js/loyal-video-player.js"></script>
+<script>
+(function () {
+  "use strict";
+  if (!window.LoyalVideoPlayer) return;
+  window.loyalBatchPlayer = window.LoyalVideoPlayer.mount({
+    root: "#loyal-classroom-player-uppsc-ro-aro-2026",
+    title: "UPPSC RO/ARO 2026",
+    launchLabel: "▶ Open LOYAL Classroom",
+    storageKey: "loyal_uppsc_ro_aro_2026_v1",
+    teachers: []
+  });
+})();
+</script>
 </body>
 </html>

@@ -17,6 +17,8 @@
     .primary{background:var(--gold);color:#061832}.secondary{border:1px solid #ffd45a;color:var(--gold)}
     .note{color:#c8d5e8;font-size:.94rem;margin-top:18px}footer{margin-top:26px;color:#aebed4;font-size:.85rem}
   </style>
+  <link rel="stylesheet" href="/static/css/loyal-classroom.css">
+  <link rel="stylesheet" href="/static/css/loyal-video-player.css">
 </head>
 <body><main class="wrap">
   <div class="brand">✦ LOYAL GLOBAL STUDIES ✦</div>
@@ -32,5 +34,27 @@
       <a class="btn secondary" href="/#batches">Batch Library</a>
     </div>
   </section>
+
+  <section class="loyal-universal-classroom">
+    <h2>LOYAL Classroom</h2>
+    <p>JEE 2027 Dropper Phase II</p>
+    <p>Verified lecture links उपलब्ध होने पर यहाँ जोड़े जाएँगे।</p>
+    <div id="loyal-classroom-player-jee-2027"></div>
+  </section>
   <footer>© 2026 LOYAL Global Studies · Learn • Grow • Achieve</footer>
-</main></body></html>
+</main>
+<script src="/static/js/loyal-video-player.js"></script>
+<script>
+(function () {
+  "use strict";
+  if (!window.LoyalVideoPlayer) return;
+  window.loyalBatchPlayer = window.LoyalVideoPlayer.mount({
+    root: "#loyal-classroom-player-jee-2027",
+    title: "JEE 2027 Dropper Phase II",
+    launchLabel: "▶ Open LOYAL Classroom",
+    storageKey: "loyal_jee_2027_dropper_phase_2_v1",
+    teachers: []
+  });
+})();
+</script>
+</body></html>

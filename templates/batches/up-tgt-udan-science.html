@@ -50,6 +50,8 @@ footer strong{color:var(--gold)}
 }
 
 </style>
+  <link rel="stylesheet" href="/static/css/loyal-classroom.css">
+  <link rel="stylesheet" href="/static/css/loyal-video-player.css">
 </head>
 <body>
 <header class="topbar">
@@ -109,6 +111,7 @@ footer strong{color:var(--gold)}
       <h3>🎬 Video Classroom</h3>
       <p>Physics, Biology, Computer और Geography के वास्तविक lectures उपलब्ध होने पर जोड़े जाएँगे।</p>
       <span class="classroom-status">Lectures not uploaded</span>
+        <div id="loyal-classroom-player-up-tgt-udan-science"></div>
     </article>
 
     <article class="classroom-card">
@@ -169,5 +172,20 @@ footer strong{color:var(--gold)}
 <small>© 2026 LOYAL Global Studies</small>
 <p>DEVELOPER BY 💓 LOYAL JI 💓</p>
 </footer>
+
+<script src="/static/js/loyal-video-player.js"></script>
+<script>
+(function () {
+  "use strict";
+  if (!window.LoyalVideoPlayer) return;
+  window.loyalBatchPlayer = window.LoyalVideoPlayer.mount({
+    root: "#loyal-classroom-player-up-tgt-udan-science",
+    title: "UP TGT Udaan Science",
+    launchLabel: "▶ Open LOYAL Classroom",
+    storageKey: "loyal_up_tgt_udan_science_v1",
+    teachers: []
+  });
+})();
+</script>
 </body>
 </html>

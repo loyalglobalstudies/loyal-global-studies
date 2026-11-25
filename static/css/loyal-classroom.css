@@ -1,0 +1,12 @@
+.loyal-universal-classroom{
+  margin:28px auto;padding:22px;max-width:1100px;
+  border:1px solid rgba(213,165,44,.45);border-radius:18px;
+  background:linear-gradient(135deg,#061832,#0b2850);
+  color:#fff;box-shadow:0 12px 30px rgba(0,0,0,.18)
+}
+.loyal-universal-classroom h2{margin:0 0 12px;color:#ffd45a}
+.loyal-universal-classroom p{line-height:1.7;margin:8px 0}
+.loyal-classroom-note{
+  margin-top:14px;padding:13px;border-radius:12px;
+  background:rgba(255,255,255,.08);color:#e8edf7
+}

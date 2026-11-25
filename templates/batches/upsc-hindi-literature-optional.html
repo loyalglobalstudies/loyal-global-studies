@@ -17,6 +17,8 @@
     .primary{background:var(--gold);color:#061832}.secondary{border:1px solid #ffd45a;color:var(--gold)}
     .note{color:#c8d5e8;font-size:.94rem;margin-top:18px}footer{margin-top:26px;color:#aebed4;font-size:.85rem}
   </style>
+<link rel="stylesheet" href="/static/css/loyal-classroom.css">
+<link rel="stylesheet" href="/static/css/loyal-video-player.css">
 </head>
 <body><main class="wrap">
   <div class="brand">✦ LOYAL GLOBAL STUDIES ✦</div>
@@ -33,4 +35,27 @@
     </div>
   </section>
   <footer>© 2026 LOYAL Global Studies · Learn • Grow • Achieve</footer>
-</main></body></html>
+</main>
+<!-- LOYAL-UNIVERSAL-CLASSROOM -->
+<section class="loyal-universal-classroom" id="loyal-classroom-upsc-hindi-literature-optional">
+  <h2>🎓 LOYAL Classroom</h2>
+  <p>इस बैच की कक्षाएँ LOYAL Global Studies Classroom में उपलब्ध कराई जाएँगी।</p>
+  <div class="loyal-classroom-note">
+    Recorded lectures इस बैच के अनुसार जोड़े जाएँगे। अभी इस पेज पर कोई अपुष्ट video link नहीं दिया गया है।
+  </div>
+  <div id="loyal-classroom-player-upsc-hindi-literature-optional"></div>
+</section>
+
+<script src="/static/js/loyal-video-player.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  window.LoyalVideoPlayer.mount({
+    root: "#loyal-classroom-player-upsc-hindi-literature-optional",
+    title: "Upsc Hindi Literature Optional",
+    launchLabel: "▶ Open LOYAL Classroom",
+    storageKey: "loyal_classroom_upsc_hindi_literature_optional_v1",
+    teachers: []
+  });
+});
+</script>
+</body></html>

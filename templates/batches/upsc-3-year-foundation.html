@@ -61,6 +61,8 @@
 }
 
 </style>
+  <link rel="stylesheet" href="/static/css/loyal-classroom.css">
+  <link rel="stylesheet" href="/static/css/loyal-video-player.css">
 </head>
 <body>
 <header class="topbar">
@@ -131,6 +133,7 @@
         <h3>🎬 Video Classroom</h3>
         <p>तीनों वर्षों के वास्तविक LOYAL lectures उपलब्ध होने पर यहाँ जोड़े जाएँगे।</p>
         <span class="classroom-status">Lectures not uploaded</span>
+        <div id="loyal-classroom-player-upsc-3-year-foundation"></div>
       </article>
 
       <article class="classroom-card">
@@ -183,5 +186,20 @@
   <small>© 2026 LOYAL Global Studies</small>
   <p>DEVELOPER BY 💓 LOYAL JI 💓</p>
 </footer>
+
+<script src="/static/js/loyal-video-player.js"></script>
+<script>
+(function () {
+  "use strict";
+  if (!window.LoyalVideoPlayer) return;
+  window.loyalBatchPlayer = window.LoyalVideoPlayer.mount({
+    root: "#loyal-classroom-player-upsc-3-year-foundation",
+    title: "UPSC 3 Year Foundation",
+    launchLabel: "▶ Open LOYAL Classroom",
+    storageKey: "loyal_upsc_3_year_foundation_v1",
+    teachers: []
+  });
+})();
+</script>
 </body>
 </html>

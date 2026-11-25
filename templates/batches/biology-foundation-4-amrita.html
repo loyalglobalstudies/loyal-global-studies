@@ -32,6 +32,8 @@ color:#061832;text-decoration:none;font-weight:800;border-radius:10px}
 footer{text-align:center;padding:25px;color:#cbd6e8;line-height:1.8}
 @media(max-width:480px){.wrap{padding:12px}.content{padding:18px}}
 </style>
+<link rel="stylesheet" href="/static/css/loyal-classroom.css">
+<link rel="stylesheet" href="/static/css/loyal-video-player.css">
 </head>
 <body>
 <div class="wrap">
@@ -72,5 +74,28 @@ unverified class link या PDF link शामिल नहीं किया 
 </main>
 <footer>LEARN • GROW • ACHIEVE<br>© 2026 LOYAL Global Studies</footer>
 </div>
+
+<!-- LOYAL-UNIVERSAL-CLASSROOM -->
+<section class="loyal-universal-classroom" id="loyal-classroom-biology-foundation-4-amrita">
+  <h2>🎓 LOYAL Classroom</h2>
+  <p>इस बैच की कक्षाएँ LOYAL Global Studies Classroom में उपलब्ध कराई जाएँगी।</p>
+  <div class="loyal-classroom-note">
+    Recorded lectures इस बैच के अनुसार जोड़े जाएँगे। अभी इस पेज पर कोई अपुष्ट video link नहीं दिया गया है।
+  </div>
+  <div id="loyal-classroom-player-biology-foundation-4-amrita"></div>
+</section>
+
+<script src="/static/js/loyal-video-player.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  window.LoyalVideoPlayer.mount({
+    root: "#loyal-classroom-player-biology-foundation-4-amrita",
+    title: "Biology Foundation 4 Amrita",
+    launchLabel: "▶ Open LOYAL Classroom",
+    storageKey: "loyal_classroom_biology_foundation_4_amrita_v1",
+    teachers: []
+  });
+});
+</script>
 </body>
 </html>

@@ -28,6 +28,8 @@ h2{color:#ffdc66;margin-top:28px}
 footer{text-align:center;color:#9eabc0;margin-top:30px;font-size:13px}
 .btn{display:inline-block;margin-top:12px;padding:12px 18px;border-radius:9px;background:#ffdc66;color:#071832}
 </style>
+<link rel="stylesheet" href="/static/css/loyal-classroom.css">
+<link rel="stylesheet" href="/static/css/loyal-video-player.css">
 </head>
 <body>
 <div class="wrap">
@@ -64,5 +66,28 @@ official provider से करें। इस page पर कोई unverified
 </main>
 <footer>LEARN • GROW • ACHIEVE<br>© 2026 LOYAL Global Studies</footer>
 </div>
+
+<!-- LOYAL-UNIVERSAL-CLASSROOM -->
+<section class="loyal-universal-classroom" id="loyal-classroom-army-gd-tradesman">
+  <h2>🎓 LOYAL Classroom</h2>
+  <p>इस बैच की verified classes यहाँ उपलब्ध कराई जाएँगी।</p>
+  <div id="loyal-army-gd-classroom-player"></div>
+  <div class="loyal-classroom-note">
+    नई कक्षाएँ उपलब्ध होने पर यहाँ जोड़ी जाएँगी।
+  </div>
+</section>
+
+<script src="/static/js/loyal-video-player.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  window.LoyalVideoPlayer.mount({
+    root: "#loyal-army-gd-classroom-player",
+    title: "Army GD Tradesman",
+    launchLabel: "▶ Open LOYAL Classroom",
+    storageKey: "loyal_army_gd_classroom_v1",
+    teachers: []
+  });
+});
+</script>
 </body>
 </html>

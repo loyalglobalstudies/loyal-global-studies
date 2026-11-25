@@ -40,8 +40,11 @@
 
     const teachers = validTeachers(options.teachers);
     if (!teachers.length) {
-      root.hidden = true;
-      return null;
+      teachers.push({
+        id: "classroom",
+        name: "Classes coming soon",
+        lectures: []
+      });
     }
 
     root.hidden = false;
@@ -132,8 +135,24 @@
 
     function showVideo() {
       const lecture = current();
-      if (!lecture) return;
 
+      if (!lecture) {
+        videoBox.replaceChildren(
+          el("div", "lvp-placeholder", "Verified classes will be added here.")
+        );
+        now.textContent = "LOYAL Classroom";
+        status.textContent = "इस बैच की कक्षाएँ जल्द उपलब्ध होंगी।";
+        prev.disabled = true;
+        next.disabled = true;
+        done.disabled = true;
+        full.disabled = true;
+        return;
+      }
+
+      prev.disabled = false;
+      next.disabled = false;
+      done.disabled = false;
+      full.disabled = false;
       videoBox.replaceChildren();
       const frame = el("iframe", "lvp-frame");
       frame.src = "https://www.youtube-nocookie.com/embed/" +

@@ -1,7 +1,32 @@
 <!doctype html>
-<html lang="hi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#06152f"><title>Mind Calculation Batch | LOYAL Global Studies</title><link rel="stylesheet" href="{{ url_for('static', filename='css/loyal-new-batches.css') }}"></head>
+<html lang="hi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#06152f"><title>Mind Calculation Batch | LOYAL Global Studies</title><link rel="stylesheet" href="{{ url_for('static', filename='css/loyal-new-batches.css') }}"><link rel="stylesheet" href="/static/css/loyal-classroom.css">
+<link rel="stylesheet" href="/static/css/loyal-video-player.css">
+</head>
 <body><header class="top"><div><div class="brand">♛ LOYAL <span>Global Studies</span></div><div class="tagline">LEARN • GROW • ACHIEVE</div></div><a class="btn secondary" href="batches.html">← All Batches</a></header>
 <main class="wrap"><section class="hero"><div><span class="pill">MIND CALCULATION</span><h1>Mind Calculation Batch</h1><p>Calculation speed और accuracy बढ़ाने के लिए Mind Calculation Batch.</p><div class="price">₹99</div><div class="note">Price set as requested</div><div><span class="pill">Hindi + English support</span><span class="pill">Not specified</span></div><a class="btn" href="#enquiry">Admission / Enquiry</a></div><div><img class="poster" src="{{ url_for('static', filename='images/mind-calculation.jpg') }}" alt="Mind Calculation Batch poster"></div></section>
 <section class="panel"><h2>Batch Details</h2><div class="details"><div class="detail">Price: ₹99</div><div class="detail">Speed-building practice</div><div class="detail">Exam-oriented calculation</div></div></section>
 <section class="panel"><h2>What You’ll Study</h2><ul class="list"><li>Fast calculation tricks</li><li>Vedic Maths techniques</li><li>Simplification</li><li>Percentage &amp; Profit-Loss</li><li>Ratio &amp; Proportion</li><li>Number system</li><li>Square &amp; Cube</li></ul></section>
-<section class="panel" id="enquiry"><h2>Admission Enquiry</h2><p>इस batch के admission, fee और schedule के लिए LOYAL Global Studies से संपर्क करें।</p><p class="note">The ₹99 fee is set according to your instruction.</p><p class="note">यह पेज LOYAL Global Studies की जानकारी के लिए है। कोई बाहरी KGS registration link शामिल नहीं किया गया है।</p></section></main><footer class="foot">© 2026 LOYAL Global Studies · LOYAL JI 💓</footer></body></html>
+<section class="panel" id="enquiry"><h2>Admission Enquiry</h2><p>इस batch के admission, fee और schedule के लिए LOYAL Global Studies से संपर्क करें।</p><p class="note">The ₹99 fee is set according to your instruction.</p><p class="note">यह पेज LOYAL Global Studies की जानकारी के लिए है। कोई बाहरी KGS registration link शामिल नहीं किया गया है।</p></section></main><footer class="foot">© 2026 LOYAL Global Studies · LOYAL JI 💓</footer>
+<!-- LOYAL-UNIVERSAL-CLASSROOM -->
+<section class="loyal-universal-classroom" id="loyal-classroom-mind-calculation">
+  <h2>🎓 LOYAL Classroom</h2>
+  <p>इस बैच की कक्षाएँ LOYAL Global Studies Classroom में उपलब्ध कराई जाएँगी।</p>
+  <div class="loyal-classroom-note">
+    Recorded lectures इस बैच के अनुसार जोड़े जाएँगे। अभी इस पेज पर कोई अपुष्ट video link नहीं दिया गया है।
+  </div>
+  <div id="loyal-classroom-player-mind-calculation"></div>
+</section>
+
+<script src="/static/js/loyal-video-player.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  window.LoyalVideoPlayer.mount({
+    root: "#loyal-classroom-player-mind-calculation",
+    title: "Mind Calculation",
+    launchLabel: "▶ Open LOYAL Classroom",
+    storageKey: "loyal_classroom_mind_calculation_v1",
+    teachers: []
+  });
+});
+</script>
+</body></html>

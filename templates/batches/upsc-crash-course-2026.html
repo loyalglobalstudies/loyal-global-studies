@@ -21,6 +21,8 @@
     .upsc-crash-back{color:#ffd45a;text-decoration:none;font-weight:700}
     .upsc-crash-note{font-size:13px;color:#d4deec!important}
   </style>
+<link rel="stylesheet" href="/static/css/loyal-classroom.css">
+<link rel="stylesheet" href="/static/css/loyal-video-player.css">
 </head>
 <body>
   <main class="upsc-crash-wrap">
@@ -52,5 +54,28 @@
       </div>
     </article>
   </main>
+
+<!-- LOYAL-UNIVERSAL-CLASSROOM -->
+<section class="loyal-universal-classroom" id="loyal-classroom-upsc-crash-course-2026">
+  <h2>🎓 LOYAL Classroom</h2>
+  <p>इस बैच की कक्षाएँ LOYAL Global Studies Classroom में उपलब्ध कराई जाएँगी।</p>
+  <div class="loyal-classroom-note">
+    Recorded lectures इस बैच के अनुसार जोड़े जाएँगे। अभी इस पेज पर कोई अपुष्ट video link नहीं दिया गया है।
+  </div>
+  <div id="loyal-classroom-player-upsc-crash-course-2026"></div>
+</section>
+
+<script src="/static/js/loyal-video-player.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  window.LoyalVideoPlayer.mount({
+    root: "#loyal-classroom-player-upsc-crash-course-2026",
+    title: "Upsc Crash Course 2026",
+    launchLabel: "▶ Open LOYAL Classroom",
+    storageKey: "loyal_classroom_upsc_crash_course_2026_v1",
+    teachers: []
+  });
+});
+</script>
 </body>
 </html>

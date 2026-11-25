@@ -203,6 +203,7 @@ footer {
 /* END LOYAL PYTHON ROYAL CLASSROOM POLISH */
 
 </style>
+<link rel="stylesheet" href="/static/css/loyal-video-player.css">
 </head>
 <body>
 <header><div class="wrap"><div class="brand">LOYAL GLOBAL STUDIES <span class="rainbow">♥ LOYAL JI ♥</span></div></div></header>
@@ -239,6 +240,7 @@ footer {
       <h3>🎬 Video Classroom</h3>
       <p>Python के वास्तविक lecture उपलब्ध होने पर यहाँ विषयवार जोड़े जाएँगे।</p>
       <span class="classroom-status">Lectures coming soon</span>
+      <div id="loyal-python-classroom-player"></div>
     </article>
 
     <article class="classroom-card">
@@ -276,5 +278,17 @@ footer {
 </section>
 </main>
 <footer><div class="wrap">© 2026 LOYAL Global Studies | Developed by <span class="rainbow">💓 LOYAL JI 💓</span></div></footer>
+<script src="/static/js/loyal-video-player.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  window.LoyalVideoPlayer.mount({
+    root: "#loyal-python-classroom-player",
+    title: "Python Full Course",
+    launchLabel: "▶ Open LOYAL Classroom",
+    storageKey: "loyal_python_full_course_v1",
+    teachers: []
+  });
+});
+</script>
 </body>
 </html>
