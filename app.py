@@ -76,6 +76,12 @@ BATCHES = [
         "category": "Teaching Exams"
     },
     {
+        "slug": "nda-1-2027-target-dehradun",
+        "name": "NDA-1 2027 Target Batch (Dehradun Offline)",
+        "description": "NDA-1 2027 offline bilingual target batch at Dehradun centre.",
+        "category": "Defence Exams"
+    },
+    {
         "slug": "up-tgt-udan-science",
         "name": "UP TGT उड़ान बैच (SCIENCE)",
         "description": "Physics, Biology, Computer and Geography preparation.",
