@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#061832">
+<title>Coding & Web Development | LOYAL GLOBAL STUDIES</title>
+<meta name="description" content="Coding & Web Development — LOYAL Global Studies skill development classroom.">
+<style>
+:root{--gold:#ffd45a;--navy:#061832;--blue:#0b2850}
+*{box-sizing:border-box}
+body{margin:0;background:var(--navy);color:#fff;font-family:Arial,sans-serif}
+.topbar{display:flex;justify-content:space-between;align-items:center;padding:16px 5%;background:#041126;border-bottom:1px solid #b88c2b}
+.brand{color:var(--gold);font-weight:900;text-decoration:none}
+.brand small{display:block;color:#d5deeb;font-size:11px;letter-spacing:2px;margin-top:4px}
+.back{color:#ffe08a;text-decoration:none}
+.wrap{width:min(1000px,92%);margin:24px auto}
+.hero,.section{border:1px solid #b88c2b;border-radius:18px;background:linear-gradient(130deg,#10294b,#111c35);padding:24px;margin-bottom:22px}
+.tag{color:var(--gold);font-weight:900;letter-spacing:1px}
+h1{font-size:clamp(28px,6vw,48px);line-height:1.2;margin:12px 0}
+h1 span,.section h2{color:var(--gold)}
+.subtitle,.muted{color:#d2d9e8}
+.poster{display:block;width:100%;max-height:420px;object-fit:contain;border-radius:14px;margin:0 0 20px;background:#07162d}
+.status{display:inline-block;border:1px solid #d5a52c;color:#ffe69a;border-radius:30px;padding:5px 12px;font-size:13px;margin:4px}
+.card{padding:18px;background:#091a32;border:1px solid #304665;border-radius:13px}
+.card h3{margin:0 0 7px;color:#ffe08a}
+.card p{margin:0;color:#d5deeb}
+.classroom-card{padding:18px;background:linear-gradient(145deg,#10294b,#091a32);border:1px solid #b88c2c66;border-radius:15px}
+.classroom-card h3{margin:0 0 8px;color:#ffe08a}
+.classroom-card p{color:#d2d9e8}
+.note{font-size:13px;color:#aebdd0}
+footer{text-align:center;padding:25px;background:#041126;border-top:1px solid #b88c2b}
+footer strong{color:var(--gold)}
+@media(max-width:520px){.hero,.section{padding:17px}.topbar{padding:13px 4%}}
+</style>
+<link rel="stylesheet" href="/static/css/loyal-classroom.css">
+<link rel="stylesheet" href="/static/css/loyal-video-player.css">
+</head>
+<body>
+<header class="topbar">
+<a class="brand" href="/">LOYAL GLOBAL STUDIES<small>LEARN • GROW • ACHIEVE</small></a>
+<a class="back" href="/">← Home</a>
+</header>
+<main class="wrap">
+<section class="hero">
+<img class="poster" src="/static/images/coding-web-development-earners.jpg" alt="Coding & Web Development batch thumbnail" loading="lazy">
+<span class="tag">✦ LOYAL SKILL DEVELOPMENT CLASSROOM ✦</span>
+<h1>Coding & Web Development</h1>
+<h2>With Certification</h2>
+<p class="subtitle">Learn • Practice • Grow</p>
+<span class="status">Skill Development</span>
+<span class="status">With Certification</span>
+</section>
+<section class="section">
+<h2>Batch Information</h2>
+<div class="card">
+<h3>📘 Course</h3>
+<p>Coding & Web Development</p>
+<p class="note">Course details and certification requirements should be confirmed with the course provider.</p>
+</div>
+</section>
+<section class="section" id="loyal-classroom">
+<span class="tag">✦ LOYAL STUDENT PORTAL ✦</span>
+<h2>👑 LOYAL Video Classroom</h2>
+<div class="classroom-card">
+<h3>🎬 Course Lectures</h3>
+<p>Authorized course lectures can be added here subject-wise.</p>
+<span class="status">Videos pending</span>
+<div id="loyal-classroom-player-coding-web-development-earners"></div>
+</div>
+<p class="note">Course videos have not been added yet.</p>
+</section>
+</main>
+<footer>
+<strong>LOYAL GLOBAL STUDIES ♥</strong>
+<p>LEARN • GROW • ACHIEVE</p>
+<small>© 2026 LOYAL Global Studies</small>
+<p>DEVELOPER BY 💓 LOYAL JI 💓</p>
+</footer>
+<script src="/static/js/loyal-video-player.js"></script>
+<script>
+(function () {
+  "use strict";
+  if (!window.LoyalVideoPlayer) return;
+  window.loyalBatchPlayer = window.LoyalVideoPlayer.mount({
+    root: "#loyal-classroom-player-coding-web-development-earners",
+    title: "Coding & Web Development",
+    launchLabel: "▶ Open LOYAL Classroom",
+    storageKey: "loyal_coding_web_development_earners_v1",
+    teachers: []
+  });
+})();
+</script>
+</body>
+</html>

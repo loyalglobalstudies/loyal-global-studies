@@ -76,6 +76,18 @@ BATCHES = [
         "category": "Teaching Exams"
     },
     {
+        "slug": "coding-web-development-earners",
+        "name": "Coding & Web Development",
+        "description": "Coding and web development course with certification.",
+        "category": "Skill Development"
+    },
+    {
+        "slug": "mobile-video-editing-ai-earners",
+        "name": "Mobile Video Editing with AI",
+        "description": "Mobile video editing course with AI tools and certification.",
+        "category": "Skill Development"
+    },
+    {
         "slug": "nda-1-2027-target-dehradun",
         "name": "NDA-1 2027 Target Batch (Dehradun Offline)",
         "description": "NDA-1 2027 offline bilingual target batch at Dehradun centre.",
